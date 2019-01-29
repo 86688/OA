@@ -23,11 +23,11 @@ use yii\widgets\ActiveForm;
 
     <?= $form->field($model, 'sex') ?>
 
-    <?= $form->field($model, 'phone') ?>
+    <?= $form->field($model, 'tel') ?>
 
     <?php // echo $form->field($model, 'email') ?>
 
-    <?php // echo $form->field($model, 'idcard') ?>
+    <?php // echo $form->field($model, 'id_card') ?>
 
     <?php // echo $form->field($model, 'school') ?>
 
@@ -37,13 +37,23 @@ use yii\widgets\ActiveForm;
 
     <?php // echo $form->field($model, 'crt_end') ?>
 
-    <?php // echo $form->field($model, 'place') ?>
+    <?php // echo $form->field($model, 'ctr_num') ?>
+
+    <?php // echo $form->field($model, 'work_place') ?>
+
+    <?php // echo $form->field($model, 'linkman') ?>
+
+    <?php // echo $form->field($model, 'linktel') ?>
+
+    <?php // echo $form->field($model, 'housing_fund') ?>
+
+    <?php // echo $form->field($model, 'vacation') ?>
 
     <?php // echo $form->field($model, 'status_id') ?>
 
     <?php // echo $form->field($model, 'dept_id') ?>
 
-    <?php // echo $form->field($model, 'role_id') ?>
+    <?php // echo $form->field($model, 'title_id') ?>
 
     <div class="form-group">
         <?= Html::submitButton('Search', ['class' => 'btn btn-primary']) ?>

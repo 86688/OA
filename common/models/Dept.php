@@ -9,10 +9,10 @@ use Yii;
  *
  * @property int $dept_id 部门编号
  * @property string $dept_name 部门名字
- * @property int $depe_level 部门级别
+ * @property int $dept_level 部门级别
  * @property int $dept_p_id 上级部门编号
  *
- * @property User[] $users
+ * @property User $dept
  */
 class Dept extends \yii\db\ActiveRecord
 {
@@ -30,8 +30,10 @@ class Dept extends \yii\db\ActiveRecord
     public function rules()
     {
         return [
-            [['depe_level', 'dept_p_id'], 'integer'],
-            [['dept_name'], 'string', 'max' => 50],
+            [['dept_name', 'dept_level', 'dept_p_id'], 'required'],
+            [['dept_name'], 'string', 'max' => 15],
+            [['dept_level', 'dept_p_id'], 'string', 'max' => 1],
+            [['dept_id'], 'exist', 'skipOnError' => true, 'targetClass' => User::className(), 'targetAttribute' => ['dept_id' => 'dept_id']],
         ];
     }
 
@@ -43,7 +45,7 @@ class Dept extends \yii\db\ActiveRecord
         return [
             'dept_id' => 'Dept ID',
             'dept_name' => 'Dept Name',
-            'depe_level' => 'Depe Level',
+            'dept_level' => 'Dept Level',
             'dept_p_id' => 'Dept P ID',
         ];
     }
@@ -51,8 +53,8 @@ class Dept extends \yii\db\ActiveRecord
     /**
      * @return \yii\db\ActiveQuery
      */
-    public function getUsers()
+    public function getDept()
     {
-        return $this->hasMany(User::className(), ['dept_id' => 'dept_id']);
+        return $this->hasOne(User::className(), ['dept_id' => 'dept_id']);
     }
 }

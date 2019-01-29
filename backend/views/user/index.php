@@ -7,7 +7,7 @@ use yii\grid\GridView;
 /* @var $searchModel common\models\UserSearch */
 /* @var $dataProvider yii\data\ActiveDataProvider */
 
-$this->title = '职员';
+$this->title = 'Users';
 $this->params['breadcrumbs'][] = $this->title;
 ?>
 <div class="user-index">
@@ -16,8 +16,7 @@ $this->params['breadcrumbs'][] = $this->title;
     <?php // echo $this->render('_search', ['model' => $searchModel]); ?>
 
     <p>
-        <?= Html::a('新增人员', ['create'], ['class' => 'btn btn-success']) ?>
-        <?= Html::a('部门管理', ['create'], ['class' => 'btn btn-success']) ?>
+        <?= Html::a('Create User', ['create'], ['class' => 'btn btn-success']) ?>
     </p>
 
     <?= GridView::widget([
@@ -30,17 +29,22 @@ $this->params['breadcrumbs'][] = $this->title;
             'user_name',
             // 'user_pwd',
             'sex',
-            'phone',
-            'email:email',
-            // 'idcard',
+            'tel',
+            'email',
+            'id_card',
             'school',
             'major',
-            'crt_start',
-            'crt_end',
-            'place',
+            // 'crt_start',
+            // 'crt_end',
+            // 'ctr_num',
+            'work_place',
+            // 'linkman',
+            // 'linktel',
+            // 'housing_fund',
+            'vacation',
             'status_id',
             'dept_id',
-            'role_id',
+            'title_id',
 
             ['class' => 'yii\grid\ActionColumn'],
         ],

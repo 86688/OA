@@ -18,8 +18,8 @@ class UserSearch extends User
     public function rules()
     {
         return [
-            [['user_id', 'idcard', 'major', 'crt_start', 'crt_end', 'status_id', 'dept_id', 'role_id'], 'integer'],
-            [['user_name', 'user_pwd', 'sex', 'phone', 'email', 'school', 'place'], 'safe'],
+            [['user_id', 'crt_start', 'crt_end'], 'integer'],
+            [['user_name', 'user_pwd', 'sex', 'tel', 'email', 'id_card', 'school', 'major', 'ctr_num', 'work_place', 'linkman', 'linktel', 'housing_fund', 'vacation', 'status_id', 'dept_id', 'title_id'], 'safe'],
         ];
     }
 
@@ -60,22 +60,27 @@ class UserSearch extends User
         // grid filtering conditions
         $query->andFilterWhere([
             'user_id' => $this->user_id,
-            'idcard' => $this->idcard,
-            'major' => $this->major,
             'crt_start' => $this->crt_start,
             'crt_end' => $this->crt_end,
-            'status_id' => $this->status_id,
-            'dept_id' => $this->dept_id,
-            'role_id' => $this->role_id,
         ]);
 
         $query->andFilterWhere(['like', 'user_name', $this->user_name])
             ->andFilterWhere(['like', 'user_pwd', $this->user_pwd])
             ->andFilterWhere(['like', 'sex', $this->sex])
-            ->andFilterWhere(['like', 'phone', $this->phone])
+            ->andFilterWhere(['like', 'tel', $this->tel])
             ->andFilterWhere(['like', 'email', $this->email])
+            ->andFilterWhere(['like', 'id_card', $this->id_card])
             ->andFilterWhere(['like', 'school', $this->school])
-            ->andFilterWhere(['like', 'place', $this->place]);
+            ->andFilterWhere(['like', 'major', $this->major])
+            ->andFilterWhere(['like', 'ctr_num', $this->ctr_num])
+            ->andFilterWhere(['like', 'work_place', $this->work_place])
+            ->andFilterWhere(['like', 'linkman', $this->linkman])
+            ->andFilterWhere(['like', 'linktel', $this->linktel])
+            ->andFilterWhere(['like', 'housing_fund', $this->housing_fund])
+            ->andFilterWhere(['like', 'vacation', $this->vacation])
+            ->andFilterWhere(['like', 'status_id', $this->status_id])
+            ->andFilterWhere(['like', 'dept_id', $this->dept_id])
+            ->andFilterWhere(['like', 'title_id', $this->title_id]);
 
         return $dataProvider;
     }

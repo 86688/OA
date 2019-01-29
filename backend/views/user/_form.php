@@ -18,27 +18,37 @@ use yii\widgets\ActiveForm;
 
     <?= $form->field($model, 'sex')->textInput(['maxlength' => true]) ?>
 
-    <?= $form->field($model, 'phone')->textInput(['maxlength' => true]) ?>
+    <?= $form->field($model, 'tel')->textInput(['maxlength' => true]) ?>
 
     <?= $form->field($model, 'email')->textInput(['maxlength' => true]) ?>
 
-    <?= $form->field($model, 'idcard')->textInput() ?>
+    <?= $form->field($model, 'id_card')->textInput(['maxlength' => true]) ?>
 
     <?= $form->field($model, 'school')->textInput(['maxlength' => true]) ?>
 
-    <?= $form->field($model, 'major')->textInput() ?>
+    <?= $form->field($model, 'major')->textInput(['maxlength' => true]) ?>
 
-    <?= $form->field($model, 'crt_start')->textInput() ?>
+    <?= $form->field($model, 'crt_start')->textInput(['maxlength' => true]) ?>
 
-    <?= $form->field($model, 'crt_end')->textInput() ?>
+    <?= $form->field($model, 'crt_end')->textInput(['maxlength' => true]) ?>
 
-    <?= $form->field($model, 'place')->textInput(['maxlength' => true]) ?>
+    <?= $form->field($model, 'ctr_num')->textInput() ?>
+
+    <?= $form->field($model, 'work_place')->textInput(['maxlength' => true]) ?>
+
+    <?= $form->field($model, 'linkman')->textInput(['maxlength' => true]) ?>
+
+    <?= $form->field($model, 'linktel')->textInput(['maxlength' => true]) ?>
+
+    <?= $form->field($model, 'housing_fund')->textInput(['maxlength' => true]) ?>
+
+    <?= $form->field($model, 'vacation')->textInput() ?>
 
     <?= $form->field($model, 'status_id')->textInput() ?>
 
     <?= $form->field($model, 'dept_id')->textInput() ?>
 
-    <?= $form->field($model, 'role_id')->textInput() ?>
+    <?= $form->field($model, 'title_id')->textInput() ?>
 
     <div class="form-group">
         <?= Html::submitButton('Save', ['class' => 'btn btn-success']) ?>

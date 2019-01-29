@@ -39,6 +39,7 @@ AppAsset::register($this);
         ['label' => '主页', 'url' => ['/site/index']],
     ];
     if (Yii::$app->user->isGuest) {
+        // 游客有登录条目
         $menuItems[] = ['label' => '登录', 'url' => ['/site/login']];
     } else {
         $menuItems[] = '<li>'

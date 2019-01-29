@@ -17,11 +17,9 @@ class UserController extends Controller
     /**
      * @inheritdoc
      */
-    // 配置控制器的权限
     public function behaviors()
     {
         return [
-            // 请求方式
             'verbs' => [
                 'class' => VerbFilter::className(),
                 'actions' => [
