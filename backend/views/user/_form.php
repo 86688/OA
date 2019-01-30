@@ -14,7 +14,7 @@ use yii\widgets\ActiveForm;
 
     <?= $form->field($model, 'user_name')->textInput(['maxlength' => true]) ?>
 
-    <?= $form->field($model, 'user_pwd')->textInput(['maxlength' => true]) ?>
+    <?= $form->field($model, 'password_hash')->textInput(['maxlength' => true]) ?>
 
     <?= $form->field($model, 'sex')->textInput(['maxlength' => true]) ?>
 

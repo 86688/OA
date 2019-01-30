@@ -17,6 +17,7 @@ return [
         'request' => [
             'csrfParam' => '_csrf-backend',
         ],
+        // 指定用户认证模型
         'user' => [
             'identityClass' => 'common\models\User',
             'enableAutoLogin' => true,

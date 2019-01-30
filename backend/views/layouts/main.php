@@ -27,10 +27,14 @@ AppAsset::register($this);
 <?php $this->beginBody() ?>
 
 <div class="wrap">
+    <!-- 导航栏的内容 -->
     <?php
     NavBar::begin([
+        // 内容来自main.php
         'brandLabel' => Yii::$app->name,
+        // 地址
         'brandUrl' => Yii::$app->homeUrl,
+        // css类
         'options' => [
             'class' => 'navbar-inverse navbar-fixed-top',
         ],
@@ -58,8 +62,13 @@ AppAsset::register($this);
     NavBar::end();
     ?>
 
+
     <div class="container">
         <?= Breadcrumbs::widget([
+            'homeLink' => [
+                'label' => '首页',
+                'url' => ['site/index'],
+            ],
             'links' => isset($this->params['breadcrumbs']) ? $this->params['breadcrumbs'] : [],
         ]) ?>
         <?= Alert::widget() ?>
