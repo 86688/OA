@@ -7,44 +7,46 @@ use yii\grid\GridView;
 /* @var $searchModel common\models\UserSearch */
 /* @var $dataProvider yii\data\ActiveDataProvider */
 
-$this->title = 'Users';
+$this->title = '人员';
 $this->params['breadcrumbs'][] = $this->title;
 ?>
 <div class="user-index">
 
-    <h1><?= Html::encode($this->title) ?></h1>
+    <!-- <h1><?= Html::encode($this->title) ?></h1> -->
     <?php // echo $this->render('_search', ['model' => $searchModel]); ?>
 
     <p>
-        <?= Html::a('Create User', ['create'], ['class' => 'btn btn-success']) ?>
+        <?= Html::a('新入人员', ['create'], ['class' => 'btn btn-success']) ?>
+        <?= Html::a('部门管理', ['dept/create'], ['class' => 'btn btn-success']) ?>
+
     </p>
 
     <?= GridView::widget([
         'dataProvider' => $dataProvider,
         'filterModel' => $searchModel,
         'columns' => [
-            ['class' => 'yii\grid\SerialColumn'],
+            // ['class' => 'yii\grid\SerialColumn'],
 
-            'user_id',
+            // 'user_id',
             'user_name',
-            'password_hash',
+            // 'password_hash',
             'sex',
             'tel',
-            //'email:email',
-            //'id_card',
-            //'school',
+            'email:email',
+            // 'id_card',
+            'school',
             //'major',
-            //'crt_start',
-            //'crt_end',
+            // 'crt_start',
+            // 'crt_end',
             //'ctr_num',
-            //'work_place',
+            'work_place',
             //'linkman',
             //'linktel',
             //'housing_fund',
-            //'vacation',
-            //'status_id',
-            //'dept_id',
-            //'title_id',
+            'vacation',
+            'status_id',
+            'dept_id',
+            'title_id',
 
             ['class' => 'yii\grid\ActionColumn'],
         ],

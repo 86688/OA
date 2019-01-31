@@ -10,7 +10,7 @@ use Yii;
  * @property int $status_id 状态编号
  * @property string $status_name 状态注释
  *
- * @property User[] $users
+ * @property User $status
  */
 class Status extends \yii\db\ActiveRecord
 {
@@ -28,7 +28,10 @@ class Status extends \yii\db\ActiveRecord
     public function rules()
     {
         return [
-            [['status_name'], 'string', 'max' => 20],
+            [['status_id', 'status_name'], 'required'],
+            [['status_id'], 'string', 'max' => 1],
+            [['status_name'], 'string', 'max' => 2],
+            [['status_id'], 'exist', 'skipOnError' => true, 'targetClass' => User::className(), 'targetAttribute' => ['status_id' => 'status_id']],
         ];
     }
 
@@ -46,8 +49,8 @@ class Status extends \yii\db\ActiveRecord
     /**
      * @return \yii\db\ActiveQuery
      */
-    public function getUsers()
+    public function getStatus()
     {
-        return $this->hasMany(User::className(), ['status_id' => 'status_id']);
+        return $this->hasOne(User::className(), ['status_id' => 'status_id']);
     }
 }

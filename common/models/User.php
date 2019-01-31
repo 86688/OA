@@ -74,26 +74,26 @@ class User extends ActiveRecord implements IdentityInterface
     public function attributeLabels()
     {
         return [
-            'user_id' => 'User ID',
-            'user_name' => 'User Name',
-            'password_hash' => 'Password Hash',
-            'sex' => 'Sex',
-            'tel' => 'Tel',
-            'email' => 'Email',
-            'id_card' => 'Id Card',
-            'school' => 'School',
-            'major' => 'Major',
-            'crt_start' => 'Crt Start',
-            'crt_end' => 'Crt End',
-            'ctr_num' => 'Ctr Num',
-            'work_place' => 'Work Place',
-            'linkman' => 'Linkman',
-            'linktel' => 'Linktel',
-            'housing_fund' => 'Housing Fund',
-            'vacation' => 'Vacation',
-            'status_id' => 'Status ID',
-            'dept_id' => 'Dept ID',
-            'title_id' => 'Title ID',
+            'user_id' => '编号',
+            'user_name' => '姓名',
+            'password_hash' => '密码',
+            'sex' => '性别',
+            'tel' => '电话',
+            'email' => '邮箱',
+            'id_card' => '身份证',
+            'school' => '院校',
+            'major' => '专业',
+            'crt_start' => '开始',
+            'crt_end' => '结束',
+            'ctr_num' => '合同次数',
+            'work_place' => '工作地',
+            'linkman' => '紧急联系人',
+            'linktel' => '紧急联系电话',
+            'housing_fund' => '公积金',
+            'vacation' => '年假',
+            'status_id' => '状态',
+            'dept_id' => '部门',
+            'title_id' => '职称',
         ];
     }
 
@@ -252,4 +252,5 @@ class User extends ActiveRecord implements IdentityInterface
     {
         return $this->hasOne(Title::className(), ['title_id' => 'title_id']);
     }
+
 }
