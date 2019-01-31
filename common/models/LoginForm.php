@@ -9,8 +9,8 @@ use yii\base\Model;
  */
 class LoginForm extends Model
 {
-    public $username;
-    public $password;
+    public $user_name;
+    public $password_hash;
     public $rememberMe = true;
 
     private $_user;
@@ -24,19 +24,19 @@ class LoginForm extends Model
     {
         return [
             // username and password are both required
-            [['username', 'password'], 'required',"message"=>"{attribute}不能为空"],
+            [['user_name', 'password_hash'], 'required',"message"=>"{attribute}不能为空"],
             // rememberMe must be a boolean value
             ['rememberMe', 'boolean'],
             // password is validated by validatePassword()
-            ['password', 'validatePassword',"message"=>"{attribute}不能为空"],
+            ['password_hash', 'validatePassword',"message"=>"{attribute}不能为空"],
         ];
     }
 
     public function attributeLabels()
     {
         return [
-            'username'=> '用户名',
-            'password'=>'密码',
+            'user_name'=> '用户名',
+            'password_hash'=>'密码',
             'rememberMe'=>'记住我',
             
         ];
@@ -54,7 +54,7 @@ class LoginForm extends Model
     {
         if (!$this->hasErrors()) {
             $user = $this->getUser();
-            if (!$user || !$user->validatePassword($this->password)) {
+            if (!$user || !$user->validatePassword($this->password_hash)) {
                 $this->addError($attribute, '用户名或者密码有错误');
             }
         }
@@ -86,7 +86,7 @@ class LoginForm extends Model
     protected function getUser()
     {
         if ($this->_user === null) {
-            $this->_user = User::findByUsername($this->username);
+            $this->_user = User::findByUsername($this->user_name);
         }
 
         return $this->_user;

@@ -119,9 +119,9 @@ class User extends ActiveRecord implements IdentityInterface
      * @param string $username
      * @return static|null
      */
-    public static function findByUsername($username)
+    public static function findByUsername($user_name)
     {
-        return static::findOne(['username' => $username, 'status' => self::STATUS_ACTIVE]);
+        return static::findOne(['user_name' => $user_name]);
     }
 
     /**
@@ -190,9 +190,14 @@ class User extends ActiveRecord implements IdentityInterface
      * @return boolean if password provided is valid for current user
      */
     // 参数为密码
-    public function validatePassword($password)
+    public function validatePassword($password_hash)
     {
-        return Yii::$app->security->validatePassword($password, $this->password_hash);
+        var_dump($password_hash);
+        var_dump($this->password_hash);
+        echo password_hash($password_hash ,PASSWORD_DEFAULT);
+        die();
+        $a=Yii::$app->security->validatePassword($password_hash, $this->password_hash);
+        var_dump($a);die();
     }
 
     /**
@@ -200,9 +205,9 @@ class User extends ActiveRecord implements IdentityInterface
      *
      * @param string $password
      */
-    public function setPassword($password)
+    public function setPassword($password_hash)
     {
-        $this->password_hash = Yii::$app->security->generatePasswordHash($password);
+        $this->password_hash = Yii::$app->security->generatePasswordHash($password_hash);
     }
 
     /**

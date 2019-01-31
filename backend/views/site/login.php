@@ -19,9 +19,9 @@ $this->params['breadcrumbs'][] = $this->title;
         <div class="col-lg-3">
             <?php $form = ActiveForm::begin(['id' => 'login-form']); ?>
 
-                <?= $form->field($model, 'username')->textInput(['autofocus' => true]) ?>
+                <?= $form->field($model, 'user_name')->textInput(['autofocus' => true]) ?>
 
-                <?= $form->field($model, 'password')->passwordInput() ?>
+                <?= $form->field($model, 'password_hash')->passwordInput() ?>
 
                 <?= $form->field($model, 'rememberMe')->checkbox() ?>
 
