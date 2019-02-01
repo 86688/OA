@@ -17,11 +17,11 @@ $this->params['breadcrumbs'][] = $this->title;
 
     <div class="row">
         <div class="col-lg-3">
-            <?php $form = ActiveForm::begin(['id' => 'login-form']); ?>
+            <?php $form = ActiveForm::begin(['id' => 'login-form'],['action'=>'site/login']); ?>
+            <!--  public yii\widgets\ActiveField field($model, $attribute, $options = [])-->
+            <?= $form->field($model, 'user_name')->textInput(['autofocus' => true]) ?>
 
-                <?= $form->field($model, 'user_name')->textInput(['autofocus' => true]) ?>
-
-                <?= $form->field($model, 'password_hash')->passwordInput() ?>
+                <?= $a=$form->field($model, 'password_hash')->passwordInput()?>
 
                 <?= $form->field($model, 'rememberMe')->checkbox() ?>
 

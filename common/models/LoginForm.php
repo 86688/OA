@@ -50,6 +50,7 @@ class LoginForm extends Model
      * @param array $params the additional name-value pairs given in the rule
      */
     // 验密(属性 参数)
+    // 验证用户密码的配对
     public function validatePassword($attribute, $params)
     {
         if (!$this->hasErrors()) {
@@ -66,6 +67,7 @@ class LoginForm extends Model
      * @return boolean whether the user is logged in successfully
      */
     // 注册
+//    验证通过  进行注册用户   并且保持登录
     public function login()
     {
         // validate检测rules

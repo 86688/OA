@@ -74,10 +74,24 @@ class SiteController extends Controller
         if (!Yii::$app->user->isGuest) {
             return $this->goHome();
         }
-
+        //  数据模型的名字
         $model = new LoginForm();
+        $B=Yii::$app->request->post();
+        echo '<br>';
+        echo '<br>';
+        echo '<br>';
+        echo '<br>';
+
+        var_dump($B);
+        $a=$model->load(Yii::$app->request->post());
+        var_dump($a);
+//        die();
+
+        //收集数据  && 执行loginform的login方法（验证密码用户配对  并且注册用户）
+        // load返回的是bool
         if ($model->load(Yii::$app->request->post()) && $model->login()) {
             return $this->goBack();
+//            没有通过  再次进行填写
         } else {
             $model->password_hash = '';
 
