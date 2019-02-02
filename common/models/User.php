@@ -194,9 +194,9 @@ class User extends ActiveRecord implements IdentityInterface
     {
 //      前端提交的代码
         var_dump($password_hash);
-        echo "<br>";
+//        echo "<br>";
 //        返回的
-        var_dump($this->password_hash);
+//        var_dump($this->password_hash);
 //        die();
 //        $a=Yii::$app->security->validatePassword($password_hash, $this->password_hash);
 //        var_dump($a);die();

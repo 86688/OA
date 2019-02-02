@@ -48,22 +48,22 @@ $this->params['breadcrumbs'][] = $this->title;
             'dept_id',
             'title_id',
 
-            ['class' => 'yii\grid\ActionColumn'
-                'template'=>'{view}{update}{resetpwd}{privilege}',
-                'buttons'=>[
-                    'resetpwd'=>function($url,$model,$key)
-                    {
-                        $options=[
-                                'title'=>Yii::t('yii','重置密码'),
-                                'aria-label'=>Yii::t('yii','重置密码'),
-                                'data-pjax'=>'0',
-                                ];
-                        return Html::a()
-                        ]
-                    }
-                ]
-
-            ],
+//            ['class' => 'yii\grid\ActionColumn'
+//                'template'=>'{view}{update}{resetpwd}{privilege}',
+//                'buttons'=>[
+//                    'resetpwd'=>function($url,$model,$key)
+//                    {
+//                        $options=[
+//                                'title'=>Yii::t('yii','重置密码'),
+//                                'aria-label'=>Yii::t('yii','重置密码'),
+//                                'data-pjax'=>'0',
+//                                ];
+//                        return Html::a()
+//                        ]
+//                    }
+//                ]
+//
+//            ],
         ],
     ]); ?>
 </div>
