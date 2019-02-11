@@ -659,6 +659,7 @@ class Security extends Component
 
         }
 
+//       以下是另一种的验证方法
         $test = crypt($password, $hash);
         $n = strlen($test);
         if ($n !== 60) {
