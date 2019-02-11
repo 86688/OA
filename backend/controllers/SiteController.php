@@ -68,14 +68,15 @@ class SiteController extends Controller
      *
      * @return string
      */
+//  登录方法是在site里面的
+//  注册方法是在user里面的
     public function actionLogin()
     {
         // 是否游客
         if (!Yii::$app->user->isGuest) {
             return $this->goHome();
         }
-        //  数据模型的名字
-        $model = new LoginForm();
+//        数据模型的名字
 //        $B=Yii::$app->request->post();
 //        echo '<br>';
 //        echo '<br>';
@@ -87,8 +88,8 @@ class SiteController extends Controller
 //        var_dump($a);
 //        die();
 
+        $model = new LoginForm();
         //收集数据  && 执行loginform的login方法（验证密码用户配对  并且注册用户）
-        // load返回的是bool
         if ($model->load(Yii::$app->request->post()) && $model->login()) {
             return $this->goBack();
 //            没有通过  再次进行填写
@@ -113,7 +114,4 @@ class SiteController extends Controller
         return $this->goHome();
     }
 
-    public function actionTest(){
-        var_dump('111');
-    }
 }

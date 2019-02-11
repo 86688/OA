@@ -90,6 +90,11 @@ class LoginForm extends Model
         if ($this->_user === null) {
             $this->_user = User::findByUsername($this->user_name);
         }
+//        能够顺利获取用户名与密码值
+//        echo '<pre>';
+//        var_dump($this->_user);
+//        echo '<pre>';
+//        die();
 
         return $this->_user;
     }

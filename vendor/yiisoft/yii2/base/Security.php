@@ -640,16 +640,17 @@ class Security extends Component
      */
     public function validatePassword($password, $hash)
     {
+//      验证填写的密码是否为空
         if (!is_string($password) || $password === '') {
-            throw new InvalidArgumentException('Password must be a string and cannot be empty.');
+            throw new InvalidParamException('Password must be a string and cannot be empty.');
         }
-
-        if (!preg_match('/^\$2[axy]\$(\d\d)\$[\.\/0-9A-Za-z]{22}/', $hash, $matches)
-            || $matches[1] < 4
-            || $matches[1] > 30
-        ) {
-            throw new InvalidArgumentException('Hash is invalid.');
-        }
+//      验证是否是哈希加密值
+//        if (!preg_match('/^\$2[axy]\$(\d\d)\$[\.\/0-9A-Za-z]{22}/', $hash, $matches)
+//            || $matches[1] < 4
+//            || $matches[1] > 30
+//        ) {
+//            throw new InvalidParamException('Hash is invalid.');
+//        }
 
         if (function_exists('password_verify')) {
             return password_verify($password, $hash);

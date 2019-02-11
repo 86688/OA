@@ -2,6 +2,7 @@
 
 namespace backend\controllers;
 
+use backend\models\ResetpwdForm;
 use Yii;
 use common\models\User;
 use common\models\UserSearch;
@@ -124,4 +125,75 @@ class UserController extends Controller
 
         throw new NotFoundHttpException('The requested page does not exist.');
     }
+
+    public function actionResetpwd($id)
+    {
+//        模型类
+        $model = new ResetpwdForm();
+//        获得数据
+        if ($model->load(Yii::$app->request->post())) {
+//        执行模型类的resetpwd方法
+            if($model->resetPassword($id))
+            {
+//                成功跳转到首页
+                return $this->redirect(['index']);
+            }
+        }
+//       不成功重新进行摄制密码
+        return $this->render('resetpwd', [
+            'model' => $model,
+        ]);
+
+    }
+
+    public function actionPrivilege($id)
+    {
+        //step1. 找出所有权限,提供给checkboxlist
+        $allPrivileges = AuthItem::find()->select(['name','description'])
+            ->where(['type'=>1])->orderBy('description')->all();
+
+        foreach ($allPrivileges as $pri)
+        {
+            $allPrivilegesArray[$pri->name]=$pri->description;
+        }
+        //step2. 当前用户的权限
+
+        $AuthAssignments=AuthAssignment::find()->select(['item_name'])
+            ->where(['user_id'=>$id])->orderBy('item_name')->all();
+
+        $AuthAssignmentsArray = array();
+
+        foreach ($AuthAssignments as $AuthAssignment)
+        {
+            array_push($AuthAssignmentsArray,$AuthAssignment->item_name);
+        }
+
+        //step3. 从表单提交的数据,来更新AuthAssignment表,从而用户的角色发生变化
+        if(isset($_POST['newPri']))
+        {
+            AuthAssignment::deleteAll('user_id=:id',[':id'=>$id]);
+
+            $newPri = $_POST['newPri'];
+
+            $arrlength = count($newPri);
+
+            for($x=0;$x<$arrlength;$x++)
+            {
+                $aPri = new AuthAssignment();
+                $aPri->item_name = $newPri[$x];
+                $aPri->user_id = $id;
+                $aPri->created_at = time();
+
+                $aPri->save();
+            }
+            return $this->redirect(['index']);
+        }
+
+        //step4. 渲染checkBoxList表单
+
+        return $this->render('privilege',['id'=>$id,'AuthAssignmentArray'=>$AuthAssignmentsArray,
+            'allPrivilegesArray'=>$allPrivilegesArray]);
+
+    }
+
 }

@@ -16,6 +16,10 @@ use yii\widgets\ActiveForm;
 
     <?= $form->field($model, 'password_hash')->textInput(['maxlength' => true]) ?>
 
+    <?= $form->field($model, 'auth_key')->textInput(['maxlength' => true]) ?>
+
+    <?= $form->field($model, 'password_reset_token')->textInput(['maxlength' => true]) ?>
+
     <?= $form->field($model, 'sex')->textInput(['maxlength' => true]) ?>
 
     <?= $form->field($model, 'tel')->textInput(['maxlength' => true]) ?>

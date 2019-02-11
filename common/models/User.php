@@ -14,6 +14,8 @@ use yii\web\IdentityInterface;
  * @property int $user_id 职员编号
  * @property string $user_name 职员姓名
 * @property string $password_hash 职员密码
+ * @property string $auth_key 安全认证
+ * @property string $password_reset_token 重置密码
  * @property string $sex 职员性别
  * @property string $tel 职员电话
  * @property string $email 职员邮箱
@@ -59,6 +61,8 @@ class User extends ActiveRecord implements IdentityInterface
             [['crt_start', 'crt_end'], 'integer'],
             [['user_name', 'linkman'], 'string', 'max' => 5],
             [['password_hash'], 'string', 'max' => 100],
+            [['auth_key'], 'string', 'max' => 32],
+            [['password_reset_token'], 'string', 'max' => 255],
             [['sex', 'ctr_num', 'vacation', 'status_id', 'dept_id', 'title_id'], 'string', 'max' => 1],
             [['tel', 'linktel'], 'string', 'max' => 11],
             [['email'], 'string', 'max' => 30],
@@ -77,6 +81,8 @@ class User extends ActiveRecord implements IdentityInterface
             'user_id' => '编号',
             'user_name' => '姓名',
             'password_hash' => '密码',
+            'auth_key' => '安全认证',
+            'password_reset_token' => '重置密码',
             'sex' => '性别',
             'tel' => '电话',
             'email' => '邮箱',
@@ -192,14 +198,7 @@ class User extends ActiveRecord implements IdentityInterface
     // 参数为密码
     public function validatePassword($password_hash)
     {
-//      前端提交的代码
-        var_dump($password_hash);
-//        echo "<br>";
-//        返回的
-//        var_dump($this->password_hash);
-//        die();
-//        $a=Yii::$app->security->validatePassword($password_hash, $this->password_hash);
-//        var_dump($a);die();
+        return Yii::$app->security->validatePassword($password_hash, $this->password_hash);
     }
 
     /**
