@@ -638,6 +638,8 @@ class Security extends Component
      * @throws InvalidArgumentException on bad password/hash parameters or if crypt() with Blowfish hash is not available.
      * @see generatePasswordHash()
      */
+//    $password表示的是填入的
+//    $hash表示的是数据库的
     public function validatePassword($password, $hash)
     {
 //      验证填写的密码是否为空
@@ -645,15 +647,16 @@ class Security extends Component
             throw new InvalidParamException('Password must be a string and cannot be empty.');
         }
 //      验证是否是哈希加密值
-//        if (!preg_match('/^\$2[axy]\$(\d\d)\$[\.\/0-9A-Za-z]{22}/', $hash, $matches)
-//            || $matches[1] < 4
-//            || $matches[1] > 30
-//        ) {
-//            throw new InvalidParamException('Hash is invalid.');
-//        }
-
+        if (!preg_match('/^\$2[axy]\$(\d\d)\$[\.\/0-9A-Za-z]{22}/', $hash, $matches)
+            || $matches[1] < 4
+            || $matches[1] > 30
+        ) {
+            throw new InvalidParamException('Hash is invalid.');
+        }
+//        使用php内置函数进行对比验证密码
         if (function_exists('password_verify')) {
             return password_verify($password, $hash);
+
         }
 
         $test = crypt($password, $hash);
@@ -661,7 +664,7 @@ class Security extends Component
         if ($n !== 60) {
             return false;
         }
-
+//      字符串比较
         return $this->compareString($test, $hash);
     }
 

@@ -2,22 +2,6 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="da73695b-73d3-4dd7-b409-cfa0504147bb" name="Default" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/dataSources.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/backend/models/ResetpwdForm.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/backend/models/SignupForm.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/backend/views/user/resetpwd.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/controllers/SiteController.php" beforeDir="false" afterPath="$PROJECT_DIR$/backend/controllers/SiteController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/controllers/UserController.php" beforeDir="false" afterPath="$PROJECT_DIR$/backend/controllers/UserController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/views/layouts/main.php" beforeDir="false" afterPath="$PROJECT_DIR$/backend/views/layouts/main.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/views/user/_form.php" beforeDir="false" afterPath="$PROJECT_DIR$/backend/views/user/_form.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/views/user/_search.php" beforeDir="false" afterPath="$PROJECT_DIR$/backend/views/user/_search.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/views/user/create.php" beforeDir="false" afterPath="$PROJECT_DIR$/backend/views/user/create.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/views/user/index.php" beforeDir="false" afterPath="$PROJECT_DIR$/backend/views/user/index.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/common/models/LoginForm.php" beforeDir="false" afterPath="$PROJECT_DIR$/common/models/LoginForm.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/common/models/User.php" beforeDir="false" afterPath="$PROJECT_DIR$/common/models/User.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/common/models/UserSearch.php" beforeDir="false" afterPath="$PROJECT_DIR$/common/models/UserSearch.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/tests/functional/SignupCest.php" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/tests/functional/SignupCest.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/vendor/yiisoft/yii2/base/Security.php" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/yiisoft/yii2/base/Security.php" afterDir="false" />
     </list>
     <ignored path="OA.iws" />
@@ -121,17 +105,17 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/vendor/yiisoft/yii2/base/Security.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="483">
-              <caret line="649" column="15" lean-forward="true" selection-start-line="647" selection-start-column="10" selection-end-line="649" selection-end-column="15" />
+            <state relative-caret-position="429">
+              <caret line="663" selection-start-line="663" selection-end-line="663" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/vendor/yiisoft/yii2/base/InvalidParamException.php">
+        <entry file="jar://$APPLICATION_HOME_DIR$/plugins/php/lib/php.jar!/stubs/password/password.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="228">
-              <caret line="16" column="6" selection-start-line="16" selection-start-column="6" selection-end-line="16" selection-end-column="6" />
+            <state relative-caret-position="477">
+              <caret line="199" column="3" lean-forward="true" selection-start-line="199" selection-start-column="3" selection-end-line="199" selection-end-column="3" />
             </state>
           </provider>
         </entry>
@@ -427,12 +411,12 @@
       <workItem from="1549033469993" duration="2335000" />
       <workItem from="1549072469087" duration="2556000" />
       <workItem from="1549849266872" duration="156000" />
-      <workItem from="1549851341016" duration="8999000" />
+      <workItem from="1549851341016" duration="12317000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="67267000" />
+    <option name="totallyTimeSpent" value="70585000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-6" y="-6" width="1549" height="837" extended-state="6" />
@@ -494,13 +478,6 @@
     </option>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/vendor/yiisoft/yii2/web/Controller.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="249">
-          <caret line="21" column="6" selection-start-line="21" selection-start-column="6" selection-end-line="21" selection-end-column="6" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/vendor/yiisoft/yii2/web/IdentityInterface.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="249">
@@ -740,13 +717,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="jar://$APPLICATION_HOME_DIR$/plugins/php/lib/php.jar!/stubs/password/password.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="591">
-          <caret line="200" column="35" selection-start-line="200" selection-end-line="201" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/../test/index.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="228">
@@ -835,6 +805,16 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/../test/validatepwd.php">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/vendor/yiisoft/yii2/base/InvalidParamException.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="228">
+          <caret line="16" column="6" selection-start-line="16" selection-start-column="6" selection-end-line="16" selection-end-column="6" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/common/models/User.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="257">
@@ -845,17 +825,17 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/vendor/yiisoft/yii2/base/InvalidParamException.php">
+    <entry file="jar://$APPLICATION_HOME_DIR$/plugins/php/lib/php.jar!/stubs/password/password.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="228">
-          <caret line="16" column="6" selection-start-line="16" selection-start-column="6" selection-end-line="16" selection-end-column="6" />
+        <state relative-caret-position="477">
+          <caret line="199" column="3" lean-forward="true" selection-start-line="199" selection-start-column="3" selection-end-line="199" selection-end-column="3" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/vendor/yiisoft/yii2/base/Security.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="483">
-          <caret line="649" column="15" lean-forward="true" selection-start-line="647" selection-start-column="10" selection-end-line="649" selection-end-column="15" />
+        <state relative-caret-position="429">
+          <caret line="663" selection-start-line="663" selection-end-line="663" />
         </state>
       </provider>
     </entry>
