@@ -239,22 +239,14 @@ class User extends ActiveRecord implements IdentityInterface
         $this->password_reset_token = null;
     }
 
-    /**
-     * @return \yii\db\ActiveQuery
-     */
-    public function getDept()
-    {
-        return $this->hasOne(Dept::className(), ['dept_id' => 'dept_id']);
-    }
-
 //    /**
+
 //     * @return \yii\db\ActiveQuery
 //     */
 //    public function getStatuses()
 //    {
 //        return $this->hasOne(Status::className(), ['status_id' => 'status_id']);
 //    }
-
     /**
      * @return \yii\db\ActiveQuery
      */
@@ -264,20 +256,29 @@ class User extends ActiveRecord implements IdentityInterface
     }
 
     //展示下拉菜单   标签对应
+
     public static function allStatus()
     {
         return [self::STATUS_OFFICAL=>'正式',self::STATUS_TRY=>'试用'];
     }
     //性别下拉菜单数组
+    public  function getStatusStr()
+    {
+        return $a=$this->status_id==self::STATUS_OFFICAL?'正式':'试用';
+    }
+    //获取性别
+
     public static function allSex()
     {
         return [self::WOMEN=>'女',self::MAN=>'男'];
     }
 
-
-    //
-    public  function getStatusStr()
+    /**
+     * @return \yii\db\ActiveQuery
+     */
+    public function getDept()
     {
-        return $this->status_id==self::STATUS_OFFICAL?'正式':'试用';
+        return $this->hasOne(Dept::className(), ['dept_id' => 'dept_id']);
     }
+
 }

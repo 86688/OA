@@ -57,7 +57,7 @@ $this->params['breadcrumbs'][] = $this->title;
 //          'status_id',
             [
                 'attribute'=>'status_id',
-                'value'=>'StatusStr',
+                'value'=>$model->StatusStr,
             ],
             'dept_id',
             'title_id',
