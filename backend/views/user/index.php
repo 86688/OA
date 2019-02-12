@@ -17,7 +17,7 @@ $this->params['breadcrumbs'][] = $this->title;
 
     <p>
         <?= Html::a('新入人员', ['create'], ['class' => 'btn btn-success']) ?>
-        <?= Html::a('部门管理', ['dept/create'], ['class' => 'btn btn-success']) ?>
+        <?= Html::a('部门管理', ['dept/index'], ['class' => 'btn btn-success']) ?>
 
     </p>
 
