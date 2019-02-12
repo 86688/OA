@@ -2,6 +2,7 @@
 
 use yii\helpers\Html;
 use yii\widgets\ActiveForm;
+use common\models\User;
 
 /* @var $this yii\web\View */
 /* @var $model common\models\User */
@@ -20,7 +21,7 @@ use yii\widgets\ActiveForm;
 
     <?= $form->field($model, 'password_reset_token')->textInput(['maxlength' => true]) ?>
 
-    <?= $form->field($model, 'sex')->textInput(['maxlength' => true]) ?>
+    <?= $form->field($model, 'sex')->dropDownList(User::allSex(),['prompt'=>'请选择性别']); ?>
 
     <?= $form->field($model, 'tel')->textInput(['maxlength' => true]) ?>
 
@@ -48,7 +49,7 @@ use yii\widgets\ActiveForm;
 
     <?= $form->field($model, 'vacation')->textInput() ?>
 
-    <?= $form->field($model, 'status_id')->textInput() ?>
+    <?= $form->field($model, 'status_id')->dropDownList(User::allStatus(),['prompt'=>'请选择状态']); ?>
 
     <?= $form->field($model, 'dept_id')->textInput() ?>
 

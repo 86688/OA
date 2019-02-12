@@ -43,10 +43,10 @@ $this->params['breadcrumbs'][] = $this->title;
             //'linkman',
             //'linktel',
             //'housing_fund',
-            'vacation',
             'status_id',
             'dept_id',
             'title_id',
+            'vacation',
 
             ['class' => 'yii\grid\ActionColumn',
                 'template'=>'{view} {update} {resetpwd} {privilege}',

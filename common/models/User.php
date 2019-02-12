@@ -40,8 +40,12 @@ use yii\web\IdentityInterface;
  */
 class User extends ActiveRecord implements IdentityInterface
 {
-    const STATUS_DELETED = 0;
-    const STATUS_ACTIVE = 10;
+//    性别
+    const WOMEN=0;
+    const MAN=1;
+//   使用与转正
+    const STATUS_TRY = 0;
+    const STATUS_OFFICAL = 1;
 
     /**
      * @inheritdoc
@@ -57,14 +61,14 @@ class User extends ActiveRecord implements IdentityInterface
     public function rules()
     {
         return [
-            [['tel', 'crt_start', 'crt_end', 'ctr_num', 'status_id', 'dept_id', 'title_id'], 'required'],
-            [['crt_start', 'crt_end'], 'integer'],
+            [['tel', 'crt_start', 'crt_end', 'ctr_num', 'status_id', 'dept_id', 'title_id'], 'required',"message"=>"{attribute}不能为空"],
+            [['crt_start', 'crt_end'], 'integer',"message"=>"{attribute}必须为数字"],
             [['user_name', 'linkman'], 'string', 'max' => 5],
             [['password_hash'], 'string', 'max' => 100],
             [['auth_key'], 'string', 'max' => 32],
             [['password_reset_token'], 'string', 'max' => 255],
             [['sex', 'ctr_num', 'vacation', 'status_id', 'dept_id', 'title_id'], 'string', 'max' => 1],
-            [['tel', 'linktel'], 'string', 'max' => 11],
+            [['tel', 'linktel'], 'string', 'max' => 11,"message"=>"{attribute}只能为数字"],
             [['email'], 'string', 'max' => 30],
             [['id_card'], 'string', 'max' => 18],
             [['school', 'major', 'work_place'], 'string', 'max' => 15],
@@ -89,10 +93,10 @@ class User extends ActiveRecord implements IdentityInterface
             'id_card' => '身份证',
             'school' => '院校',
             'major' => '专业',
-            'crt_start' => '开始',
-            'crt_end' => '结束',
-            'ctr_num' => '合同次数',
-            'work_place' => '工作地',
+            'crt_start' => '合同开始时间',
+            'crt_end' => '合同结束时间',
+            'ctr_num' => '合同签订次数',
+            'work_place' => '办公地',
             'linkman' => '紧急联系人',
             'linktel' => '紧急联系电话',
             'housing_fund' => '公积金',
@@ -243,13 +247,13 @@ class User extends ActiveRecord implements IdentityInterface
         return $this->hasOne(Dept::className(), ['dept_id' => 'dept_id']);
     }
 
-    /**
-     * @return \yii\db\ActiveQuery
-     */
-    public function getStatuses()
-    {
-        return $this->hasMany(Status::className(), ['status_id' => 'status_id']);
-    }
+//    /**
+//     * @return \yii\db\ActiveQuery
+//     */
+//    public function getStatuses()
+//    {
+//        return $this->hasOne(Status::className(), ['status_id' => 'status_id']);
+//    }
 
     /**
      * @return \yii\db\ActiveQuery
@@ -259,4 +263,21 @@ class User extends ActiveRecord implements IdentityInterface
         return $this->hasOne(Title::className(), ['title_id' => 'title_id']);
     }
 
+    //展示下拉菜单   标签对应
+    public static function allStatus()
+    {
+        return [self::STATUS_OFFICAL=>'正式',self::STATUS_TRY=>'试用'];
+    }
+    //性别下拉菜单数组
+    public static function allSex()
+    {
+        return [self::WOMEN=>'女',self::MAN=>'男'];
+    }
+
+
+    //
+    public  function getStatusStr()
+    {
+        return $this->status_id==self::STATUS_OFFICAL?'正式':'试用';
+    }
 }

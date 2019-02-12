@@ -3,6 +3,7 @@
 use yii\helpers\Html;
 use yii\widgets\DetailView;
 
+
 /* @var $this yii\web\View */
 /* @var $model common\models\User */
 
@@ -37,15 +38,27 @@ $this->params['breadcrumbs'][] = $this->title;
             'id_card',
             'school',
             'major',
-            'crt_start',
-            'crt_end',
+//            'crt_start',
+            [
+               'attribute'=>'crt_start',
+                'format'=>['date','php:Y-m-d'],
+            ],
+//            'crt_end',
+            [
+                'attribute'=>'crt_start',
+                'format'=>['date','php:Y-m-d'],
+            ],
             'ctr_num',
             'work_place',
             'linkman',
             'linktel',
             'housing_fund',
             'vacation',
-            'status_id',
+//          'status_id',
+            [
+                'attribute'=>'status_id',
+                'value'=>'StatusStr',
+            ],
             'dept_id',
             'title_id',
         ],
