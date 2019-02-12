@@ -66,6 +66,7 @@ class UserController extends Controller
     public function actionCreate()
     {
         $model = new User();
+        $model->password_hash='$2y$13$HtJqGRmc76KIRIwokii8AOQ1XZljXiuWCKUGFnH9vkTnfBpHtqgFu';
 
         if ($model->load(Yii::$app->request->post()) && $model->save()) {
             return $this->redirect(['view', 'id' => $model->user_id]);
