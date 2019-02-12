@@ -44,11 +44,11 @@ class Dept extends \yii\db\ActiveRecord
     public function attributeLabels()
     {
         return [
-            'dept_id' => 'Dept ID',
-            'dept_name' => 'Dept Name',
-            'dept_level' => 'Dept Level',
-            'dept_p_id' => 'Dept P ID',
-            'dept_status' => 'Dept Status',
+            'dept_id' => '部门编号',
+            'dept_name' => '部门名字',
+            'dept_level' => '部门级别',
+            'dept_p_id' => '上级部门',
+            'dept_status' => '部门状态',
         ];
     }
 

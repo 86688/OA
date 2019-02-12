@@ -7,16 +7,15 @@ use yii\grid\GridView;
 /* @var $searchModel common\models\DeptSearch */
 /* @var $dataProvider yii\data\ActiveDataProvider */
 
-$this->title = 'Depts';
+$this->title = '新建部门';
 $this->params['breadcrumbs'][] = $this->title;
 ?>
 <div class="dept-index">
 
-    <h1><?= Html::encode($this->title) ?></h1>
-    <?php // echo $this->render('_search', ['model' => $searchModel]); ?>
+<!--    --><?php // echo $this->render('_search', ['model' => $searchModel]); ?>
 
     <p>
-        <?= Html::a('Create Dept', ['create'], ['class' => 'btn btn-success']) ?>
+        <?= Html::a('新建部门', ['create'], ['class' => 'btn btn-success']) ?>
     </p>
 
     <?= GridView::widget([
@@ -27,11 +26,11 @@ $this->params['breadcrumbs'][] = $this->title;
 
             'dept_id',
             'dept_name',
-            'dept_level',
-            'dept_p_id',
+//            'dept_level',
+//            'dept_p_id',
             'dept_status',
 
             ['class' => 'yii\grid\ActionColumn'],
-        ],
-    ]); ?>
-</div>
+        ]
+    ])
+    ?>

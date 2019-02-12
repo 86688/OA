@@ -5,10 +5,10 @@ use yii\helpers\Html;
 /* @var $this yii\web\View */
 /* @var $model common\models\Dept */
 
-$this->title = 'Update Dept: {nameAttribute}';
-$this->params['breadcrumbs'][] = ['label' => 'Depts', 'url' => ['index']];
-$this->params['breadcrumbs'][] = ['label' => $model->dept_id, 'url' => ['view', 'id' => $model->dept_id]];
-$this->params['breadcrumbs'][] = 'Update';
+//$this->title = 'Update Dept: {nameAttribute}';
+$this->params['breadcrumbs'][] = ['label' => '部门', 'url' => ['index']];
+$this->params['breadcrumbs'][] = ['label' => $model->dept_name, 'url' => ['view', 'id' => $model->dept_id]];
+$this->params['breadcrumbs'][] = '更新';
 ?>
 <div class="dept-update">
 
