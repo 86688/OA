@@ -71,4 +71,5 @@ class Dept extends \yii\db\ActiveRecord
             ->column();
         return $allDept;
     }
+
 }

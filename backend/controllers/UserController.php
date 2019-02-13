@@ -97,13 +97,7 @@ class UserController extends Controller
         ]);
     }
 
-    /**
-     * Deletes an existing User model.
-     * If deletion is successful, the browser will be redirected to the 'index' page.
-     * @param integer $id
-     * @return mixed
-     * @throws NotFoundHttpException if the model cannot be found
-     */
+
     public function actionDelete($id)
     {
         $this->findModel($id)->delete();
@@ -197,22 +191,6 @@ class UserController extends Controller
 
     }
 
-    public function actionDept(){
-//        $model=new User();
-//        $a=$model->getDept();
-//        echo '<pre>';
-//        var_dump($a);
-//        echo '<pre>';
-//        die();
-//        $dept_id=1;
-//        $a=User::findByDept($dept_id);
-//        var_dump($a);
-//        die();
-//        $b=$a->dept0->dept_name;
-//        var_dump($b);
-//        die('1');
-
-    }
 
 
 

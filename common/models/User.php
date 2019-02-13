@@ -169,47 +169,31 @@ class User extends ActiveRecord implements IdentityInterface
         return $timestamp + $expire >= time();
     }
 
-    /**
-     * @inheritdoc
-     */
+    //获取主键
     public function getId()
     {
         return $this->getPrimaryKey();
     }
 
-    /**
-     * @inheritdoc
-     */
+    // 获取getAuthKey
     public function getAuthKey()
     {
         return $this->auth_key;
     }
 
-    /**
-     * @inheritdoc
-     */
+    // 验证authkey
     public function validateAuthKey($authKey)
     {
         return $this->getAuthKey() === $authKey;
     }
 
-    /**
-     * Validates password
-     *
-     * @param string $password password to validate
-     * @return boolean if password provided is valid for current user
-     */
-    // 参数为密码
+    // 验证密码   参数为密码
     public function validatePassword($password_hash)
     {
         return Yii::$app->security->validatePassword($password_hash, $this->password_hash);
     }
 
-    /**
-     * Generates password hash from password and sets it to the model
-     *
-     * @param string $password
-     */
+    //产生密码的哈希值
     public function setPassword($password_hash)
     {
         $this->password_hash = Yii::$app->security->generatePasswordHash($password_hash);
@@ -239,17 +223,6 @@ class User extends ActiveRecord implements IdentityInterface
         $this->password_reset_token = null;
     }
 
-//    /**
-
-//     * @return \yii\db\ActiveQuery
-//     */
-//    public function getStatuses()
-//    {
-//        return $this->hasOne(Status::className(), ['status_id' => 'status_id']);
-//    }
-    /**
-     * @return \yii\db\ActiveQuery
-     */
     public function getTitle()
     {
         return $this->hasOne(Title::className(), ['title_id' => 'title_id']);
@@ -263,30 +236,12 @@ class User extends ActiveRecord implements IdentityInterface
     //展示页面获取所有性别
     public static function allSex()
     {
-        return [self::WOMEN=>'女',self::MAN=>'男'];
+        return [self::MAN=>'男',self::WOMEN=>'女'];
     }
     //性别下拉菜单数组
     public  function getStatusStr()
     {
         return $a=$this->status_id==self::STATUS_OFFICAL?'正式':'试用';
     }
-
-
-    public function findByDept($dept_id)
-    {
-        return static::findOne(['dept_id' => $dept_id]);
-    }
-    /**
-     * @return \yii\db\ActiveQuery
-     */
-//    hasone 一用户对应一部门  hasone(主表：：classname(),['主表字段'=>'从表字段'])；
-    public function getDept0()
-    {
-        $a=$this->hasOne(Dept::className(), ['dept_id' => '1']);
-//        var_dump($a);
-//        die();
-    }
-
-
 
 }
