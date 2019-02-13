@@ -25,6 +25,7 @@ $this->params['breadcrumbs'][] = $this->title;
     </p>
 
     <?= DetailView::widget([
+//      从控制器返回过来的数据 $model
         'model' => $model,
         'attributes' => [
             'dept_id',

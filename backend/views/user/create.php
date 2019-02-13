@@ -3,6 +3,7 @@
 use yii\helpers\Html;
 use yii\widgets\ActiveForm;
 use common\models\User;
+use common\models\Dept;
 
 
 
@@ -47,9 +48,9 @@ $this->params['breadcrumbs'][] = $this->title;
 
     <?= $form->field($model, 'vacation')->textInput() ?>
 
-    <?= $form->field($model, 'status_id')->dropDownList(User::allStatus(),['prompt'=>'请选择状态']); ?>
+    <?= $form->field($model, 'status_id')->dropDownList(User::allStatus(),['prompt'=>'请输入状态']); ?>
 
-    <?= $form->field($model, 'dept_id')->textInput() ?>
+    <?= $form->field($model, 'dept_id')->dropDownList(Dept::allDept(),['prompt'=>'请输入部门']) ?>
 
     <?= $form->field($model, 'title_id')->textInput() ?>
 

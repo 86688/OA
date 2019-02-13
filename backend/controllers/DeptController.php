@@ -116,12 +116,20 @@ class DeptController extends Controller
      * @return Dept the loaded model
      * @throws NotFoundHttpException if the model cannot be found
      */
+//    根据主键找出一条字段的所有数据
     protected function findModel($id)
     {
         if (($model = Dept::findOne($id)) !== null) {
             return $model;
         }
 
-        throw new NotFoundHttpException('The requested page does not exist.');
+        throw new NotFoundHttpException('页面不存在');
     }
+
+    public function actionTest()
+    {
+//        $a=Dept::allDept();
+    }
+
+
 }

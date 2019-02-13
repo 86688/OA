@@ -255,30 +255,38 @@ class User extends ActiveRecord implements IdentityInterface
         return $this->hasOne(Title::className(), ['title_id' => 'title_id']);
     }
 
-    //展示下拉菜单   标签对应
-
+    //展示页面获取所有的状态
     public static function allStatus()
     {
         return [self::STATUS_OFFICAL=>'正式',self::STATUS_TRY=>'试用'];
+    }
+    //展示页面获取所有性别
+    public static function allSex()
+    {
+        return [self::WOMEN=>'女',self::MAN=>'男'];
     }
     //性别下拉菜单数组
     public  function getStatusStr()
     {
         return $a=$this->status_id==self::STATUS_OFFICAL?'正式':'试用';
     }
-    //获取性别
 
-    public static function allSex()
+
+    public function findByDept($dept_id)
     {
-        return [self::WOMEN=>'女',self::MAN=>'男'];
+        return static::findOne(['dept_id' => $dept_id]);
     }
-
     /**
      * @return \yii\db\ActiveQuery
      */
-    public function getDept()
+//    hasone 一用户对应一部门  hasone(主表：：classname(),['主表字段'=>'从表字段'])；
+    public function getDept0()
     {
-        return $this->hasOne(Dept::className(), ['dept_id' => 'dept_id']);
+        $a=$this->hasOne(Dept::className(), ['dept_id' => '1']);
+//        var_dump($a);
+//        die();
     }
+
+
 
 }

@@ -3,6 +3,7 @@
 namespace common\models;
 
 use Yii;
+use yii\db\QueryBuilder;
 
 /**
  * This is the model class for table "dept".
@@ -58,5 +59,16 @@ class Dept extends \yii\db\ActiveRecord
     public function getDept()
     {
         return $this->hasOne(User::className(), ['dept_id' => 'dept_id']);
+    }
+
+    // 找出所有的部门
+    public static function allDept()
+    {
+        $allDept=Dept::find()
+            ->select(['dept_name'])
+            ->from('dept')
+            ->indexBy('dept_id')
+            ->column();
+        return $allDept;
     }
 }

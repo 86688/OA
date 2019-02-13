@@ -160,6 +160,7 @@ class ActiveDataProvider extends BaseDataProvider
     /**
      * {@inheritdoc}
      */
+//    准备所有的个数
     protected function prepareTotalCount()
     {
         if (!$this->query instanceof QueryInterface) {
@@ -172,6 +173,7 @@ class ActiveDataProvider extends BaseDataProvider
     /**
      * {@inheritdoc}
      */
+//    排序
     public function setSort($value)
     {
         parent::setSort($value);
