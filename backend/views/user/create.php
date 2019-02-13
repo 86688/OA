@@ -4,6 +4,7 @@ use yii\helpers\Html;
 use yii\widgets\ActiveForm;
 use common\models\User;
 use common\models\Dept;
+use common\models\Title;
 
 
 
@@ -52,7 +53,7 @@ $this->params['breadcrumbs'][] = $this->title;
 
     <?= $form->field($model, 'dept_id')->dropDownList(Dept::allDept(),['prompt'=>'请输入部门']) ?>
 
-    <?= $form->field($model, 'title_id')->textInput() ?>
+    <?= $form->field($model, 'title_id')->dropDownList(Title::allTitle(),['prompt'=>'请输入职称']) ?>
 
     <div class="form-group">
         <?= Html::submitButton('Save', ['class' => 'btn btn-success']) ?>

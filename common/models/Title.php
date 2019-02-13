@@ -55,4 +55,15 @@ class Title extends \yii\db\ActiveRecord
     {
         return $this->hasOne(User::className(), ['title_id' => 'title_id']);
     }
+
+    // 找出所有的职位
+    public static function allTitle()
+    {
+        $allTitle=Title::find()
+            ->select(['title_name'])
+            ->from('title')
+            ->indexBy('title_id')
+            ->column();
+        return $allTitle;
+    }
 }
