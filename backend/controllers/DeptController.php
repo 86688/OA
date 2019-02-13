@@ -126,10 +126,10 @@ class DeptController extends Controller
         throw new NotFoundHttpException('页面不存在');
     }
 
-    public function actionTest()
-    {
+//    public function actionTest()
+//    {
 //        $a=Dept::allDept();
-    }
+//    }
 
 
 }

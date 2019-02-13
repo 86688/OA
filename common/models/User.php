@@ -223,11 +223,6 @@ class User extends ActiveRecord implements IdentityInterface
         $this->password_reset_token = null;
     }
 
-    public function getTitle()
-    {
-        return $this->hasOne(Title::className(), ['title_id' => 'title_id']);
-    }
-
     //展示页面获取所有的状态
     public static function allStatus()
     {
@@ -241,7 +236,15 @@ class User extends ActiveRecord implements IdentityInterface
     //性别下拉菜单数组
     public  function getStatusStr()
     {
-        return $a=$this->status_id==self::STATUS_OFFICAL?'正式':'试用';
+        return $this->status_id==self::STATUS_OFFICAL?'正式':'试用';
+    }
+    //获取部门名字  用于view页面
+    public function getDept0()
+    {
+        $a=$this->hasOne(Title::className(), ['title_id' => 'title_id']);
+        return $a;
+//        var_dump($a);
+//        die();
     }
 
 }

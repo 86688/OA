@@ -15,9 +15,6 @@ use yii\filters\VerbFilter;
  */
 class UserController extends Controller
 {
-    /**
-     * @inheritdoc
-     */
     public function behaviors()
     {
         return [
@@ -30,10 +27,6 @@ class UserController extends Controller
         ];
     }
 
-    /**
-     * Lists all User models.
-     * @return mixed
-     */
     public function actionIndex()
     {
         $searchModel = new UserSearch();
@@ -53,6 +46,17 @@ class UserController extends Controller
      */
     public function actionView($id)
     {
+//        var_dump('1');
+//        die();
+        $the_Dept=User::findone($id);
+        die($the_Dept);
+        $dd=$the_Dept->Dept0;
+        var_dump($dd);
+        echo '<br>';
+        var_dump('1');
+        die();
+
+
         return $this->render('view', [
             'model' => $this->findModel($id),
         ]);
@@ -191,7 +195,10 @@ class UserController extends Controller
 
     }
 
+    // 收集view的用户ID 进行传递至模型  返回来的是部门的名字
+    public function actionTest($id)
+    {
+//        $a=$this->findModel($id);
 
-
-
+    }
 }

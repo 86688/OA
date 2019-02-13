@@ -59,7 +59,11 @@ $this->params['breadcrumbs'][] = $this->title;
                 'attribute'=>'status_id',
                 'value'=>$model->StatusStr,
             ],
-            'dept_id',
+//            'dept_id',
+            [
+                'attribute'=>'dept_id',
+//                'value'=>$model->,
+            ],
             'title_id',
         ],
     ]) ?>
