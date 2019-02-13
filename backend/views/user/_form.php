@@ -49,11 +49,11 @@ use common\models\User;
 
     <?= $form->field($model, 'vacation')->textInput() ?>
 
-    <?= $form->field($model, 'status_id')->dropDownList(User::allStatus(),['prompt'=>'请选择状态']); ?>
+    <?= $form->field($model, 'status_id')->dropDownList(User::allStatus(),['prompt'=>'请输入状态']); ?>
 
-    <?= $form->field($model, 'dept_id')->textInput() ?>
+    <?= $form->field($model, 'dept_id')->dropDownList(Dept::allDept(),['prompt'=>'请输入部门']) ?>
 
-    <?= $form->field($model, 'title_id')->textInput() ?>
+    <?= $form->field($model, 'title_id')->dropDownList(Title::allTitle(),['prompt'=>'请输入职称']) ?>
 
     <div class="form-group">
         <?= Html::submitButton('Save', ['class' => 'btn btn-success']) ?>
