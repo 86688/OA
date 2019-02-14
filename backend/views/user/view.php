@@ -27,6 +27,7 @@ $this->params['breadcrumbs'][] = $this->title;
     </p>
 
     <?= DetailView::widget([
+//            此处的model属于的是user的模型！
         'model' => $model,
         'attributes' => [
             'user_id',
@@ -57,7 +58,7 @@ $this->params['breadcrumbs'][] = $this->title;
 //          'status_id',
             [
                 'attribute'=>'status_id',
-                'value'=>$model->StatusStr,
+                'value'=>$model->status->status_name,
             ],
 //            'dept_id',
             [

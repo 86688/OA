@@ -234,9 +234,9 @@ class User extends ActiveRecord implements IdentityInterface
         return [self::MAN=>'男',self::WOMEN=>'女'];
     }
     //性别下拉菜单数组
-    public  function getStatusStr()
+    public  function getStatus()
     {
-        return $this->status_id==self::STATUS_OFFICAL?'正式':'试用';
+        return $this->hasOne(Status::className(), ['status_id' => 'status_id']);
     }
     //获取部门名字  用于view页面
     public function getDept()

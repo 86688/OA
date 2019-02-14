@@ -50,7 +50,7 @@ $this->params['breadcrumbs'][] = $this->title;
             [
                 'attribute'=>'dept_id',
 //                'value'=>$model->dept->dept_name,
-            ],  
+            ],
             'title_id',
             'vacation',
 
