@@ -12,9 +12,7 @@ $this->params['breadcrumbs'][] = ['label' => '人员', 'url' => ['index']];
 $this->params['breadcrumbs'][] = $this->title;
 ?>
 <div class="user-view">
-
-    <!-- <h1><?= Html::encode($this->title) ?></h1> -->
-
+    
     <p>
         <?= Html::a('修改', ['update', 'id' => $model->user_id], ['class' => 'btn btn-primary']) ?>
         <?= Html::a('删除', ['delete', 'id' => $model->user_id], [
@@ -27,24 +25,21 @@ $this->params['breadcrumbs'][] = $this->title;
     </p>
 
     <?= DetailView::widget([
-//            此处的model属于的是user的模型！
+        //此处的model属于的是user的模型！
         'model' => $model,
         'attributes' => [
             'user_id',
             'user_name',
-//            'password_hash',
             'sex',
             'tel',
             'email:email',
             'id_card',
             'school',
             'major',
-//            'crt_start',
             [
                'attribute'=>'crt_start',
                 'format'=>['date','php:Y-m-d'],
             ],
-//            'crt_end',
             [
                 'attribute'=>'crt_start',
                 'format'=>['date','php:Y-m-d'],
@@ -55,17 +50,14 @@ $this->params['breadcrumbs'][] = $this->title;
             'linktel',
             'housing_fund',
             'vacation',
-//          'status_id',
             [
                 'attribute'=>'status_id',
                 'value'=>$model->status->status_name,
             ],
-//            'dept_id',
             [
                 'attribute'=>'dept_id',
                 'value'=>$model->dept->dept_name,
             ],
-//            'title_id',
             [
                 'attribute'=>'title_id',
                 'value'=>$model->title->title_name,
