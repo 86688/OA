@@ -1,12 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="da73695b-73d3-4dd7-b409-cfa0504147bb" name="Default" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/views/user/index.php" beforeDir="false" afterPath="$PROJECT_DIR$/backend/views/user/index.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/views/user/view.php" beforeDir="false" afterPath="$PROJECT_DIR$/backend/views/user/view.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/common/models/User.php" beforeDir="false" afterPath="$PROJECT_DIR$/common/models/User.php" afterDir="false" />
-    </list>
+    <list default="true" id="da73695b-73d3-4dd7-b409-cfa0504147bb" name="Default" comment="" />
     <ignored path="OA.iws" />
     <ignored path=".idea/workspace.xml" />
     <ignored path=".idea/dataSources.local.xml" />
@@ -76,7 +71,7 @@
         <entry file="file://$PROJECT_DIR$/backend/views/user/view.php">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="331">
-              <caret line="63" column="12" lean-forward="true" selection-start-line="62" selection-end-line="65" selection-end-column="14" />
+              <caret line="63" column="12" selection-start-line="62" selection-end-line="65" selection-end-column="14" />
               <folding>
                 <element signature="e#7#28#0#PHP" expanded="true" />
               </folding>
@@ -88,7 +83,7 @@
         <entry file="file://$PROJECT_DIR$/backend/views/user/index.php">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="500">
-              <caret line="52" column="14" selection-start-line="52" selection-start-column="14" selection-end-line="52" selection-end-column="14" />
+              <caret line="52" column="14" lean-forward="true" selection-start-line="52" selection-start-column="14" selection-end-line="52" selection-end-column="14" />
               <folding>
                 <element signature="e#7#28#0#PHP" expanded="true" />
               </folding>
@@ -378,12 +373,12 @@
       <workItem from="1549955706676" duration="1822000" />
       <workItem from="1549958159733" duration="7840000" />
       <workItem from="1550024122724" duration="21839000" />
-      <workItem from="1550122457012" duration="1797000" />
+      <workItem from="1550122457012" duration="2037000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="121760000" />
+    <option name="totallyTimeSpent" value="122000000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-6" y="-6" width="1549" height="837" extended-state="6" />
@@ -785,7 +780,7 @@
     <entry file="file://$PROJECT_DIR$/backend/views/user/view.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="331">
-          <caret line="63" column="12" lean-forward="true" selection-start-line="62" selection-end-line="65" selection-end-column="14" />
+          <caret line="63" column="12" selection-start-line="62" selection-end-line="65" selection-end-column="14" />
           <folding>
             <element signature="e#7#28#0#PHP" expanded="true" />
           </folding>
@@ -795,7 +790,7 @@
     <entry file="file://$PROJECT_DIR$/backend/views/user/index.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="500">
-          <caret line="52" column="14" selection-start-line="52" selection-start-column="14" selection-end-line="52" selection-end-column="14" />
+          <caret line="52" column="14" lean-forward="true" selection-start-line="52" selection-start-column="14" selection-end-line="52" selection-end-column="14" />
           <folding>
             <element signature="e#7#28#0#PHP" expanded="true" />
           </folding>
