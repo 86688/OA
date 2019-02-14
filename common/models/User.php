@@ -239,12 +239,14 @@ class User extends ActiveRecord implements IdentityInterface
         return $this->status_id==self::STATUS_OFFICAL?'正式':'试用';
     }
     //获取部门名字  用于view页面
-    public function getDept0()
+    public function getDept()
     {
-        $a=$this->hasOne(Title::className(), ['title_id' => 'title_id']);
-        return $a;
-//        var_dump($a);
-//        die();
+        return $this->hasOne(Dept::className(), ['dept_id' => 'dept_id']);
+    }
+    //获取职称  用于view页面
+    public function getTitle()
+    {
+        return $this->hasOne(Title::className(), ['title_id' => 'title_id']);
     }
 
 }

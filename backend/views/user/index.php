@@ -2,6 +2,9 @@
 
 use yii\helpers\Html;
 use yii\grid\GridView;
+use common\models\Dept;
+use common\models\Title;
+
 
 /* @var $this yii\web\View */
 /* @var $searchModel common\models\UserSearch */
@@ -43,7 +46,11 @@ $this->params['breadcrumbs'][] = $this->title;
             //'linktel',
             //'housing_fund',
             'status_id',
-            'dept_id',
+//            'dept_id',
+            [
+                'attribute'=>'dept_id',
+                'value'=>$model->dept->dept_name,
+            ],
             'title_id',
             'vacation',
 
