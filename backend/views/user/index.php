@@ -52,6 +52,7 @@ $this->params['breadcrumbs'][] = $this->title;
             ['class' => 'yii\grid\ActionColumn',
                 'template'=>'{view} {update} {delete} {resetpwd} {privilege}',
                 'buttons'=>[
+                    //$url 是列为按钮创建的URL，$model是当前要渲染的模型对象， 并且 $key 是在数据提供者数组中模型的键
                     'resetpwd'=>function($url,$model,$key)
                     {
                         $options=[
