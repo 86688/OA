@@ -1,9 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="da73695b-73d3-4dd7-b409-cfa0504147bb" name="Default" comment="">
-      <change beforePath="$PROJECT_DIR$/backend/views/user/view.php" beforeDir="false" afterPath="$PROJECT_DIR$/backend/views/user/view.php" afterDir="false" />
-    </list>
+    <list default="true" id="da73695b-73d3-4dd7-b409-cfa0504147bb" name="Default" comment="" />
     <ignored path="OA.iws" />
     <ignored path=".idea/workspace.xml" />
     <ignored path=".idea/dataSources.local.xml" />
@@ -57,8 +55,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/backend/views/user/view.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="132">
-              <caret line="54" column="52" selection-start-line="54" selection-start-column="41" selection-end-line="54" selection-end-column="52" />
+            <state relative-caret-position="232">
+              <caret line="58" column="50" selection-start-line="58" selection-start-column="19" selection-end-line="58" selection-end-column="50" />
               <folding>
                 <element signature="e#7#28#0#PHP" expanded="true" />
               </folding>
@@ -375,12 +373,12 @@
       <workItem from="1549955706676" duration="1822000" />
       <workItem from="1549958159733" duration="7840000" />
       <workItem from="1550024122724" duration="21839000" />
-      <workItem from="1550122457012" duration="5260000" />
+      <workItem from="1550122457012" duration="5291000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="125223000" />
+    <option name="totallyTimeSpent" value="125254000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-6" y="-6" width="1549" height="837" extended-state="6" />
@@ -787,8 +785,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/backend/views/user/view.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="132">
-          <caret line="54" column="52" selection-start-line="54" selection-start-column="41" selection-end-line="54" selection-end-column="52" />
+        <state relative-caret-position="232">
+          <caret line="58" column="50" selection-start-line="58" selection-start-column="19" selection-end-line="58" selection-end-column="50" />
           <folding>
             <element signature="e#7#28#0#PHP" expanded="true" />
           </folding>
