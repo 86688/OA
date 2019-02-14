@@ -48,13 +48,13 @@ class UserController extends Controller
     {
 //        var_dump('1');
 //        die();
-        $the_Dept=User::findone($id);
-        die($the_Dept);
-        $dd=$the_Dept->Dept0;
-        var_dump($dd);
-        echo '<br>';
-        var_dump('1');
-        die();
+//        $the_Dept=User::findone($id);
+//        die($the_Dept);
+//        $dd=$the_Dept->Dept0;
+//        var_dump($dd);
+//        echo '<br>';
+//        var_dump('1');
+//        die();
 
 
         return $this->render('view', [

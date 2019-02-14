@@ -48,8 +48,10 @@ $this->params['breadcrumbs'][] = $this->title;
             'vacation',
 
             ['class' => 'yii\grid\ActionColumn',
-                'template'=>'{view} {update} {resetpwd} {privilege}',
+                'template'=>'{view} {update} {delete} {resetpwd} {privilege}',
+
                 'buttons'=>[
+
                     'resetpwd'=>function($url,$model,$key)
                     {
                         $options=[

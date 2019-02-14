@@ -163,13 +163,13 @@ class ActionColumn extends Column
             $this->buttons[$name] = function ($url, $model, $key) use ($name, $iconName, $additionalOptions) {
                 switch ($name) {
                     case 'view':
-                        $title = Yii::t('yii', 'View');
+                        $title = Yii::t('yii', '查看');
                         break;
                     case 'update':
-                        $title = Yii::t('yii', 'Update');
+                        $title = Yii::t('yii', '更新');
                         break;
                     case 'delete':
-                        $title = Yii::t('yii', 'Delete');
+                        $title = Yii::t('yii', '删除');
                         break;
                     default:
                         $title = ucfirst($name);
