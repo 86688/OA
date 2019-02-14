@@ -12,7 +12,7 @@ $this->params['breadcrumbs'][] = ['label' => '人员', 'url' => ['index']];
 $this->params['breadcrumbs'][] = $this->title;
 ?>
 <div class="user-view">
-    
+
     <p>
         <?= Html::a('修改', ['update', 'id' => $model->user_id], ['class' => 'btn btn-primary']) ?>
         <?= Html::a('删除', ['delete', 'id' => $model->user_id], [
@@ -56,6 +56,7 @@ $this->params['breadcrumbs'][] = $this->title;
             ],
             [
                 'attribute'=>'dept_id',
+                // $model执行dept方法然后进行取出dept_name字段
                 'value'=>$model->dept->dept_name,
             ],
             [
