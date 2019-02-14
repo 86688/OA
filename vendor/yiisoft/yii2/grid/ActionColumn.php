@@ -166,7 +166,7 @@ class ActionColumn extends Column
                         $title = Yii::t('yii', '查看');
                         break;
                     case 'update':
-                        $title = Yii::t('yii', '更新');
+                        $title = Yii::t('yii', '修改');
                         break;
                     case 'delete':
                         $title = Yii::t('yii', '删除');
