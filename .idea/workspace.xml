@@ -72,7 +72,7 @@
         <entry file="file://$PROJECT_DIR$/backend/controllers/UserController.php">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="375">
-              <caret line="65" lean-forward="true" selection-start-line="65" selection-end-line="65" />
+              <caret line="65" selection-start-line="65" selection-end-line="65" />
               <folding>
                 <element signature="e#39#47#0#PHP" expanded="true" />
                 <element signature="e#223#292#0#PHP" />
@@ -248,7 +248,7 @@
       <path value="$PROJECT_DIR$/vendor/psr/log" />
     </include_path>
   </component>
-  <component name="ProjectFrameBounds" extendedState="6">
+  <component name="ProjectFrameBounds" extendedState="7">
     <option name="x" value="750" />
     <option name="width" value="1460" />
     <option name="height" value="890" />
@@ -382,15 +382,15 @@
       <workItem from="1550024122724" duration="21839000" />
       <workItem from="1550122457012" duration="8050000" />
       <workItem from="1550194617439" duration="5399000" />
-      <workItem from="1550205633319" duration="6537000" />
+      <workItem from="1550205633319" duration="6880000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="139949000" />
+    <option name="totallyTimeSpent" value="140292000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-6" y="-6" width="1549" height="837" extended-state="6" />
+    <frame x="-6" y="-6" width="1549" height="837" extended-state="7" />
     <editor active="true" />
     <layout>
       <window_info id="Structure" order="0" weight="0.25" />
@@ -816,7 +816,7 @@
     <entry file="file://$PROJECT_DIR$/backend/controllers/UserController.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="375">
-          <caret line="65" lean-forward="true" selection-start-line="65" selection-end-line="65" />
+          <caret line="65" selection-start-line="65" selection-end-line="65" />
           <folding>
             <element signature="e#39#47#0#PHP" expanded="true" />
             <element signature="e#223#292#0#PHP" />
