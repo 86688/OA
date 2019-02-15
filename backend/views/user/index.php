@@ -4,6 +4,8 @@ use yii\helpers\Html;
 use yii\grid\GridView;
 use common\models\Dept;
 use common\models\Title;
+use yii\helpers\Url;
+
 
 
 /* @var $this yii\web\View */
@@ -52,13 +54,17 @@ $this->params['breadcrumbs'][] = $this->title;
             ['class' => 'yii\grid\ActionColumn',
                 'template'=>'{view} {update} {delete} {resetpwd} {privilege}',
                 'buttons'=>[
-                    //$url 是列为按钮创建的URL，$model是当前要渲染的模型对象， 并且 $key 是在数据提供者数组中模型的键
+                    //$url 是列为按钮创建的URL，
+                    //$model是当前要渲染的模型对象，
+                    //$key 是在数据提供者数组中模型的键
                     'resetpwd'=>function($url,$model,$key)
                     {
                         $options=[
                             'title'=>Yii::t('yii','重置密码'),
                             'aria-label'=>Yii::t('yii','重置密码'),
                             'data-pjax'=>'0',
+                            'data-confirm' => Yii::t('yii', '确认重置密码吗?'),
+
                         ];
                         return Html::a('<span class="glyphicon glyphicon-lock"></span>',$url,$options);
                     },
