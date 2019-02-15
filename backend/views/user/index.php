@@ -66,7 +66,7 @@ $this->params['breadcrumbs'][] = $this->title;
                             'data-confirm' => Yii::t('yii', '确认重置吗?'),
 
                         ];
-                        return Html::a('<span class="glyphicon glyphicon-lock"></span>',['user/resetpwd'],$options);
+                        return Html::a('<span class="glyphicon glyphicon-lock"></span>',['user/resetpwd', 'id' => $key],$options);
                     },
 
                     'privilege'=>function($url,$model,$key)
