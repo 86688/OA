@@ -8,7 +8,7 @@ use common\models\UserSearch;
 use yii\web\Controller;
 use yii\web\NotFoundHttpException;
 use yii\filters\VerbFilter;
-use yii\db\mssql\QueryBuilder;
+
 
 /**
  * UserController implements the CRUD actions for User model.
@@ -62,10 +62,12 @@ class UserController extends Controller
     //执行重置密码
     public function actionResetpwd($id)
     {
-//        $sql = $queryBuilder->update('user', ['password_hash' => '$2y$13$HtJqGRmc76KIRIwokii8AOQ1XZljXiuWCKUGFnH9vkTnfBpHtqgFu'], 'age > 30', $params);
-
+        $user = User::findOne($id);
+        $user->password_hash ='$2y$13$HtJqGRmc76KIRIwokii8AOQ1XZljXiuWCKUGFnH9vkTnfBpHtqgFu';
+        if($user->save(true,['password_hash'])){
+            return $this->redirect(['index']);
+        }
     }
-
 
     public function actionDelete($id)
     {
