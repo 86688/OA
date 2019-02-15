@@ -63,10 +63,10 @@ $this->params['breadcrumbs'][] = $this->title;
                             'title'=>Yii::t('yii','重置密码'),
                             'aria-label'=>Yii::t('yii','重置密码'),
                             'data-pjax'=>'0',
-                            'data-confirm' => Yii::t('yii', '确认重置密码吗?'),
+                            'data-confirm' => Yii::t('yii', '确认重置吗?'),
 
                         ];
-                        return Html::a('<span class="glyphicon glyphicon-lock"></span>',$url,$options);
+                        return Html::a('<span class="glyphicon glyphicon-lock"></span>',['user/resetpwd'],$options);
                     },
 
                     'privilege'=>function($url,$model,$key)

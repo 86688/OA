@@ -114,21 +114,16 @@ class UserController extends Controller
         throw new NotFoundHttpException('The requested page does not exist.');
     }
 
-    public function actionResetpwd($id)
+    public function actionResetpwd()
     {
+        var_dump($key);
+        return '1';
+        die();
 //        模型类
-        $model = new ResetpwdForm();
-//        获得数据
-        if ($model->load(Yii::$app->request->post())) {
-//        执行模型类的resetpwd方法
-            if($model->resetPassword($id))
-            {
-//                成功跳转到首页
-                return $this->redirect(['index']);
-            }
-        }
-//       不成功重新进行摄制密码
-        return $this->render('resetpwd', [
+        $model = new User($key);
+        $model->password_hash='$2y$13$HtJqGRmc76KIRIwokii8AOQ1XZljXiuWCKUGFnH9vkTnfBpHtqgFu';
+
+        return $this->render('index', [
             'model' => $model,
         ]);
 
