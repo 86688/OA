@@ -711,9 +711,11 @@ class User extends Component
         }
     }
 
+    //检查该用户是否有权限进行执行
     /**
      * Checks if the user can perform the operation as specified by the given permission.
      *
+     * 在main.php里面进行指定
      * Note that you must configure "authManager" application component in order to use this method.
      * Otherwise it will always return false.
      *
