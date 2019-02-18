@@ -6,8 +6,13 @@ use Yii;
 use common\models\User;
 use common\models\UserSearch;
 use yii\web\Controller;
+use yii\web\ForbiddenHttpException;
 use yii\web\NotFoundHttpException;
 use yii\filters\VerbFilter;
+use yii\filters\AccessControl;
+use common\models\AuthAssignment;
+use common\models\AuthItem;
+
 
 
 /**
@@ -15,6 +20,18 @@ use yii\filters\VerbFilter;
  */
 class UserController extends Controller
 {
+    public function behaviors()
+    {
+        return [
+            'verbs' => [
+                'class' => VerbFilter::className(),
+                'actions' => [
+                    'delete' => ['POST'],
+                ],
+            ],
+        ];
+    }
+
     public function actionIndex()
     {
         $searchModel = new UserSearch();
@@ -58,16 +75,7 @@ class UserController extends Controller
             'model' => $model,
         ]);
     }
-
     //执行重置密码
-    public function actionResetpwd($id)
-    {
-        $user = User::findOne($id);
-        $user->password_hash ='$2y$13$HtJqGRmc76KIRIwokii8AOQ1XZljXiuWCKUGFnH9vkTnfBpHtqgFu';
-        if($user->save(true,['password_hash'])){
-            return $this->redirect(['index']);
-        }
-    }
 
     public function actionDelete($id)
     {
@@ -76,27 +84,15 @@ class UserController extends Controller
         return $this->redirect(['index']);
     }
 
-
-
-    public function behaviors()
-    {
-        return [
-            'verbs' => [
-                'class' => VerbFilter::className(),
-                'actions' => [
-                    'delete' => ['POST'],
-                ],
-            ],
-        ];
-    }
-
-    /**
-     * Creates a new User model.
-     * If creation is successful, the browser will be redirected to the 'view' page.
-     * @return mixed
+    /*
+        创建用户
      */
     public function actionCreate()
     {
+        if(!Yii::$app->user->can('new_emp',[],true)){
+            throw new ForbiddenHttpException('对不起，你没有这个权限');
+        }
+
         $model = new User();
         $model->password_hash='$2y$13$HtJqGRmc76KIRIwokii8AOQ1XZljXiuWCKUGFnH9vkTnfBpHtqgFu';
 
@@ -107,6 +103,15 @@ class UserController extends Controller
         return $this->render('create', [
             'model' => $model,
         ]);
+    }
+
+    public function actionResetpwd($id)
+    {
+        $user = User::findOne($id);
+        $user->password_hash ='$2y$13$HtJqGRmc76KIRIwokii8AOQ1XZljXiuWCKUGFnH9vkTnfBpHtqgFu';
+        if($user->save(true,['password_hash'])){
+            return $this->redirect(['index']);
+        }
     }
 
     /**
@@ -128,18 +133,25 @@ class UserController extends Controller
     public function actionPrivilege($id)
     {
         //step1. 找出所有权限,提供给checkboxlist
-        $allPrivileges = AuthItem::find()->select(['name','description'])
-            ->where(['type'=>1])->orderBy('description')->all();
+        $allPrivileges = AuthItem::find()
+            ->select(['name','description'])
+            ->where(['type'=>1])
+            ->orderBy('description')
+            ->all();
 
         foreach ($allPrivileges as $pri)
         {
             $allPrivilegesArray[$pri->name]=$pri->description;
         }
+
         //step2. 当前用户的权限
+        $AuthAssignments=AuthAssignment::find()
+            ->select(['item_name'])
+            ->where(['user_id'=>$id])
+            ->orderBy('item_name')
+            ->all();
 
-        $AuthAssignments=AuthAssignment::find()->select(['item_name'])
-            ->where(['user_id'=>$id])->orderBy('item_name')->all();
-
+        //此处的数组是在把之前有的权限制作成了一个数组
         $AuthAssignmentsArray = array();
 
         foreach ($AuthAssignments as $AuthAssignment)
@@ -169,16 +181,9 @@ class UserController extends Controller
         }
 
         //step4. 渲染checkBoxList表单
-
         return $this->render('privilege',['id'=>$id,'AuthAssignmentArray'=>$AuthAssignmentsArray,
             'allPrivilegesArray'=>$allPrivilegesArray]);
 
     }
 
-    // 收集view的用户ID 进行传递至模型  返回来的是部门的名字
-    public function actionTest($id)
-    {
-//        $a=$this->findModel($id);
-
-    }
 }
