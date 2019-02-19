@@ -41,6 +41,8 @@ AppAsset::register($this);
     ]);
     $menuItems = [
         ['label' => '主页', 'url' => ['/site/index']],
+        ['label' => '人事', 'url' => ['/user/index']],
+        ['label' => '财务', 'url' => ['/finance/index']],
     ];
     if (Yii::$app->user->isGuest) {
         // 游客有登录条目
@@ -76,13 +78,6 @@ AppAsset::register($this);
     </div>
 </div>
 
-<footer class="footer">
-    <div class="container">
-        <p class="pull-left">&copy; <?= Html::encode(Yii::$app->name) ?> <?= date('Y') ?></p>
-
-        <p class="pull-right"><?= Yii::powered() ?></p>
-    </div>
-</footer>
 
 <?php $this->endBody() ?>
 </body>

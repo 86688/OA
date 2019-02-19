@@ -7,8 +7,7 @@ use common\models\Title;
 use yii\helpers\Url;
 use yii\widgets\ActiveForm;
 use common\models\User;
-
-
+use common\models\Place;
 
 
 /* @var $this yii\web\View */
@@ -18,17 +17,16 @@ use common\models\User;
 $this->title = '人员';
 $this->params['breadcrumbs'][] = $this->title;
 ?>
-    <div class="user-index">
+    <div class="user-index table table-hover">
 
         <p>
             <?= Html::a('新入人员', ['create'], ['class' => 'btn btn-success']) ?>
             <?= Html::a('部门管理', ['dept/index'], ['class' => 'btn btn-success']) ?>
         </p>
 
-
-    <?= GridView::widget([
+        <?= GridView::widget([
         'dataProvider' => $dataProvider,
-//        'filterModel' => $searchModel,
+        'filterModel' => $searchModel,
         'columns' => [
             'user_name',
             'sex',
