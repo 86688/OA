@@ -32,7 +32,7 @@ class Dept extends \yii\db\ActiveRecord
     public function rules()
     {
         return [
-            [['dept_name', 'dept_level', 'dept_p_id'], 'required'],
+            [['dept_name'], 'required',"message"=>"{attribute}不能为空"],
             [['dept_name'], 'string', 'max' => 15],
             [['dept_level', 'dept_p_id', 'dept_status'], 'string', 'max' => 1],
             [['dept_id'], 'exist', 'skipOnError' => true, 'targetClass' => User::className(), 'targetAttribute' => ['dept_id' => 'dept_id']],

@@ -34,7 +34,6 @@ $this->params['breadcrumbs'][] = $this->title;
             'sex',
             'tel',
             'email:email',
-            'school',
             'work_place',
 
             ['attribute'=>'status_id',
@@ -49,7 +48,15 @@ $this->params['breadcrumbs'][] = $this->title;
                 'label'=>'状态',
                 'value'=>'title.title_name',
             ],
-            'vacation',
+            [
+                'attribute' => 'crt_start',
+                'format' => ['date', 'php:Y-m-d']
+            ],
+            [
+                'attribute' => 'crt_end',
+                'format' => ['date', 'php:Y-m-d']
+            ],
+            'ctr_num',
             //动作按钮
             ['class' => 'yii\grid\ActionColumn',
                 'template'=>'{view} {update} {delete} {resetpwd} {privilege}',
