@@ -45,7 +45,7 @@ $this->params['breadcrumbs'][] = $this->title;
                 'format'=>['date','php:Y-m-d'],
             ],
             'ctr_num',
-            'work_place',
+//            'work_place',
             'linkman',
             'linktel',
             'housing_fund',
@@ -62,6 +62,11 @@ $this->params['breadcrumbs'][] = $this->title;
             [
                 'attribute'=>'title_id',
                 'value'=>$model->title->title_name,
+            ],
+            //工作地点
+            [
+                'attribute'=>'place_id',
+                'value'=>$model->place->place,
             ],
         ],
     ]) ?>

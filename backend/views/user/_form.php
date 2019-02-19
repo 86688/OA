@@ -39,8 +39,6 @@ use common\models\User;
 
     <?= $form->field($model, 'ctr_num')->textInput() ?>
 
-    <?= $form->field($model, 'work_place')->textInput(['maxlength' => true]) ?>
-
     <?= $form->field($model, 'linkman')->textInput(['maxlength' => true]) ?>
 
     <?= $form->field($model, 'linktel')->textInput(['maxlength' => true]) ?>
@@ -54,6 +52,9 @@ use common\models\User;
     <?= $form->field($model, 'dept_id')->dropDownList(Dept::allDept(),['prompt'=>'请输入部门']) ?>
 
     <?= $form->field($model, 'title_id')->dropDownList(Title::allTitle(),['prompt'=>'请输入职称']) ?>
+
+    <?= $form->field($model, 'place_id')->textInput() ?>
+
 
     <div class="form-group">
         <?= Html::submitButton('Save', ['class' => 'btn btn-success']) ?>

@@ -19,7 +19,7 @@ class UserSearch extends User
     {
         return [
             [['user_id', 'crt_start', 'crt_end'], 'integer'],
-            [['user_name', 'password_hash', 'auth_key', 'password_reset_token', 'sex', 'tel', 'email', 'id_card', 'school', 'major', 'ctr_num', 'work_place', 'linkman', 'linktel', 'housing_fund', 'vacation', 'status_id', 'dept_id', 'title_id'], 'safe'],
+            [['user_name', 'auth_key', 'password_hash', 'password_reset_token', 'sex', 'tel', 'email', 'id_card', 'school', 'major', 'ctr_num', 'linkman', 'linktel', 'housing_fund', 'vacation', 'status_id', 'dept_id', 'title_id', 'place_id'], 'safe'],
         ];
     }
 
@@ -65,8 +65,8 @@ class UserSearch extends User
         ]);
 
         $query->andFilterWhere(['like', 'user_name', $this->user_name])
-            ->andFilterWhere(['like', 'password_hash', $this->password_hash])
             ->andFilterWhere(['like', 'auth_key', $this->auth_key])
+            ->andFilterWhere(['like', 'password_hash', $this->password_hash])
             ->andFilterWhere(['like', 'password_reset_token', $this->password_reset_token])
             ->andFilterWhere(['like', 'sex', $this->sex])
             ->andFilterWhere(['like', 'tel', $this->tel])
@@ -75,14 +75,14 @@ class UserSearch extends User
             ->andFilterWhere(['like', 'school', $this->school])
             ->andFilterWhere(['like', 'major', $this->major])
             ->andFilterWhere(['like', 'ctr_num', $this->ctr_num])
-            ->andFilterWhere(['like', 'work_place', $this->work_place])
             ->andFilterWhere(['like', 'linkman', $this->linkman])
             ->andFilterWhere(['like', 'linktel', $this->linktel])
             ->andFilterWhere(['like', 'housing_fund', $this->housing_fund])
             ->andFilterWhere(['like', 'vacation', $this->vacation])
             ->andFilterWhere(['like', 'status_id', $this->status_id])
             ->andFilterWhere(['like', 'dept_id', $this->dept_id])
-            ->andFilterWhere(['like', 'title_id', $this->title_id]);
+            ->andFilterWhere(['like', 'title_id', $this->title_id])
+            ->andFilterWhere(['like', 'place_id', $this->place_id]);
 
         return $dataProvider;
     }

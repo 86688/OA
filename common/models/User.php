@@ -4,7 +4,6 @@ namespace common\models;
 
 use Yii;
 use yii\base\NotSupportedException;
-use yii\behaviors\TimestampBehavior;
 use yii\db\ActiveRecord;
 use yii\web\IdentityInterface;
 
@@ -25,7 +24,6 @@ use yii\web\IdentityInterface;
  * @property string $crt_start 合同开始
  * @property string $crt_end 合同结束
  * @property int $ctr_num 合同次数
- * @property string $work_place 工作地点
  * @property string $linkman 紧急联系人
  * @property string $linktel 紧急联系人电话
  * @property string $housing_fund 住房公积金
@@ -33,6 +31,8 @@ use yii\web\IdentityInterface;
  * @property int $status_id 状态编号(外键)
  * @property int $dept_id 部门编号(外键)
  * @property int $title_id 角色编号（外键）
+ * @property int $place_id
+
  *
  * @property Dept $dept
  * @property Status[] $statuses
@@ -61,17 +61,17 @@ class User extends ActiveRecord implements IdentityInterface
     public function rules()
     {
         return [
-            [['tel', 'crt_start', 'crt_end', 'ctr_num', 'status_id', 'dept_id', 'title_id'], 'required',"message"=>"{attribute}不能为空"],
+            [['tel', 'crt_start', 'crt_end', 'ctr_num', 'status_id', 'dept_id', 'title_id','place_id'], 'required',"message"=>"{attribute}不能为空"],
             [['crt_start', 'crt_end'], 'integer',"message"=>"{attribute}必须为数字"],
             [['user_name', 'linkman'], 'string', 'max' => 5],
             [['password_hash'], 'string', 'max' => 100],
             [['auth_key'], 'string', 'max' => 32],
-            [['password_reset_token'], 'string', 'max' => 255],
+            [['password_hash', 'password_reset_token'], 'string', 'max' => 255],
             [['sex', 'ctr_num', 'vacation', 'status_id', 'dept_id', 'title_id'], 'string', 'max' => 1],
             [['tel', 'linktel'], 'string', 'max' => 11,"message"=>"{attribute}只能为数字"],
             [['email'], 'string', 'max' => 30],
             [['id_card'], 'string', 'max' => 18],
-            [['school', 'major', 'work_place'], 'string', 'max' => 15],
+            [['school', 'major'], 'string', 'max' => 15],
             [['housing_fund'], 'string', 'max' => 20],
         ];
     }
@@ -96,7 +96,6 @@ class User extends ActiveRecord implements IdentityInterface
             'crt_start' => '合同开始',
             'crt_end' => '合同结束',
             'ctr_num' => '合同次数',
-            'work_place' => '办公地',
             'linkman' => '紧急联系人',
             'linktel' => '紧急联系电话',
             'housing_fund' => '公积金',
@@ -104,6 +103,8 @@ class User extends ActiveRecord implements IdentityInterface
             'status_id' => '状态',
             'dept_id' => '部门',
             'title_id' => '职称',
+            'place_id' => '地点',
+
         ];
     }
 
@@ -233,7 +234,7 @@ class User extends ActiveRecord implements IdentityInterface
     {
         return [self::MAN=>'男',self::WOMEN=>'女'];
     }
-    //性别下拉菜单数组
+    //性别下拉菜单数组  用于view页面
     public  function getStatus()
     {
         return $this->hasOne(Status::className(), ['status_id' => 'status_id']);
@@ -248,5 +249,9 @@ class User extends ActiveRecord implements IdentityInterface
     {
         return $this->hasOne(Title::className(), ['title_id' => 'title_id']);
     }
-
+    //获取地点  用于view页面
+    public function getPlace()
+    {
+        return $this->hasOne(Place::className(), ['place_id' => 'place_id']);
+    }
 }

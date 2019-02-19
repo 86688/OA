@@ -5,6 +5,7 @@ use yii\widgets\ActiveForm;
 use common\models\User;
 use common\models\Dept;
 use common\models\Title;
+use common\models\Place;
 
 
 
@@ -39,8 +40,6 @@ $this->params['breadcrumbs'][] = $this->title;
 
     <?= $form->field($model, 'ctr_num')->textInput() ?>
 
-    <?= $form->field($model, 'work_place')->textInput(['maxlength' => true]) ?>
-
     <?= $form->field($model, 'linkman')->textInput(['maxlength' => true]) ?>
 
     <?= $form->field($model, 'linktel')->textInput(['maxlength' => true]) ?>
@@ -48,6 +47,8 @@ $this->params['breadcrumbs'][] = $this->title;
     <?= $form->field($model, 'housing_fund')->textInput(['maxlength' => true]) ?>
 
     <?= $form->field($model, 'vacation')->textInput() ?>
+
+    <?= $form->field($model, 'place_id')->dropDownList(Place::allPlace(),['prompt'=>'请输入地点'])?>
 
     <?= $form->field($model, 'status_id')->dropDownList(User::allStatus(),['prompt'=>'请输入状态']); ?>
 

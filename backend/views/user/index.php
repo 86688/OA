@@ -5,6 +5,9 @@ use yii\grid\GridView;
 use common\models\Dept;
 use common\models\Title;
 use yii\helpers\Url;
+use yii\widgets\ActiveForm;
+use common\models\User;
+
 
 
 
@@ -15,26 +18,27 @@ use yii\helpers\Url;
 $this->title = '人员';
 $this->params['breadcrumbs'][] = $this->title;
 ?>
-<div class="user-index">
+    <div class="user-index">
 
-    <!-- <h1><?= Html::encode($this->title) ?></h1> -->
-    <?php // echo $this->render('_search', ['model' => $searchModel]); ?>
+        <p>
+            <?= Html::a('新入人员', ['create'], ['class' => 'btn btn-success']) ?>
+            <?= Html::a('部门管理', ['dept/index'], ['class' => 'btn btn-success']) ?>
+        </p>
 
-    <p>
-        <?= Html::a('新入人员', ['create'], ['class' => 'btn btn-success']) ?>
-        <?= Html::a('部门管理', ['dept/index'], ['class' => 'btn btn-success']) ?>
-    </p>
 
     <?= GridView::widget([
         'dataProvider' => $dataProvider,
-        'filterModel' => $searchModel,
+//        'filterModel' => $searchModel,
         'columns' => [
-
             'user_name',
             'sex',
             'tel',
             'email:email',
-            'work_place',
+
+//            ['attribute'=>'place_id',
+//                'label'=>'地点',
+//                'value'=>'place.place',
+//            ],
 
             ['attribute'=>'status_id',
                 'label'=>'状态',
