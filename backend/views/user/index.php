@@ -18,9 +18,38 @@ $this->params['breadcrumbs'][] = $this->title;
         <?= Html::a('部门管理', ['dept/index'], ['class' => 'btn btn-success']) ?>
     </p>
 
+    <!--  搜索框  -->
+    <form class="form-inline" action="User/search/">
+
+        <div class="form-group dropdown">
+            <input class="form-control"  placeholder="地点">
+        </div>
+
+        <div class="form-group">
+            <input class="form-control"  placeholder="地点">
+        </div>
+
+        <div class="form-group">
+            <input class="form-control"  placeholder="职务">
+        </div>
+
+        <div class="form-group">
+            <input class="form-control"  placeholder="状态">
+        </div>
+
+        <div class="form-group">
+            <input class="form-control"  placeholder="性别">
+        </div>
+
+        <button type="submit" class="btn btn-default">搜索</button>
+        <p>
+    </form>
+
+
+
     <?= GridView::widget([
     'dataProvider' => $dataProvider,
-    'filterModel' => $searchModel,
+//    'filterModel' => $searchModel,
     'columns' => [
         'user_name',
         'sex',
