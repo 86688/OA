@@ -17,9 +17,10 @@ use common\models\Place;
     <?php $form = ActiveForm::begin([
         'action' => ['index'],
         'method' => 'get',
+        'options' => ['class' => 'form-horizontal'],
     ]); ?>
-
-    <?= $form->field($model, 'user_name')->textInput(['placeholder'=> '姓名'])?>
+    <!--  属性是标签形式的  -->
+    <?= $form->field($model, 'user_name')->textInput(['placeholder'=> '姓名','maxlength' => false,])?>
 
     <?= $form->field($model, 'dept_id')->dropDownList(Dept::allDept(),['prompt'=>'请输入部门']) ?>
 
