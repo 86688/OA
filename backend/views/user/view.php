@@ -45,7 +45,6 @@ $this->params['breadcrumbs'][] = $this->title;
                 'format'=>['date','php:Y-m-d'],
             ],
             'ctr_num',
-//            'work_place',
             'linkman',
             'linktel',
             'housing_fund',
