@@ -15,7 +15,9 @@ $this->params['breadcrumbs'][] = $this->title;
     <!--   标签  -->
     <p>
         <?= Html::a('新入人员', ['create'], ['class' => 'btn btn-success']) ?>
+        <?= Html::a('请假调休', ['dept/index'], ['class' => 'btn btn-success']) ?>
         <?= Html::a('部门管理', ['dept/index'], ['class' => 'btn btn-success']) ?>
+        <?= Html::a('人事变动', ['dept/index'], ['class' => 'btn btn-success']) ?>
     </p>
 
     <!--  搜索框  -->
