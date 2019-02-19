@@ -19,7 +19,7 @@ use common\models\Place;
         'method' => 'get',
     ]); ?>
 
-    <?= $form->field($model, 'user_name')?>
+    <?= $form->field($model, 'user_name')->textInput(['placeholder'=> '姓名'])?>
 
     <?= $form->field($model, 'dept_id')->dropDownList(Dept::allDept(),['prompt'=>'请输入部门']) ?>
 
