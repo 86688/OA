@@ -54,69 +54,30 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/backend/views/user/index.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="352">
-              <caret line="24" column="4" selection-start-line="24" selection-start-column="4" selection-end-line="24" selection-end-column="4" />
-              <folding>
-                <element signature="e#7#28#0#PHP" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/backend/views/user/_search.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="63">
-              <caret line="26" column="4" selection-start-line="26" selection-start-column="4" selection-end-line="26" selection-end-column="4" />
+            <state relative-caret-position="437">
+              <caret line="35" column="156" selection-start-line="35" selection-start-column="156" selection-end-line="35" selection-end-column="156" />
               <folding>
-                <element signature="e#504#510#0#HTML" expanded="true" />
-                <element signature="e#510#516#0#HTML" expanded="true" />
-                <element signature="e#728#734#0#HTML" expanded="true" />
+                <element signature="e#567#573#0#HTML" expanded="true" />
+                <element signature="e#573#579#0#HTML" expanded="true" />
+                <element signature="e#579#585#0#HTML" expanded="true" />
                 <element signature="e#734#740#0#HTML" expanded="true" />
-                <element signature="e#736#742#0#HTML" expanded="true" />
-                <element signature="e#742#748#0#HTML" expanded="true" />
-                <element signature="e#1088#1094#0#HTML" expanded="true" />
-                <element signature="e#1094#1100#0#HTML" expanded="true" />
-                <element signature="e#1275#1281#0#HTML" expanded="true" />
-                <element signature="e#1281#1287#0#HTML" expanded="true" />
-                <element signature="e#1453#1459#0#HTML" expanded="true" />
-                <element signature="e#1459#1465#0#HTML" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/vendor/yiisoft/yii2/widgets/ActiveField.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="274">
-              <caret line="274" column="41" lean-forward="true" selection-start-line="274" selection-start-column="41" selection-end-line="274" selection-end-column="41" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/common/models/User.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="3387">
-              <caret line="232" column="33" selection-start-line="232" selection-start-column="33" selection-end-line="232" selection-end-column="33" />
-              <folding>
-                <element signature="e#33#41#0#PHP" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/common/models/UserSearch.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="928">
-              <caret line="66" selection-start-line="66" selection-end-line="66" />
-              <folding>
-                <element signature="e#33#41#0#PHP" expanded="true" />
+                <element signature="e#746#752#0#HTML" expanded="true" />
+                <element signature="e#752#758#0#HTML" expanded="true" />
+                <element signature="e#906#912#0#HTML" expanded="true" />
+                <element signature="e#924#930#0#HTML" expanded="true" />
+                <element signature="e#930#936#0#HTML" expanded="true" />
+                <element signature="e#1081#1087#0#HTML" expanded="true" />
+                <element signature="e#1105#1111#0#HTML" expanded="true" />
+                <element signature="e#1111#1117#0#HTML" expanded="true" />
+                <element signature="e#1282#1288#0#HTML" expanded="true" />
+                <element signature="e#1288#1294#0#HTML" expanded="true" />
+                <element signature="e#1263#1269#0#HTML" expanded="true" />
+                <element signature="e#1432#1438#0#HTML" expanded="true" />
+                <element signature="e#1469#1475#0#HTML" expanded="true" />
+                <element signature="e#1475#1481#0#HTML" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -427,7 +388,7 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="216066000" />
+    <option name="totallyTimeSpent" value="217864000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-6" y="-6" width="1549" height="837" extended-state="6" />
@@ -858,23 +819,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/vendor/yiisoft/yii2/widgets/ActiveForm.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-2569">
-          <caret line="322" column="15" selection-start-line="322" selection-start-column="15" selection-end-line="322" selection-end-column="15" />
-          <folding>
-            <element signature="e#176#184#0#PHP" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/vendor/yiisoft/yii2/widgets/ActiveField.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="274">
-          <caret line="274" column="41" lean-forward="true" selection-start-line="274" selection-start-column="41" selection-end-line="274" selection-end-column="41" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/backend/views/user/index.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="352">
@@ -885,23 +829,46 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/vendor/yiisoft/yii2/widgets/ActiveField.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="208">
+          <caret line="393" column="20" selection-start-line="393" selection-start-column="20" selection-end-line="393" selection-end-column="20" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/vendor/yiisoft/yii2/widgets/ActiveForm.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="227">
+          <caret line="319" column="44" selection-start-line="319" selection-start-column="34" selection-end-line="319" selection-end-column="44" />
+          <folding>
+            <element signature="e#176#184#0#PHP" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/backend/views/user/_search.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="63">
-          <caret line="26" column="4" selection-start-line="26" selection-start-column="4" selection-end-line="26" selection-end-column="4" />
+        <state relative-caret-position="437">
+          <caret line="35" column="156" selection-start-line="35" selection-start-column="156" selection-end-line="35" selection-end-column="156" />
           <folding>
-            <element signature="e#504#510#0#HTML" expanded="true" />
-            <element signature="e#510#516#0#HTML" expanded="true" />
-            <element signature="e#728#734#0#HTML" expanded="true" />
+            <element signature="e#567#573#0#HTML" expanded="true" />
+            <element signature="e#573#579#0#HTML" expanded="true" />
+            <element signature="e#579#585#0#HTML" expanded="true" />
             <element signature="e#734#740#0#HTML" expanded="true" />
-            <element signature="e#736#742#0#HTML" expanded="true" />
-            <element signature="e#742#748#0#HTML" expanded="true" />
-            <element signature="e#1088#1094#0#HTML" expanded="true" />
-            <element signature="e#1094#1100#0#HTML" expanded="true" />
-            <element signature="e#1275#1281#0#HTML" expanded="true" />
-            <element signature="e#1281#1287#0#HTML" expanded="true" />
-            <element signature="e#1453#1459#0#HTML" expanded="true" />
-            <element signature="e#1459#1465#0#HTML" expanded="true" />
+            <element signature="e#746#752#0#HTML" expanded="true" />
+            <element signature="e#752#758#0#HTML" expanded="true" />
+            <element signature="e#906#912#0#HTML" expanded="true" />
+            <element signature="e#924#930#0#HTML" expanded="true" />
+            <element signature="e#930#936#0#HTML" expanded="true" />
+            <element signature="e#1081#1087#0#HTML" expanded="true" />
+            <element signature="e#1105#1111#0#HTML" expanded="true" />
+            <element signature="e#1111#1117#0#HTML" expanded="true" />
+            <element signature="e#1282#1288#0#HTML" expanded="true" />
+            <element signature="e#1288#1294#0#HTML" expanded="true" />
+            <element signature="e#1263#1269#0#HTML" expanded="true" />
+            <element signature="e#1432#1438#0#HTML" expanded="true" />
+            <element signature="e#1469#1475#0#HTML" expanded="true" />
+            <element signature="e#1475#1481#0#HTML" expanded="true" />
           </folding>
         </state>
       </provider>
