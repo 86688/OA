@@ -3,15 +3,11 @@
 use yii\helpers\Html;
 use yii\grid\GridView;
 
-
-/* @var $this yii\web\View */
-/* @var $searchModel common\models\UserSearch */
-/* @var $dataProvider yii\data\ActiveDataProvider */
-
 $this->title = '人员';
 $this->params['breadcrumbs'][] = $this->title;
 ?>
-<div class="user-index table table-hover">
+
+<div class="user-index">
     <!--   标签  -->
     <p>
         <?= Html::a('新入人员', ['create'], ['class' => 'btn btn-success']) ?>
@@ -22,11 +18,9 @@ $this->params['breadcrumbs'][] = $this->title;
 
     <?php  echo $this->render('_search', ['model' => $searchModel]); ?>
 
-
-
     <?= GridView::widget([
     'dataProvider' => $dataProvider,
-//    'filterModel' => $searchModel,
+    // 'filterModel' => $searchModel,
     'columns' => [
         'user_name',
         'sex',
@@ -88,3 +82,5 @@ $this->params['breadcrumbs'][] = $this->title;
         ],
 ]); ?>
 </div>
+
+

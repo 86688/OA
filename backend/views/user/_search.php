@@ -1,26 +1,23 @@
 <?php
-
 use yii\helpers\Html;
 use yii\widgets\ActiveForm;
 use common\models\User;
 use common\models\Dept;
 use common\models\Title;
 use common\models\Place;
-
-/* @var $this yii\web\View */
-/* @var $model common\models\UserSearch */
-/* @var $form yii\widgets\ActiveForm */
 ?>
+
+
 
 <div class="user-search">
 
     <?php $form = ActiveForm::begin([
         'action' => ['index'],
         'method' => 'get',
-        'options' => ['class' => 'form-horizontal'],
     ]); ?>
+
     <!--  属性是标签形式的  -->
-    <?= $form->field($model, 'user_name')->textInput(['placeholder'=> '姓名','maxlength' => false,])?>
+    <?= $form->field($model, 'user_name')->textInput(['placeholder'=> '姓名'])?>
 
     <?= $form->field($model, 'dept_id')->dropDownList(Dept::allDept(),['prompt'=>'请输入部门']) ?>
 
