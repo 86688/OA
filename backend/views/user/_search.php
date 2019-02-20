@@ -29,10 +29,10 @@ use common\models\Place;
 
     <?= $form->field($model, 'title_id')->dropDownList(Title::allTitle(),['prompt'=>'请输入职位  ']) ?>
 
-    <div class="form-group">
-        <?= Html::submitButton('搜索', ['class' => 'btn btn-primary']) ?>
-        <?= Html::resetButton('重置', ['class' => 'btn btn-default']) ?>
-    </div>
+<!--    <div class="form-group">-->
+<!--        --><?//= Html::submitButton('搜索', ['class' => 'btn btn-primary']) ?>
+<!--        --><?//= Html::resetButton('重置', ['class' => 'btn btn-default']) ?>
+<!--    </div>-->
 
     <?php ActiveForm::end(); ?>
 

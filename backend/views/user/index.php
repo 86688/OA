@@ -16,11 +16,11 @@ $this->params['breadcrumbs'][] = $this->title;
         <?= Html::a('人事变动', ['user/index'], ['class' => 'btn btn-success']) ?>
     </p>
 
-    <?php  echo $this->render('_search', ['model' => $searchModel]); ?>
+<!--    --><?php // echo $this->render('_search', ['model' => $searchModel]); ?>
 
     <?= GridView::widget([
     'dataProvider' => $dataProvider,
-    // 'filterModel' => $searchModel,
+     'filterModel' => $searchModel,
     'columns' => [
         'user_name',
         'sex',
@@ -36,7 +36,7 @@ $this->params['breadcrumbs'][] = $this->title;
             'value'=>'dept.dept_name',
         ],
         ['attribute'=>'title_id',
-            'label'=>'状态',
+            'label'=>'职位',
             'value'=>'title.title_name',
         ],
         [
