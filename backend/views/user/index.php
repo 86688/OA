@@ -2,6 +2,10 @@
 
 use yii\helpers\Html;
 use yii\grid\GridView;
+use common\models\Status;
+use common\models\Dept;
+use common\models\Title;
+use common\models\User;
 
 $this->title = '人员';
 $this->params['breadcrumbs'][] = $this->title;
@@ -22,54 +26,42 @@ $this->params['breadcrumbs'][] = $this->title;
     <?php // echo $this->render('_search', ['model' => $searchModel]); ?>
 
 
-    <form action='index.php\'?'r=user' method="get">
-        <select class="col-sm-2 dropform">
-            <option>性别</option>
-            <option value="a">Saab</option>
-        </select>
-
-        <select class="col-md-2 col-sm-offset-1 dropform">
-            <option>部门</option>
-            <option value="b">Saab</option>
-        </select>
-
-        <select class="col-md-2 col-sm-offset-1 dropform">
-            <option>职位</option>
-            <option value="c">Saab</option>
-        </select>
-
-        <select class="col-md-2 col-sm-offset-1 dropform">
-            <option>工作地点</option>
-            <option value="d">Saab</option>
-        </select>
-
-        <input type="submit" value="提交" class="dropform">
-
-        <p class="row"></p>
-    </form>
-
-
     <!-- 以下为用户的列表   -->
     <?= GridView::widget([
     'dataProvider' => $dataProvider,
-    //'filterModel' => $searchModel,
+    'filterModel' => $searchModel,
     'columns' => [
         'user_name',
-        'sex',
+        ['attribute'=>'sex',
+            'label'=>'性别',
+            'filter'=>User::allSex(),
+        ],
         'tel',
         'email:email',
 
         ['attribute'=>'status_id',
             'label'=>'状态',
             'value'=>'status.status_name',
+            'filter'=>Status::find()
+                ->select(['status_name'])
+         	    ->orderBy('status_id')
+         	    ->column(),
         ],
         ['attribute'=>'dept_id',
             'label'=>'部门',
             'value'=>'dept.dept_name',
+            'filter'=>Dept::find()
+                ->select(['dept_name'])
+                ->orderBy('dept_id')
+                ->column(),
         ],
         ['attribute'=>'title_id',
             'label'=>'职位',
             'value'=>'title.title_name',
+            'filter'=>Title::find()
+                ->select(['title_name'])
+                ->orderBy('title_id')
+                ->column(),
         ],
         [
             'attribute' => 'crt_start',
@@ -80,6 +72,8 @@ $this->params['breadcrumbs'][] = $this->title;
             'format' => ['date', 'php:Y-m-d']
         ],
         'ctr_num',
+
+
         //动作按钮
         ['class' => 'yii\grid\ActionColumn',
             'template'=>'{view} {update} {delete} {resetpwd} {privilege}',
