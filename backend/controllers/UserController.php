@@ -186,4 +186,9 @@ class UserController extends Controller
 
     }
 
+    // 测试
+    public function actionTest(){
+        echo '1';
+    }
+
 }

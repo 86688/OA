@@ -31,7 +31,7 @@ use yii\web\IdentityInterface;
  * @property int $status_id 状态编号(外键)
  * @property int $dept_id 部门编号(外键)
  * @property int $title_id 角色编号（外键）
- * @property int $place_id
+ * @property int $place_id  地点编号(外键)
 
  *
  * @property Dept $dept
@@ -254,4 +254,5 @@ class User extends ActiveRecord implements IdentityInterface
     {
         return $this->hasOne(Place::className(), ['place_id' => 'place_id']);
     }
+
 }

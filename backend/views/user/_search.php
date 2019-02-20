@@ -16,10 +16,6 @@ use common\models\Place;
         'method' => 'get',
     ]); ?>
 
-<<<<<<< HEAD
-    <!--  属性是标签形式的  -->
-=======
->>>>>>> parent of 0b9dd7a... 0219更新
     <?= $form->field($model, 'user_name')->textInput(['placeholder'=> '姓名'])?>
 
     <?= $form->field($model, 'dept_id')->dropDownList(Dept::allDept(),['prompt'=>'请输入部门']) ?>
@@ -32,10 +28,11 @@ use common\models\Place;
 
     <?= $form->field($model, 'title_id')->dropDownList(Title::allTitle(),['prompt'=>'请输入职位  ']) ?>
 
-<!--    <div class="form-group">-->
-<!--        --><?//= Html::submitButton('搜索', ['class' => 'btn btn-primary']) ?>
-<!--        --><?//= Html::resetButton('重置', ['class' => 'btn btn-default']) ?>
-<!--    </div>-->
+
+    <div class="form-group">
+        <?= Html::submitButton('搜索', ['class' => 'btn btn-primary']) ?>
+        <?= Html::resetButton('重置', ['class' => 'btn btn-default']) ?>
+    </div>
 
     <?php ActiveForm::end(); ?>
 

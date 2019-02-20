@@ -6,9 +6,12 @@ use yii\grid\GridView;
 $this->title = '人员';
 $this->params['breadcrumbs'][] = $this->title;
 ?>
-
+<style>
+    .dropform{
+        height:32px;
+    }
+</style>
 <div class="user-index">
-    <!--   标签  -->
     <p>
         <?= Html::a('新入人员', ['create'], ['class' => 'btn btn-success']) ?>
         <?= Html::a('请假调休', ['vacation/index'], ['class' => 'btn btn-success']) ?>
@@ -16,11 +19,40 @@ $this->params['breadcrumbs'][] = $this->title;
         <?= Html::a('人事变动', ['user/index'], ['class' => 'btn btn-success']) ?>
     </p>
 
-<!--    --><?php // echo $this->render('_search', ['model' => $searchModel]); ?>
+    <?php // echo $this->render('_search', ['model' => $searchModel]); ?>
 
+
+    <form action='index.php\'?'r=user' method="get">
+        <select class="col-sm-2 dropform">
+            <option>性别</option>
+            <option value="a">Saab</option>
+        </select>
+
+        <select class="col-md-2 col-sm-offset-1 dropform">
+            <option>部门</option>
+            <option value="b">Saab</option>
+        </select>
+
+        <select class="col-md-2 col-sm-offset-1 dropform">
+            <option>职位</option>
+            <option value="c">Saab</option>
+        </select>
+
+        <select class="col-md-2 col-sm-offset-1 dropform">
+            <option>工作地点</option>
+            <option value="d">Saab</option>
+        </select>
+
+        <input type="submit" value="提交" class="dropform">
+
+        <p class="row"></p>
+    </form>
+
+
+    <!-- 以下为用户的列表   -->
     <?= GridView::widget([
     'dataProvider' => $dataProvider,
-     'filterModel' => $searchModel,
+    //'filterModel' => $searchModel,
     'columns' => [
         'user_name',
         'sex',
