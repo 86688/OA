@@ -10,10 +10,16 @@ use common\models\User;
 /**
  * UserSearch represents the model behind the search form of `common\models\User`.
  */
+//继承user
 class UserSearch extends User
 {
+//    public function attributes()
+//    {
+//        return array_merge(parent::attributes(),['authorName']);
+//    }
+
     /**
-     * @inheritdoc
+     * @重写了rules
      */
     public function rules()
     {
@@ -24,10 +30,11 @@ class UserSearch extends User
     }
 
     /**
-     * @inheritdoc
+     * @
      */
     public function scenarios()
     {
+        //作废场景类
         // bypass scenarios() implementation in the parent class
         return Model::scenarios();
     }
@@ -48,26 +55,23 @@ class UserSearch extends User
         $dataProvider = new ActiveDataProvider([
             'query' => $query,
         ]);
-
+        //块赋值
         $this->load($params);
-
+        //校验数据
         if (!$this->validate()) {
             // uncomment the following line if you do not want to return any records when validation fails
             // $query->where('0=1');
             return $dataProvider;
         }
 
-        // grid filtering conditions
-        $query->andFilterWhere([
-            'user_id' => $this->user_id,
-            'crt_start' => $this->crt_start,
-            'crt_end' => $this->crt_end,
-        ]);
+// grid filtering conditions
+//        $query->andFilterWhere([
+//            'user_id' => $this->user_id,
+//            'crt_start' => $this->crt_start,
+//            'crt_end' => $this->crt_end,
+//        ]);
 
         $query->andFilterWhere(['like', 'user_name', $this->user_name])
-            ->andFilterWhere(['like', 'auth_key', $this->auth_key])
-            ->andFilterWhere(['like', 'password_hash', $this->password_hash])
-            ->andFilterWhere(['like', 'password_reset_token', $this->password_reset_token])
             ->andFilterWhere(['like', 'sex', $this->sex])
             ->andFilterWhere(['like', 'tel', $this->tel])
             ->andFilterWhere(['like', 'email', $this->email])

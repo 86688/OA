@@ -10,11 +10,8 @@ use common\models\User;
 $this->title = '人员';
 $this->params['breadcrumbs'][] = $this->title;
 ?>
-<style>
-    .dropform{
-        height:32px;
-    }
-</style>
+
+
 <div class="user-index">
     <p>
         <?= Html::a('新入人员', ['create'], ['class' => 'btn btn-success']) ?>
@@ -23,13 +20,12 @@ $this->params['breadcrumbs'][] = $this->title;
         <?= Html::a('人事变动', ['user/index'], ['class' => 'btn btn-success']) ?>
     </p>
 
-    <?php // echo $this->render('_search', ['model' => $searchModel]); ?>
-
+    <?php  echo $this->render('_search', ['model' => $searchModel]); ?>
 
     <!-- 以下为用户的列表   -->
     <?= GridView::widget([
     'dataProvider' => $dataProvider,
-    'filterModel' => $searchModel,
+    //'filterModel' => $searchModel,
     'columns' => [
         'user_name',
         ['attribute'=>'sex',
