@@ -2,6 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="da73695b-73d3-4dd7-b409-cfa0504147bb" name="Default" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/backend/views/user/_search.php" beforeDir="false" afterPath="$PROJECT_DIR$/backend/views/user/_search.php" afterDir="false" />
     </list>
     <ignored path="OA.iws" />
@@ -54,30 +55,39 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/backend/views/user/index.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="-993">
+              <caret line="39" column="12" selection-start-line="39" selection-start-column="12" selection-end-line="39" selection-end-column="12" />
+              <folding>
+                <element signature="e#7#28#0#PHP" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/backend/views/user/_search.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="437">
-              <caret line="35" column="156" selection-start-line="35" selection-start-column="156" selection-end-line="35" selection-end-column="156" />
+            <state relative-caret-position="467">
+              <caret line="40" column="10" lean-forward="true" selection-start-line="40" selection-start-column="10" selection-end-line="40" selection-end-column="10" />
               <folding>
-                <element signature="e#567#573#0#HTML" expanded="true" />
-                <element signature="e#573#579#0#HTML" expanded="true" />
-                <element signature="e#579#585#0#HTML" expanded="true" />
-                <element signature="e#734#740#0#HTML" expanded="true" />
-                <element signature="e#746#752#0#HTML" expanded="true" />
-                <element signature="e#752#758#0#HTML" expanded="true" />
-                <element signature="e#906#912#0#HTML" expanded="true" />
-                <element signature="e#924#930#0#HTML" expanded="true" />
-                <element signature="e#930#936#0#HTML" expanded="true" />
-                <element signature="e#1081#1087#0#HTML" expanded="true" />
-                <element signature="e#1105#1111#0#HTML" expanded="true" />
-                <element signature="e#1111#1117#0#HTML" expanded="true" />
-                <element signature="e#1282#1288#0#HTML" expanded="true" />
-                <element signature="e#1288#1294#0#HTML" expanded="true" />
-                <element signature="e#1263#1269#0#HTML" expanded="true" />
-                <element signature="e#1432#1438#0#HTML" expanded="true" />
-                <element signature="e#1469#1475#0#HTML" expanded="true" />
-                <element signature="e#1475#1481#0#HTML" expanded="true" />
+                <element signature="e#770#776#0#HTML" expanded="true" />
+                <element signature="e#776#782#0#HTML" expanded="true" />
+                <element signature="e#782#788#0#HTML" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/common/models/User.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="-4290">
+              <caret line="30" column="17" selection-start-line="30" selection-start-column="17" selection-end-line="30" selection-end-column="17" />
+              <folding>
+                <element signature="e#33#41#0#PHP" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -384,11 +394,12 @@
       <workItem from="1550542772582" duration="9952000" />
       <workItem from="1550557158072" duration="15849000" />
       <workItem from="1550626485613" duration="5985000" />
+      <workItem from="1550716784758" duration="3604000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="217864000" />
+    <option name="totallyTimeSpent" value="221686000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-6" y="-6" width="1549" height="837" extended-state="6" />
@@ -396,7 +407,7 @@
     <layout>
       <window_info id="Structure" order="0" weight="0.24976258" />
       <window_info id="Favorites" order="1" side_tool="true" />
-      <window_info active="true" content_ui="combo" id="Project" order="2" visible="true" weight="0.14668453" />
+      <window_info content_ui="combo" id="Project" order="2" visible="true" weight="0.16342933" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.27864215" />
       <window_info anchor="bottom" id="Run" order="2" />
@@ -713,16 +724,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/vendor/yiisoft/yii2/helpers/BaseHtml.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-135">
-          <caret line="1434" column="46" selection-start-line="1434" selection-start-column="27" selection-end-line="1434" selection-end-column="46" />
-          <folding>
-            <element signature="e#176#184#0#PHP" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/backend/assets/css/site.css" />
     <entry file="file://$PROJECT_DIR$/backend/assets/AppAsset.php">
       <provider selected="true" editor-type-id="text-editor">
@@ -732,12 +733,12 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/backend/web/assets/2f8713ec/css/bootstrap.css.map">
-      <provider editor-type-id="sourcemapFileViewerProvider" />
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="246">
           <caret column="121305" lean-forward="true" selection-start-column="121305" selection-end-column="121305" />
         </state>
       </provider>
+      <provider editor-type-id="sourcemapFileViewerProvider" />
     </entry>
     <entry file="file://$PROJECT_DIR$/backend/web/css/site.css">
       <provider selected="true" editor-type-id="text-editor">
@@ -761,12 +762,12 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/backend/web/assets/2f8713ec/css/bootstrap.min.css.map">
-      <provider editor-type-id="sourcemapFileViewerProvider" />
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="218">
           <caret column="425112" selection-start-column="425112" selection-end-column="425112" />
         </state>
       </provider>
+      <provider editor-type-id="sourcemapFileViewerProvider" />
     </entry>
     <entry file="file://$PROJECT_DIR$/vendor/yiisoft/yii2-bootstrap/src/ActiveField.php">
       <provider selected="true" editor-type-id="text-editor">
@@ -801,30 +802,10 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/common/models/UserSearch.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="928">
-          <caret line="66" selection-start-line="66" selection-end-line="66" />
+        <state relative-caret-position="203">
+          <caret line="64" column="9" selection-start-line="64" selection-start-column="9" selection-end-line="64" selection-end-column="9" />
           <folding>
             <element signature="e#33#41#0#PHP" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/common/models/User.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="3387">
-          <caret line="232" column="33" selection-start-line="232" selection-start-column="33" selection-end-line="232" selection-end-column="33" />
-          <folding>
-            <element signature="e#33#41#0#PHP" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/backend/views/user/index.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="352">
-          <caret line="24" column="4" selection-start-line="24" selection-start-column="4" selection-end-line="24" selection-end-column="4" />
-          <folding>
-            <element signature="e#7#28#0#PHP" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -846,29 +827,44 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/vendor/yiisoft/yii2/helpers/BaseHtml.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-1134">
+          <caret line="528" column="18" lean-forward="true" selection-start-line="528" selection-end-line="529" />
+          <folding>
+            <element signature="e#176#184#0#PHP" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/backend/views/user/index.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-993">
+          <caret line="39" column="12" selection-start-line="39" selection-start-column="12" selection-end-line="39" selection-end-column="12" />
+          <folding>
+            <element signature="e#7#28#0#PHP" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/common/models/User.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-4290">
+          <caret line="30" column="17" selection-start-line="30" selection-start-column="17" selection-end-line="30" selection-end-column="17" />
+          <folding>
+            <element signature="e#33#41#0#PHP" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/backend/views/user/_search.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="437">
-          <caret line="35" column="156" selection-start-line="35" selection-start-column="156" selection-end-line="35" selection-end-column="156" />
+        <state relative-caret-position="467">
+          <caret line="40" column="10" lean-forward="true" selection-start-line="40" selection-start-column="10" selection-end-line="40" selection-end-column="10" />
           <folding>
-            <element signature="e#567#573#0#HTML" expanded="true" />
-            <element signature="e#573#579#0#HTML" expanded="true" />
-            <element signature="e#579#585#0#HTML" expanded="true" />
-            <element signature="e#734#740#0#HTML" expanded="true" />
-            <element signature="e#746#752#0#HTML" expanded="true" />
-            <element signature="e#752#758#0#HTML" expanded="true" />
-            <element signature="e#906#912#0#HTML" expanded="true" />
-            <element signature="e#924#930#0#HTML" expanded="true" />
-            <element signature="e#930#936#0#HTML" expanded="true" />
-            <element signature="e#1081#1087#0#HTML" expanded="true" />
-            <element signature="e#1105#1111#0#HTML" expanded="true" />
-            <element signature="e#1111#1117#0#HTML" expanded="true" />
-            <element signature="e#1282#1288#0#HTML" expanded="true" />
-            <element signature="e#1288#1294#0#HTML" expanded="true" />
-            <element signature="e#1263#1269#0#HTML" expanded="true" />
-            <element signature="e#1432#1438#0#HTML" expanded="true" />
-            <element signature="e#1469#1475#0#HTML" expanded="true" />
-            <element signature="e#1475#1481#0#HTML" expanded="true" />
+            <element signature="e#770#776#0#HTML" expanded="true" />
+            <element signature="e#776#782#0#HTML" expanded="true" />
+            <element signature="e#782#788#0#HTML" expanded="true" />
           </folding>
         </state>
       </provider>
