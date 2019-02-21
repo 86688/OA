@@ -56,6 +56,8 @@ $this->params['breadcrumbs'][] = $this->title;
 
     <?= $form->field($model, 'title_id')->dropDownList(Title::allTitle(),['prompt'=>'请输入职称']) ?>
 
+
+
     <div class="form-group">
         <?= Html::submitButton('保存', ['class' => 'btn btn-success']) ?>
     </div>

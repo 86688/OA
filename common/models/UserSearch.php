@@ -48,7 +48,7 @@ class UserSearch extends User
      */
     public function search($params)
     {
-        $query = User::find();
+        $query = User::find()->where(['show'=>1]);
 
         // add conditions that should always apply here
 

@@ -55,6 +55,10 @@ use common\models\User;
 
     <?= $form->field($model, 'place_id')->textInput() ?>
 
+    <?= $form->field($model, 'file')->textInput(['maxlength' => true]) ?>
+
+    <?= $form->field($model, 'show')->textInput() ?>
+
 
     <div class="form-group">
         <?= Html::submitButton('Save', ['class' => 'btn btn-success']) ?>

@@ -32,6 +32,8 @@ use yii\web\IdentityInterface;
  * @property int $dept_id 部门编号(外键)
  * @property int $title_id 角色编号（外键）
  * @property int $place_id  地点编号(外键)
+ * @property string $file 文件图片路径
+ * @property int $show 离职在职
 
  *
  * @property Dept $dept
@@ -62,11 +64,11 @@ class User extends ActiveRecord implements IdentityInterface
     {
         return [
             [['tel', 'id_card','crt_start', 'crt_end', 'ctr_num', 'status_id', 'dept_id', 'title_id','place_id','linkman','linktel'], 'required',"message"=>"{attribute}不能为空"],
-            [['crt_start', 'crt_end'], 'integer',"message"=>"{attribute}必须为数字"],
+            [['crt_start', 'crt_end','show'], 'integer',"message"=>"{attribute}必须为数字"],
             [['user_name', 'linkman'], 'string', 'max' => 5],
             [['password_hash'], 'string', 'max' => 100],
             [['auth_key'], 'string', 'max' => 32],
-            [['password_hash', 'password_reset_token'], 'string', 'max' => 255],
+            [['password_hash', 'password_reset_token','file'], 'string', 'max' => 255],
             [['sex', 'ctr_num', 'vacation', 'status_id', 'dept_id', 'title_id'], 'string', 'max' => 1],
             [['tel', 'linktel'], 'string', 'max' => 11,"message"=>"{attribute}只能为数字"],
             [['email'], 'string', 'max' => 30],
@@ -104,6 +106,8 @@ class User extends ActiveRecord implements IdentityInterface
             'dept_id' => '部门',
             'title_id' => '职称',
             'place_id' => '地点',
+            'file' => '路径',
+            'show' => '展示',
 
         ];
     }
