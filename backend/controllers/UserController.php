@@ -9,15 +9,12 @@ use yii\web\Controller;
 use yii\web\ForbiddenHttpException;
 use yii\web\NotFoundHttpException;
 use yii\filters\VerbFilter;
-use yii\filters\AccessControl;
 use common\models\AuthAssignment;
 use common\models\AuthItem;
+use app\models\Upload;
+use app\models\UploadForm;
+use yii\web\UploadedFile;
 
-
-
-/**
- * UserController implements the CRUD actions for User model.
- */
 class UserController extends Controller
 {
     public function behaviors()
@@ -32,6 +29,7 @@ class UserController extends Controller
         ];
     }
 
+    //展示所有
     public function actionIndex()
     {
         $searchModel = new UserSearch();
@@ -43,12 +41,7 @@ class UserController extends Controller
         ]);
     }
 
-    /**
-     * Displays a single User model.
-     * @param integer $id
-     * @return mixed
-     * @throws NotFoundHttpException if the model cannot be found
-     */
+    //展示一个
     public function actionView($id)
     {
         return $this->render('view', [
@@ -56,13 +49,7 @@ class UserController extends Controller
         ]);
     }
 
-    /**
-     * Updates an existing User model.
-     * If update is successful, the browser will be redirected to the 'view' page.
-     * @param integer $id
-     * @return mixed
-     * @throws NotFoundHttpException if the model cannot be found
-     */
+    //更新一个
     public function actionUpdate($id)
     {
         $model = $this->findModel($id);
@@ -75,8 +62,8 @@ class UserController extends Controller
             'model' => $model,
         ]);
     }
-    //执行重置密码
 
+    //删除一个
     public function actionDelete($id)
     {
         $this->findModel($id)->delete();
@@ -84,17 +71,15 @@ class UserController extends Controller
         return $this->redirect(['index']);
     }
 
-    /*
-        创建用户
-     */
+    //新建一个
     public function actionCreate()
     {
-        if(!Yii::$app->user->can('new_emp',[],true)){
+
+        if (!Yii::$app->user->can('new_emp', [], true)) {
             throw new ForbiddenHttpException('对不起，你没有这个权限');
         }
-
         $model = new User();
-        $model->password_hash='$2y$13$HtJqGRmc76KIRIwokii8AOQ1XZljXiuWCKUGFnH9vkTnfBpHtqgFu';
+        $model->password_hash = '$2y$13$HtJqGRmc76KIRIwokii8AOQ1XZljXiuWCKUGFnH9vkTnfBpHtqgFu';
 
         if ($model->load(Yii::$app->request->post()) && $model->save()) {
             return $this->redirect(['view', 'id' => $model->user_id]);
@@ -105,22 +90,17 @@ class UserController extends Controller
         ]);
     }
 
+    //重置一个
     public function actionResetpwd($id)
     {
         $user = User::findOne($id);
-        $user->password_hash ='$2y$13$HtJqGRmc76KIRIwokii8AOQ1XZljXiuWCKUGFnH9vkTnfBpHtqgFu';
-        if($user->save(true,['password_hash'])){
+        $user->password_hash = '$2y$13$HtJqGRmc76KIRIwokii8AOQ1XZljXiuWCKUGFnH9vkTnfBpHtqgFu';
+        if ($user->save(true, ['password_hash'])) {
             return $this->redirect(['index']);
         }
     }
 
-    /**
-     * Finds the User model based on its primary key value.
-     * If the model is not found, a 404 HTTP exception will be thrown.
-     * @param integer $id
-     * @return User the loaded model
-     * @throws NotFoundHttpException if the model cannot be found
-     */
+    //找到一个
     protected function findModel($id)
     {
         if (($model = User::findOne($id)) !== null) {
@@ -130,46 +110,43 @@ class UserController extends Controller
         throw new NotFoundHttpException('The requested page does not exist.');
     }
 
+    //权限
     public function actionPrivilege($id)
     {
         //step1. 找出所有权限,提供给checkboxlist
         $allPrivileges = AuthItem::find()
-            ->select(['name','description'])
-            ->where(['type'=>1])
+            ->select(['name', 'description'])
+            ->where(['type' => 1])
             ->orderBy('description')
             ->all();
 
-        foreach ($allPrivileges as $pri)
-        {
-            $allPrivilegesArray[$pri->name]=$pri->description;
+        foreach ($allPrivileges as $pri) {
+            $allPrivilegesArray[$pri->name] = $pri->description;
         }
 
         //step2. 当前用户的权限
-        $AuthAssignments=AuthAssignment::find()
+        $AuthAssignments = AuthAssignment::find()
             ->select(['item_name'])
-            ->where(['user_id'=>$id])
+            ->where(['user_id' => $id])
             ->orderBy('item_name')
             ->all();
 
         //此处的数组是在把之前有的权限制作成了一个数组
         $AuthAssignmentsArray = array();
 
-        foreach ($AuthAssignments as $AuthAssignment)
-        {
-            array_push($AuthAssignmentsArray,$AuthAssignment->item_name);
+        foreach ($AuthAssignments as $AuthAssignment) {
+            array_push($AuthAssignmentsArray, $AuthAssignment->item_name);
         }
 
         //step3. 从表单提交的数据,来更新AuthAssignment表,从而用户的角色发生变化
-        if(isset($_POST['newPri']))
-        {
-            AuthAssignment::deleteAll('user_id=:id',[':id'=>$id]);
+        if (isset($_POST['newPri'])) {
+            AuthAssignment::deleteAll('user_id=:id', [':id' => $id]);
 
             $newPri = $_POST['newPri'];
 
             $arrlength = count($newPri);
 
-            for($x=0;$x<$arrlength;$x++)
-            {
+            for ($x = 0; $x < $arrlength; $x++) {
                 $aPri = new AuthAssignment();
                 $aPri->item_name = $newPri[$x];
                 $aPri->user_id = $id;
@@ -181,14 +158,24 @@ class UserController extends Controller
         }
 
         //step4. 渲染checkBoxList表单
-        return $this->render('privilege',['id'=>$id,'AuthAssignmentArray'=>$AuthAssignmentsArray,
-            'allPrivilegesArray'=>$allPrivilegesArray]);
+        return $this->render('privilege', ['id' => $id, 'AuthAssignmentArray' => $AuthAssignmentsArray,
+            'allPrivilegesArray' => $allPrivilegesArray]);
 
     }
 
-    // 测试
-    public function actionTest(){
-        echo '1';
-    }
+    //上传
+    public function actionUploadMore(){
+
+        $model = new UploadForm();
+        if(Yii::$app->request->isPost){
+            $file = UploadedFile::getInstances($model, 'file');
+            if ($file && $model->validate()) {
+                foreach ($file as $fl){
+                    $fl->saveAs('uploads/' .mt_rand(1100,9900) .time() .$fl->baseName. '.' . $fl->extension);
+                }
+            }
+            }
+        }
 
 }
+

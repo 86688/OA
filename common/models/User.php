@@ -42,24 +42,19 @@ use yii\web\IdentityInterface;
  */
 class User extends ActiveRecord implements IdentityInterface
 {
-//    性别
+    //性别
     const WOMEN=0;
     const MAN=1;
-//   使用与转正
+
+    //使用与转正
     const STATUS_TRY = 0;
     const STATUS_OFFICAL = 1;
 
-    /**
-     * @inheritdoc
-     */
     public static function tableName()
     {
         return 'user';
     }
 
-    /**
-     * @inheritdoc
-     */
     public function rules()
     {
         return [
@@ -78,9 +73,6 @@ class User extends ActiveRecord implements IdentityInterface
         ];
     }
 
-    /**
-     * @inheritdoc
-     */
     public function attributeLabels()
     {
         return [
@@ -106,45 +98,31 @@ class User extends ActiveRecord implements IdentityInterface
             'dept_id' => '部门',
             'title_id' => '职称',
             'place_id' => '地点',
-            'file' => '路径',
+            'file' => '上传',
             'show' => '展示',
 
         ];
     }
 
-    /**
-     * @inheritdoc
-     */
+    //根据ID查找
     public static function findIdentity($id)
     {
         return static::findOne($id);
     }
 
-    /**
-     * @inheritdoc
-     */
+    //根据token查找
     public static function findIdentityByAccessToken($token, $type = null)
     {
         throw new NotSupportedException('"findIdentityByAccessToken" is not implemented.');
     }
 
-    /**
-     * Finds user by username
-     *
-     * @param string $username
-     * @return static|null
-     */
+    //根据name查找
     public static function findByUsername($user_name)
     {
         return static::findOne(['user_name' => $user_name]);
     }
 
-    /**
-     * Finds user by password reset token
-     *
-     * @param string $token password reset token
-     * @return static|null
-     */
+    //根据token查找
     public static function findByPasswordResetToken($token)
     {
         if (!static::isPasswordResetTokenValid($token)) {
@@ -157,12 +135,7 @@ class User extends ActiveRecord implements IdentityInterface
         ]);
     }
 
-    /**
-     * Finds out if password reset token is valid
-     *
-     * @param string $token password reset token
-     * @return boolean
-     */
+    //判断token
     public static function isPasswordResetTokenValid($token)
     {
         if (empty($token)) {
@@ -192,37 +165,31 @@ class User extends ActiveRecord implements IdentityInterface
         return $this->getAuthKey() === $authKey;
     }
 
-    // 验证密码   参数为密码
+    // 验证密码
     public function validatePassword($password_hash)
     {
         return Yii::$app->security->validatePassword($password_hash, $this->password_hash);
     }
 
-    //产生密码的哈希值
+    //产生哈希值
     public function setPassword($password_hash)
     {
         $this->password_hash = Yii::$app->security->generatePasswordHash($password_hash);
     }
 
-    /**
-     * Generates "remember me" authentication key
-     */
+    //Generates "remember me" authentication key
     public function generateAuthKey()
     {
         $this->auth_key = Yii::$app->security->generateRandomString();
     }
 
-    /**
-     * Generates new password reset token
-     */
+    //Generates new password reset token
     public function generatePasswordResetToken()
     {
         $this->password_reset_token = Yii::$app->security->generateRandomString() . '_' . time();
     }
 
-    /**
-     * Removes password reset token
-     */
+    //删除重置密码
     public function removePasswordResetToken()
     {
         $this->password_reset_token = null;
@@ -233,26 +200,31 @@ class User extends ActiveRecord implements IdentityInterface
     {
         return [self::STATUS_OFFICAL=>'正式',self::STATUS_TRY=>'试用'];
     }
+
     //展示页面获取所有性别
     public static function allSex()
     {
         return [self::MAN=>'男',self::WOMEN=>'女'];
     }
+
     //性别下拉菜单数组  用于view页面
     public  function getStatus()
     {
         return $this->hasOne(Status::className(), ['status_id' => 'status_id']);
     }
+
     //获取部门名字  用于view页面
     public function getDept()
     {
         return $this->hasOne(Dept::className(), ['dept_id' => 'dept_id']);
     }
+
     //获取职称  用于view页面
     public function getTitle()
     {
         return $this->hasOne(Title::className(), ['title_id' => 'title_id']);
     }
+    
     //获取地点  用于view页面
     public function getPlace()
     {
