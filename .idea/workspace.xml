@@ -1,10 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="da73695b-73d3-4dd7-b409-cfa0504147bb" name="Default" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/views/site/index.php" beforeDir="false" afterPath="$PROJECT_DIR$/backend/views/site/index.php" afterDir="false" />
-    </list>
+    <list default="true" id="da73695b-73d3-4dd7-b409-cfa0504147bb" name="Default" comment="" />
     <ignored path="OA.iws" />
     <ignored path=".idea/workspace.xml" />
     <ignored path=".idea/dataSources.local.xml" />
@@ -54,7 +51,7 @@
     <favorites_list name="OA" />
   </component>
   <component name="FileEditorManager">
-    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300" />
+    <leaf />
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
@@ -371,7 +368,7 @@
     <layout>
       <window_info id="Structure" order="0" weight="0.24976258" />
       <window_info id="Favorites" order="1" side_tool="true" />
-      <window_info active="true" content_ui="combo" id="Project" order="2" visible="true" weight="0.18218352" />
+      <window_info active="true" content_ui="combo" id="Project" order="2" visible="true" weight="0.18486269" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.27864215" />
       <window_info anchor="bottom" id="Run" order="2" />
