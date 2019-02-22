@@ -56,21 +56,21 @@ class Vendor extends \yii\db\ActiveRecord
     public function attributeLabels()
     {
         return [
-            'vendor_id' => 'Vendor ID',
-            'vendor_name' => 'Vendor Name',
-            'vendor_type' => 'Vendor Type',
-            'vendor_province' => 'Vendor Province',
-            'vendor_city' => 'Vendor City',
-            'vendor_linkman' => 'Vendor Linkman',
-            'vendor_linktel' => 'Vendor Linktel',
-            'vendor_email' => 'Vendor Email',
-            'coupon_rate' => 'Coupon Rate',
-            'is_taxpayer' => 'Is Taxpayer',
-            'vendor_address' => 'Vendor Address',
-            'social_code' => 'Social Code',
-            'deposit_bank' => 'Deposit Bank',
-            'bank_num' => 'Bank Num',
-            'register_capital' => 'Register Capital',
+            'vendor_id' => '编号',
+            'vendor_name' => '名称',
+            'vendor_type' => '类型',
+            'vendor_province' => '省份',
+            'vendor_city' => '城市',
+            'vendor_linkman' => '联系人',
+            'vendor_linktel' => '联系电话',
+            'vendor_email' => '电子邮箱',
+            'coupon_rate' => '票面利率',
+            'is_taxpayer' => '一般纳税人',
+            'vendor_address' => '地址',
+            'social_code' => '社会编码',
+            'deposit_bank' => '开户银行',
+            'bank_num' => '银行卡',
+            'register_capital' => '注册资本',
         ];
     }
 }
