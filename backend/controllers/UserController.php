@@ -66,7 +66,7 @@ class UserController extends Controller
 
         foreach ($files as $file){
             //构成：位置+(时间+文件名+扩展名)---(路径，删除模板)
-            $file->saveAs(Yii::getAlias("@backend").'\assets\file\\'.$file->baseName.'.'.$file->extension,true);
+            $file->saveAs(Yii::getAlias("@backend").'\assets\file\\'.$model->user_name.$file->baseName.'.'.$file->extension,true);
         }
     }
 
@@ -100,7 +100,7 @@ class UserController extends Controller
         $model = $this->findModel($id);
 
         //上传文件
-
+        $this->upload();
 
         if ($model->load(Yii::$app->request->post()) && $model->save()) {
             return $this->redirect(['view', 'id' => $model->user_id]);
