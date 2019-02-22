@@ -62,8 +62,6 @@ class UserController extends Controller
     {
         $model = new User();
 
-        Yii::setAlias('@common', dirname(__DIR__));
-
         $files = UploadedFile::getInstances($model, 'file');
 
         foreach ($files as $file){
