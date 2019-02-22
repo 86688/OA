@@ -59,8 +59,10 @@ $this->params['breadcrumbs'][] = '修改';
 
         <?= $form->field($model, 'title_id')->dropDownList(Title::allTitle(),['prompt'=>'请输入职称']) ?>
 
+        <?= $form->field($model, 'file[]')->fileInput(['multiple' => true])->label('上传');?>
+
         <div class="form-group">
-            <?= Html::submitButton('Save', ['class' => 'btn btn-success']) ?>
+            <?= Html::submitButton('保存', ['class' => 'btn btn-success']) ?>
         </div>
 
         <?php ActiveForm::end(); ?>

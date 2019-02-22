@@ -45,7 +45,6 @@ class User extends ActiveRecord implements IdentityInterface
     //性别
     const WOMEN=0;
     const MAN=1;
-
     //使用与转正
     const STATUS_TRY = 0;
     const STATUS_OFFICAL = 1;
@@ -63,7 +62,7 @@ class User extends ActiveRecord implements IdentityInterface
             [['user_name', 'linkman'], 'string', 'max' => 5],
             [['password_hash'], 'string', 'max' => 100],
             [['auth_key'], 'string', 'max' => 32],
-            [['password_hash', 'password_reset_token','file'], 'string', 'max' => 255],
+            [['password_hash', 'password_reset_token'], 'string', 'max' => 255],
             [['sex', 'ctr_num', 'vacation', 'status_id', 'dept_id', 'title_id'], 'string', 'max' => 1],
             [['tel', 'linktel'], 'string', 'max' => 11,"message"=>"{attribute}只能为数字"],
             [['email'], 'string', 'max' => 30],
@@ -224,7 +223,7 @@ class User extends ActiveRecord implements IdentityInterface
     {
         return $this->hasOne(Title::className(), ['title_id' => 'title_id']);
     }
-    
+
     //获取地点  用于view页面
     public function getPlace()
     {

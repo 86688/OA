@@ -67,8 +67,9 @@ $this->params['breadcrumbs'][] = $this->title;
                 'attribute'=>'place_id',
                 'value'=>$model->place->place,
             ],
-            'file',
-            'show',
+
+            // 'file',
+            // 'show',
         ],
     ]) ?>
 

@@ -49,26 +49,27 @@ class UserController extends Controller
         ]);
     }
 
-    //更新一个
-    public function actionUpdate($id)
-    {
-        $model = $this->findModel($id);
-
-        if ($model->load(Yii::$app->request->post()) && $model->save()) {
-            return $this->redirect(['view', 'id' => $model->user_id]);
-        }
-
-        return $this->render('update', [
-            'model' => $model,
-        ]);
-    }
-
     //删除一个
     public function actionDelete($id)
     {
         $this->findModel($id)->delete();
 
         return $this->redirect(['index']);
+    }
+
+    //上传文件
+    public function upload()
+    {
+        $model = new User();
+
+        Yii::setAlias('@common', dirname(__DIR__));
+
+        $files = UploadedFile::getInstances($model, 'file');
+
+        foreach ($files as $file){
+            //构成：位置+(时间+文件名+扩展名)---(路径，删除模板)
+            $file->saveAs(Yii::getAlias("@backend").'\assets\file\\'.$file->baseName.'.'.$file->extension,true);
+        }
     }
 
     //新建一个
@@ -78,14 +79,36 @@ class UserController extends Controller
         if (!Yii::$app->user->can('new_emp', [], true)) {
             throw new ForbiddenHttpException('对不起，你没有这个权限');
         }
+
         $model = new User();
+        //功能点一：设置默认密码
         $model->password_hash = '$2y$13$HtJqGRmc76KIRIwokii8AOQ1XZljXiuWCKUGFnH9vkTnfBpHtqgFu';
+
+        //功能点二：上传文件
+        $this->upload();
 
         if ($model->load(Yii::$app->request->post()) && $model->save()) {
             return $this->redirect(['view', 'id' => $model->user_id]);
         }
 
         return $this->render('create', [
+            'model' => $model,
+        ]);
+    }
+
+    //更新一个
+    public function actionUpdate($id)
+    {
+        $model = $this->findModel($id);
+
+        //上传文件
+
+
+        if ($model->load(Yii::$app->request->post()) && $model->save()) {
+            return $this->redirect(['view', 'id' => $model->user_id]);
+        }
+
+        return $this->render('update', [
             'model' => $model,
         ]);
     }
@@ -166,16 +189,19 @@ class UserController extends Controller
     //上传
     public function actionUploadMore(){
 
-        $model = new UploadForm();
+        $model = new User();
+
         if(Yii::$app->request->isPost){
-            $file = UploadedFile::getInstances($model, 'file');
-            if ($file && $model->validate()) {
-                foreach ($file as $fl){
-                    $fl->saveAs('uploads/' .mt_rand(1100,9900) .time() .$fl->baseName. '.' . $fl->extension);
-                }
-            }
+            //获取文件
+            $files = UploadedFile::getInstances($model, 'file');
+
+            foreach ($files as $file){
+                //构成：位置+(时间+文件名+扩展名)
+                $file->saveAs('./uploads/'.time() .$file->baseName. '.' . $file->extension);
+                var_dump(1);
+                die();
             }
         }
-
+    }
 }
 
