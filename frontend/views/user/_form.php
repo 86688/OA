@@ -3,26 +3,24 @@
 use yii\helpers\Html;
 use yii\widgets\ActiveForm;
 use common\models\User;
-use common\models\Dept;
-use common\models\Title;
-use common\models\Place;
-use kartik\datetime\DateTimePicker;
-
-
 
 /* @var $this yii\web\View */
 /* @var $model common\models\User */
-
-$this->title = '新入人员';
-$this->params['breadcrumbs'][] = ['label' => '人员', 'url' => ['index']];
-$this->params['breadcrumbs'][] = $this->title;
+/* @var $form yii\widgets\ActiveForm */
 ?>
+
 <div class="user-form">
 
     <?php $form = ActiveForm::begin(); ?>
 
     <?= $form->field($model, 'user_name')->textInput(['maxlength' => true]) ?>
-    
+
+    <?= $form->field($model, 'password_hash')->textInput(['maxlength' => true]) ?>
+
+    <?= $form->field($model, 'auth_key')->textInput(['maxlength' => true]) ?>
+
+    <?= $form->field($model, 'password_reset_token')->textInput(['maxlength' => true]) ?>
+
     <?= $form->field($model, 'sex')->dropDownList(User::allSex(),['prompt'=>'请选择性别']); ?>
 
     <?= $form->field($model, 'tel')->textInput(['maxlength' => true]) ?>
@@ -49,27 +47,21 @@ $this->params['breadcrumbs'][] = $this->title;
 
     <?= $form->field($model, 'vacation')->textInput() ?>
 
-    <?= $form->field($model, 'place_id')->dropDownList(Place::allPlace(),['prompt'=>'请输入地点'])?>
-
     <?= $form->field($model, 'status_id')->dropDownList(User::allStatus(),['prompt'=>'请输入状态']); ?>
 
     <?= $form->field($model, 'dept_id')->dropDownList(Dept::allDept(),['prompt'=>'请输入部门']) ?>
 
     <?= $form->field($model, 'title_id')->dropDownList(Title::allTitle(),['prompt'=>'请输入职称']) ?>
 
-    <?= $form->field($model, 'file[]')->fileInput(['multiple' => true])->label('上传');?>
+    <?= $form->field($model, 'place_id')->textInput() ?>
 
-    <?= $form->field($model, 'crt_start')->widget(DateTimePicker::classname(), [
-        'options' => ['placeholder' => ''],
-        'pluginOptions' => [
-            'autoclose' => true
-        ]
-    ]);
-    ?>
+    <?= $form->field($model, 'file')->textInput(['maxlength' => true]) ?>
+
+    <?= $form->field($model, 'show')->textInput() ?>
 
 
     <div class="form-group">
-        <?= Html::submitButton('保存', ['class' => 'btn btn-success']) ?>
+        <?= Html::submitButton('Save', ['class' => 'btn btn-success']) ?>
     </div>
 
     <?php ActiveForm::end(); ?>
