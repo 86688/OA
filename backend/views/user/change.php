@@ -14,7 +14,7 @@ $this->params['breadcrumbs'][] = $this->title;
 
 <div class="user-index">
 
-    <?php  echo $this->render('_search', ['model' => $searchModel]); ?>
+    <?php  echo $this->render('_change', ['model' => $searchModel]); ?>
 
     <!-- 以下为用户的列表   -->
     <?= GridView::widget([

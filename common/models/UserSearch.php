@@ -82,11 +82,9 @@ class UserSearch extends User
         $dataProvider = new ActiveDataProvider([
             'query' => $query,
         ]);
-        //块赋值
+
         $this->load($params);
-        //校验数据
         if (!$this->validate()) {
-            // $query->where('0=1');
             return $dataProvider;
         }
 
