@@ -1,21 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="da73695b-73d3-4dd7-b409-cfa0504147bb" name="Default" comment="">
-      <change afterPath="$PROJECT_DIR$/frontend/controllers/UserController.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/frontend/views/user/_form.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/frontend/views/user/_search.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/frontend/views/user/create.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/frontend/views/user/index.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/frontend/views/user/privilege.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/frontend/views/user/resetpwd.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/frontend/views/user/update.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/frontend/views/user/view.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/views/user/create.php" beforeDir="false" afterPath="$PROJECT_DIR$/backend/views/user/create.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/composer.json" beforeDir="false" afterPath="$PROJECT_DIR$/composer.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/views/layouts/main.php" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/views/layouts/main.php" afterDir="false" />
-    </list>
+    <list default="true" id="da73695b-73d3-4dd7-b409-cfa0504147bb" name="Default" comment="" />
     <ignored path="OA.iws" />
     <ignored path=".idea/workspace.xml" />
     <ignored path=".idea/dataSources.local.xml" />
@@ -65,26 +51,7 @@
     <favorites_list name="OA" />
   </component>
   <component name="FileEditorManager">
-    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/composer.json">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="286">
-              <caret line="29" column="24" selection-start-line="29" selection-start-column="24" selection-end-line="29" selection-end-column="24" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/frontend/views/layouts/main.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="393">
-              <caret line="70" lean-forward="true" selection-start-line="70" selection-end-line="70" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-    </leaf>
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300" />
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
@@ -288,6 +255,19 @@
             <path>
               <item name="OA" type="b2602c69:ProjectViewProjectNode" />
               <item name="OA" type="462c0819:PsiDirectoryNode" />
+              <item name="backend" type="462c0819:PsiDirectoryNode" />
+              <item name="views" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="OA" type="b2602c69:ProjectViewProjectNode" />
+              <item name="OA" type="462c0819:PsiDirectoryNode" />
+              <item name="backend" type="462c0819:PsiDirectoryNode" />
+              <item name="views" type="462c0819:PsiDirectoryNode" />
+              <item name="user" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="OA" type="b2602c69:ProjectViewProjectNode" />
+              <item name="OA" type="462c0819:PsiDirectoryNode" />
               <item name="common" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
@@ -325,7 +305,25 @@
               <item name="OA" type="b2602c69:ProjectViewProjectNode" />
               <item name="OA" type="462c0819:PsiDirectoryNode" />
               <item name="frontend" type="462c0819:PsiDirectoryNode" />
+              <item name="views" type="462c0819:PsiDirectoryNode" />
+              <item name="user" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="OA" type="b2602c69:ProjectViewProjectNode" />
+              <item name="OA" type="462c0819:PsiDirectoryNode" />
+              <item name="frontend" type="462c0819:PsiDirectoryNode" />
               <item name="web" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="OA" type="b2602c69:ProjectViewProjectNode" />
+              <item name="OA" type="462c0819:PsiDirectoryNode" />
+              <item name="vendor" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="OA" type="b2602c69:ProjectViewProjectNode" />
+              <item name="OA" type="462c0819:PsiDirectoryNode" />
+              <item name="vendor" type="462c0819:PsiDirectoryNode" />
+              <item name="composer" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -419,11 +417,10 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="259031000" />
+    <option name="totallyTimeSpent" value="259271000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-6" y="-6" width="1549" height="837" extended-state="6" />
-    <editor active="true" />
     <layout>
       <window_info id="Structure" order="0" weight="0.24976258" />
       <window_info id="Favorites" order="1" side_tool="true" />
@@ -500,13 +497,6 @@
     </option>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/vendor/phpdocumentor/reflection-common/.travis.yml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="462">
-          <caret line="21" column="4" selection-start-line="21" selection-start-column="4" selection-end-line="21" selection-end-column="4" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/vendor/bower-asset/inputmask/Gruntfile.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="208">
@@ -675,7 +665,9 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/vendor/yiisoft/extensions.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-333" />
+        <state relative-caret-position="283">
+          <caret line="40" column="4" selection-start-line="40" selection-start-column="4" selection-end-line="40" selection-end-column="4" />
+        </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/backend/controllers/ClientController.php">
@@ -768,7 +760,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/frontend/views/user/create.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state>
+        <state relative-caret-position="85">
+          <caret line="8" column="15" selection-start-line="8" selection-start-column="15" selection-end-line="8" selection-end-column="15" />
           <folding>
             <element signature="e#7#28#0#PHP" expanded="true" />
           </folding>
@@ -855,8 +848,15 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/composer.json">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="286">
-          <caret line="29" column="24" selection-start-line="29" selection-start-column="24" selection-end-line="29" selection-end-column="24" />
+        <state relative-caret-position="660">
+          <caret line="30" column="6" selection-start-line="30" selection-start-column="6" selection-end-line="30" selection-end-column="6" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/vendor/composer/autoload_psr4.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="242">
+          <caret line="11" column="64" selection-start-line="11" selection-start-column="64" selection-end-line="11" selection-end-column="64" />
         </state>
       </provider>
     </entry>
