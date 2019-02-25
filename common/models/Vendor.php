@@ -67,7 +67,7 @@ class Vendor extends \yii\db\ActiveRecord
             'coupon_rate' => '票面利率',
             'is_taxpayer' => '一般纳税人',
             'vendor_address' => '地址',
-            'social_code' => '社会编码',
+            'social_code' => '统一社会信用代码',
             'deposit_bank' => '开户银行',
             'bank_num' => '银行卡',
             'register_capital' => '注册资本',

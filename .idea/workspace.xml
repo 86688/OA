@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="da73695b-73d3-4dd7-b409-cfa0504147bb" name="Default" comment="">
-      <change beforePath="$PROJECT_DIR$/backend/views/vendor/index.php" beforeDir="false" afterPath="$PROJECT_DIR$/backend/views/vendor/index.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/common/models/Vendor.php" beforeDir="false" afterPath="$PROJECT_DIR$/common/models/Vendor.php" afterDir="false" />
     </list>
     <ignored path="OA.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -54,11 +54,27 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/backend/views/vendor/index.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="528">
-              <caret line="41" column="31" lean-forward="true" selection-start-line="32" selection-start-column="16" selection-end-line="41" selection-end-column="31" />
+            <state relative-caret-position="415">
+              <caret line="38" column="26" lean-forward="true" selection-start-line="38" selection-start-column="26" selection-end-line="38" selection-end-column="26" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/backend/controllers/VendorController.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="-1056" />
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/common/models/Vendor.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="395">
+              <caret line="69" column="34" selection-start-line="69" selection-start-column="34" selection-end-line="69" selection-end-column="34" />
             </state>
           </provider>
         </entry>
@@ -146,7 +162,6 @@
         <option value="$PROJECT_DIR$/common/models/UploadForm.php" />
         <option value="$PROJECT_DIR$/backend/views/user/view.php" />
         <option value="$PROJECT_DIR$/common/models/Client.php" />
-        <option value="$PROJECT_DIR$/common/models/Vendor.php" />
         <option value="$PROJECT_DIR$/backend/views/client/index.php" />
         <option value="$PROJECT_DIR$/backend/views/site/index.php" />
         <option value="$PROJECT_DIR$/frontend/controllers/UserController.php" />
@@ -162,6 +177,7 @@
         <option value="$PROJECT_DIR$/common/models/UserSearch.php" />
         <option value="$PROJECT_DIR$/backend/views/user/update.php" />
         <option value="$PROJECT_DIR$/backend/views/vendor/index.php" />
+        <option value="$PROJECT_DIR$/common/models/Vendor.php" />
       </list>
     </option>
   </component>
@@ -381,7 +397,7 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="266814000" />
+    <option name="totallyTimeSpent" value="266905000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-6" y="-6" width="1549" height="837" extended-state="6" />
@@ -462,23 +478,9 @@
     </option>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/common/models/Client.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="613">
-          <caret line="84" column="33" selection-start-line="84" selection-start-column="33" selection-end-line="84" selection-end-column="33" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/common/models/ClientSearch.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-352" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/common/models/Vendor.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="437">
-          <caret line="72" column="39" selection-start-line="72" selection-start-column="39" selection-end-line="72" selection-end-column="39" />
-        </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/backend/views/client/index.php">
@@ -808,8 +810,20 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/backend/views/vendor/index.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="528">
-          <caret line="41" column="31" lean-forward="true" selection-start-line="32" selection-start-column="16" selection-end-line="41" selection-end-column="31" />
+        <state relative-caret-position="415">
+          <caret line="38" column="26" lean-forward="true" selection-start-line="38" selection-start-column="26" selection-end-line="38" selection-end-column="26" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/backend/controllers/VendorController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-1056" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/common/models/Vendor.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="395">
+          <caret line="69" column="34" selection-start-line="69" selection-start-column="34" selection-end-line="69" selection-end-column="34" />
         </state>
       </provider>
     </entry>
