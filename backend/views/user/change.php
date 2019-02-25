@@ -49,7 +49,7 @@ $this->params['breadcrumbs'][] = $this->title;
 
             //动作按钮
             ['class' => 'yii\grid\ActionColumn',
-                'template'=>'{view} {update} {delete} {resetpwd} {privilege}',
+                'template'=>'{view} {update} {delete}',
                 'buttons'=>[
                     //$url 是列为按钮创建的URL，
                     //$model是当前要渲染的模型对象，
