@@ -6,22 +6,6 @@ use Yii;
 
 /**
  * This is the model class for table "vendor".
- *
- * @property string $vendor_id ��Ӧ�̱��
- * @property string $vendor_name ��Ӧ������
- * @property string $vendor_type ��Ӧ�����
- * @property string $vendor_province ��Ӧ��ʡ��
- * @property string $vendor_city ��Ӧ�̳���
- * @property string $vendor_linkman ��Ӧ����ϵ��
- * @property string $vendor_linktel ��Ӧ����ϵ�绰
- * @property string $vendor_email ��Ӧ������
- * @property string $coupon_rate Ʊ��˰��
- * @property int $is_taxpayer �Ƿ�һ����˰��
- * @property string $vendor_address ��˾��ַ
- * @property string $social_code ͳһ������
- * @property string $deposit_bank ��������
- * @property string $bank_num ���п�����
- * @property string $register_capital ע���ʱ�
  */
 class Vendor extends \yii\db\ActiveRecord
 {
