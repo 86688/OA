@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="da73695b-73d3-4dd7-b409-cfa0504147bb" name="Default" comment="">
-      <change beforePath="$PROJECT_DIR$/backend/views/user/update.php" beforeDir="false" afterPath="$PROJECT_DIR$/backend/views/user/update.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/views/vendor/index.php" beforeDir="false" afterPath="$PROJECT_DIR$/backend/views/vendor/index.php" afterDir="false" />
     </list>
     <ignored path="OA.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -55,13 +55,10 @@
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/backend/views/user/update.php">
+        <entry file="file://$PROJECT_DIR$/backend/views/vendor/index.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="506">
-              <caret line="72" column="38" selection-start-line="72" selection-start-column="38" selection-end-line="72" selection-end-column="38" />
-              <folding>
-                <element signature="e#7#28#0#PHP" expanded="true" />
-              </folding>
+            <state relative-caret-position="528">
+              <caret line="41" column="31" lean-forward="true" selection-start-line="32" selection-start-column="16" selection-end-line="41" selection-end-column="31" />
             </state>
           </provider>
         </entry>
@@ -150,7 +147,6 @@
         <option value="$PROJECT_DIR$/backend/views/user/view.php" />
         <option value="$PROJECT_DIR$/common/models/Client.php" />
         <option value="$PROJECT_DIR$/common/models/Vendor.php" />
-        <option value="$PROJECT_DIR$/backend/views/vendor/index.php" />
         <option value="$PROJECT_DIR$/backend/views/client/index.php" />
         <option value="$PROJECT_DIR$/backend/views/site/index.php" />
         <option value="$PROJECT_DIR$/frontend/controllers/UserController.php" />
@@ -165,6 +161,7 @@
         <option value="$PROJECT_DIR$/backend/views/user/change.php" />
         <option value="$PROJECT_DIR$/common/models/UserSearch.php" />
         <option value="$PROJECT_DIR$/backend/views/user/update.php" />
+        <option value="$PROJECT_DIR$/backend/views/vendor/index.php" />
       </list>
     </option>
   </component>
@@ -280,7 +277,7 @@
               <item name="OA" type="462c0819:PsiDirectoryNode" />
               <item name="backend" type="462c0819:PsiDirectoryNode" />
               <item name="views" type="462c0819:PsiDirectoryNode" />
-              <item name="user" type="462c0819:PsiDirectoryNode" />
+              <item name="vendor" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="OA" type="b2602c69:ProjectViewProjectNode" />
@@ -384,7 +381,7 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="266230000" />
+    <option name="totallyTimeSpent" value="266814000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-6" y="-6" width="1549" height="837" extended-state="6" />
@@ -481,13 +478,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="437">
           <caret line="72" column="39" selection-start-line="72" selection-start-column="39" selection-end-line="72" selection-end-column="39" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/backend/views/vendor/index.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="374">
-          <caret line="18" column="26" selection-start-line="18" selection-start-column="26" selection-end-line="18" selection-end-column="26" />
         </state>
       </provider>
     </entry>
@@ -813,6 +803,13 @@
           <folding>
             <element signature="e#7#28#0#PHP" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/backend/views/vendor/index.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="528">
+          <caret line="41" column="31" lean-forward="true" selection-start-line="32" selection-start-column="16" selection-end-line="41" selection-end-column="31" />
         </state>
       </provider>
     </entry>
