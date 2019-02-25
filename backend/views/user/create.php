@@ -6,7 +6,6 @@ use common\models\User;
 use common\models\Dept;
 use common\models\Title;
 use common\models\Place;
-use timepicker;
 
 
 
@@ -59,13 +58,7 @@ $this->params['breadcrumbs'][] = $this->title;
 
     <?= $form->field($model, 'file[]')->fileInput(['multiple' => true])->label('上传');?>
 
-    <?= $form->field($model, 'crt_start')->widget(DateTimePicker::classname(), [
-        'options' => ['placeholder' => ''],
-        'pluginOptions' => [
-            'autoclose' => true
-        ]
-    ]);
-    ?>
+    
 
 
     <div class="form-group">
