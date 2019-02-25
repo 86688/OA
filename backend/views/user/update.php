@@ -42,6 +42,15 @@ $this->params['breadcrumbs'][] = '修改';
 
         <?= $form->field($model, 'ctr_num')->textInput() ?>
 
+        <?= $form->field($model, 'in_time')->textInput(['maxlength' => true]) ?>
+
+        <?= $form->field($model, 'out_time')->textInput(['maxlength' => true]) ?>
+
+        <?= $form->field($model, 'sal_time')->textInput(['maxlength' => true]) ?>
+
+        <?= $form->field($model, 'salary')->textInput(['maxlength' => true]) ?>
+
+
 
         <?= $form->field($model, 'linkman')->textInput(['maxlength' => true]) ?>
 
@@ -60,6 +69,9 @@ $this->params['breadcrumbs'][] = '修改';
         <?= $form->field($model, 'title_id')->dropDownList(Title::allTitle(),['prompt'=>'请输入职称']) ?>
 
         <?= $form->field($model, 'file[]')->fileInput(['multiple' => true])->label('上传');?>
+
+        <?= $form->field($model, 'mark')->textInput() ?>
+
 
         <div class="form-group">
             <?= Html::submitButton('保存', ['class' => 'btn btn-success']) ?>
