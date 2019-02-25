@@ -48,7 +48,8 @@ class UserSearch extends User
      */
     public function search($params)
     {
-        $query = User::find()->where(['show'=>1]);
+        $query = User::find()->where(['!=','status_id',2]);
+
 
         $dataProvider = new ActiveDataProvider([
             'query' => $query,
