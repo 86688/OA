@@ -34,6 +34,11 @@ use yii\web\IdentityInterface;
  * @property int $place_id  地点编号(外键)
  * @property string $file 文件图片路径
  * @property int $show 离职在职
+ * @property int $in_time 入职时间
+ * @property int $out_time 离职时间
+ * @property int $sal_time
+ * @property double $salary 薪资
+ * @property string $mark 备注
 
  *
  * @property Dept $dept
@@ -99,6 +104,11 @@ class User extends ActiveRecord implements IdentityInterface
             'place_id' => '地点',
             'file' => '上传',
             'show' => '展示',
+            'in_time' => '入职时间',
+            'out_time' => '离职时间',
+            'sal_time' => '薪资调整时间',
+            'salary' => '薪资',
+            'mark' => '备注',
 
         ];
     }

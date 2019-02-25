@@ -50,7 +50,34 @@ class UserSearch extends User
     {
         $query = User::find()->where(['show'=>1]);
 
-        // add conditions that should always apply here
+        $dataProvider = new ActiveDataProvider([
+            'query' => $query,
+        ]);
+        //块赋值
+        $this->load($params);
+        //校验数据
+        if (!$this->validate()) {
+            // $query->where('0=1');
+            return $dataProvider;
+        }
+
+        $query->andFilterWhere(['like', 'user_name', $this->user_name])
+            ->andFilterWhere(['like', 'sex', $this->sex])
+            ->andFilterWhere(['like', 'tel', $this->tel])
+            ->andFilterWhere(['like', 'email', $this->email])
+            ->andFilterWhere(['like', 'ctr_num', $this->ctr_num])
+            ->andFilterWhere(['like', 'vacation', $this->vacation])
+            ->andFilterWhere(['like', 'status_id', $this->status_id])
+            ->andFilterWhere(['like', 'dept_id', $this->dept_id])
+            ->andFilterWhere(['like', 'title_id', $this->title_id])
+            ->andFilterWhere(['like', 'place_id', $this->place_id]);
+
+        return $dataProvider;
+    }
+
+    public function change($params)
+    {
+        $query = User::find()->where([]);
 
         $dataProvider = new ActiveDataProvider([
             'query' => $query,
@@ -59,17 +86,9 @@ class UserSearch extends User
         $this->load($params);
         //校验数据
         if (!$this->validate()) {
-            // uncomment the following line if you do not want to return any records when validation fails
             // $query->where('0=1');
             return $dataProvider;
         }
-
-// grid filtering conditions
-//        $query->andFilterWhere([
-//            'user_id' => $this->user_id,
-//            'crt_start' => $this->crt_start,
-//            'crt_end' => $this->crt_end,
-//        ]);
 
         $query->andFilterWhere(['like', 'user_name', $this->user_name])
             ->andFilterWhere(['like', 'sex', $this->sex])

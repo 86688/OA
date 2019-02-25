@@ -17,7 +17,7 @@ $this->params['breadcrumbs'][] = $this->title;
         <?= Html::a('新入人员', ['create'], ['class' => 'btn btn-success']) ?>
         <?= Html::a('请假调休', ['vacation/index'], ['class' => 'btn btn-success']) ?>
         <?= Html::a('部门管理', ['dept/index'], ['class' => 'btn btn-success']) ?>
-        <?= Html::a('人事变动', ['user/index'], ['class' => 'btn btn-success']) ?>
+        <?= Html::a('人事变动', ['user/change'], ['class' => 'btn btn-success']) ?>
     </p>
 
     <?php  echo $this->render('_search', ['model' => $searchModel]); ?>
