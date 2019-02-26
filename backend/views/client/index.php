@@ -26,7 +26,7 @@ $this->params['breadcrumbs'][] = $this->title;
 
             'client_id',
             'client_cmy_name',
-            'client_dept',
+//            'client_dept',
             'client_province',
             'client_city',
             //'client_site',
