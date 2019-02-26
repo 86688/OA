@@ -12,6 +12,8 @@ $this->title = '后台管理系统';
         <a href="http://admin.oa.com/index.php?r=finance"><p class="btn btn-lg btn-success col-md-4">财务</p></a>
         <a href="http://admin.oa.com/index.php?r=vendor"><p class="btn btn-lg btn-success col-md-4 col-md-offset-2">供应商</p></a>
         <a href="http://admin.oa.com/index.php?r=client"><p class="btn btn-lg btn-success col-md-4">客户</p></a>
+        <a href="http://admin.oa.com/index.php?r=vendor"><p class="btn btn-lg btn-success col-md-4 col-md-offset-2">空白</p></a>
+
     </div>
 
 

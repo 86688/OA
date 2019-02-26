@@ -2,6 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="da73695b-73d3-4dd7-b409-cfa0504147bb" name="Default" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/backend/views/site/index.php" beforeDir="false" afterPath="$PROJECT_DIR$/backend/views/site/index.php" afterDir="false" />
     </list>
     <ignored path="OA.iws" />
@@ -53,7 +54,17 @@
     <favorites_list name="OA" />
   </component>
   <component name="FileEditorManager">
-    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300" />
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/backend/views/site/index.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="308">
+              <caret line="14" column="118" selection-start-line="14" selection-start-column="118" selection-end-line="14" selection-end-column="118" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+    </leaf>
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
@@ -226,7 +237,7 @@
       <path value="$PROJECT_DIR$/vendor/yiisoft/yii2-timepicker" />
     </include_path>
   </component>
-  <component name="ProjectFrameBounds" extendedState="7">
+  <component name="ProjectFrameBounds" extendedState="6">
     <option name="x" value="360" />
     <option name="y" value="260" />
     <option name="width" value="2775" />
@@ -387,15 +398,16 @@
       <workItem from="1550823317386" duration="881000" />
       <workItem from="1550826214038" duration="3391000" />
       <workItem from="1551057999598" duration="2820000" />
-      <workItem from="1551142816403" duration="19478000" />
+      <workItem from="1551142816403" duration="20029000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="289681000" />
+    <option name="totallyTimeSpent" value="290232000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-6" y="-6" width="1549" height="837" extended-state="6" />
+    <editor active="true" />
     <layout>
       <window_info id="Structure" order="0" weight="0.24976258" />
       <window_info id="Favorites" order="1" side_tool="true" />
@@ -818,8 +830,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/backend/views/site/index.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="242">
-          <caret line="11" column="33" selection-start-line="11" selection-start-column="33" selection-end-line="11" selection-end-column="33" />
+        <state relative-caret-position="308">
+          <caret line="14" column="118" selection-start-line="14" selection-start-column="118" selection-end-line="14" selection-end-column="118" />
         </state>
       </provider>
     </entry>
