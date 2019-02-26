@@ -31,7 +31,6 @@ class UserSearch extends User
 
     public function scenarios()
     {
-        //作废场景类
         return Model::scenarios();
     }
 
@@ -39,7 +38,6 @@ class UserSearch extends User
     {
         $query = User::find()
             ->where(['!=','status_id',2]);
-
 
         $dataProvider = new ActiveDataProvider([
             'query' => $query,
@@ -51,17 +49,23 @@ class UserSearch extends User
             // $query->where('0=1');
             return $dataProvider;
         }
-        var_dump($this->status_id);
-        var_dump($this->title_id);
-        var_dump($this->place_id);
-//        die();
 
         $query->andFilterWhere(['like', 'user_name', $this->user_name])
             ->andFilterWhere(['like', 'sex', $this->sex])
             ->andFilterWhere(['like', 'status_id', $this->status_id])
             ->andFilterWhere(['like', 'dept_id', $this->dept_id])
-            ->andFilterWhere(['like', 'title_id', $this->title_id])
-            ->andFilterWhere(['like', 'place_id', $this->place_id]);
+            ->andFilterWhere(['like', 'title_id', $this->title_id]);
+
+        //连表查询-工作地址
+        $query->join('INNER JOIN','place','user.place_id = place.place_id');
+        $query->andFilterWhere(['like','place.place',$this->place_id]);
+
+        //默认排序
+        $dataProvider->sort->attributes['title_id'] =
+            [
+                'asc'=>['User.title_id'=>SORT_ASC],
+                'desc'=>['User.dept_id'=>SORT_DESC],
+            ];
 
         return $dataProvider;
     }
