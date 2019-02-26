@@ -29,26 +29,16 @@ class UserSearch extends User
         ];
     }
 
-    /**
-     * @
-     */
     public function scenarios()
     {
         //作废场景类
-        // bypass scenarios() implementation in the parent class
         return Model::scenarios();
     }
 
-    /**
-     * Creates data provider instance with search query applied
-     *
-     * @param array $params
-     *
-     * @return ActiveDataProvider
-     */
     public function search($params)
     {
-        $query = User::find()->where(['!=','status_id',2]);
+        $query = User::find()
+            ->where(['!=','status_id',2]);
 
 
         $dataProvider = new ActiveDataProvider([
@@ -61,13 +51,13 @@ class UserSearch extends User
             // $query->where('0=1');
             return $dataProvider;
         }
+        var_dump($this->status_id);
+        var_dump($this->title_id);
+        var_dump($this->place_id);
+//        die();
 
         $query->andFilterWhere(['like', 'user_name', $this->user_name])
             ->andFilterWhere(['like', 'sex', $this->sex])
-            ->andFilterWhere(['like', 'tel', $this->tel])
-            ->andFilterWhere(['like', 'email', $this->email])
-            ->andFilterWhere(['like', 'ctr_num', $this->ctr_num])
-            ->andFilterWhere(['like', 'vacation', $this->vacation])
             ->andFilterWhere(['like', 'status_id', $this->status_id])
             ->andFilterWhere(['like', 'dept_id', $this->dept_id])
             ->andFilterWhere(['like', 'title_id', $this->title_id])
@@ -92,7 +82,6 @@ class UserSearch extends User
         $query->andFilterWhere(['like', 'user_name', $this->user_name])
             ->andFilterWhere(['like', 'sex', $this->sex])
             ->andFilterWhere(['like', 'tel', $this->tel])
-            ->andFilterWhere(['like', 'email', $this->email])
             ->andFilterWhere(['like', 'ctr_num', $this->ctr_num])
             ->andFilterWhere(['like', 'vacation', $this->vacation])
             ->andFilterWhere(['like', 'status_id', $this->status_id])
