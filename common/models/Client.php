@@ -65,7 +65,7 @@ class Client extends \yii\db\ActiveRecord
     public function attributeLabels()
     {
         return [
-            'client_id' => '客户编号',
+            'client_id' => '编号',
             'client_cmy_name' => '客户公司全称',
             'client_dept' => '部门',
             'client_province' => '省份',
