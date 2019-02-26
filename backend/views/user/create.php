@@ -58,7 +58,7 @@ $this->params['breadcrumbs'][] = $this->title;
 
     <?= $form->field($model, 'file[]')->fileInput(['multiple' => true])->label('上传');?>
 
-    
+
 
 
     <div class="form-group">

@@ -66,7 +66,7 @@ class Client extends \yii\db\ActiveRecord
     {
         return [
             'client_id' => '客户编号',
-            'client_cmy_name' => '客户公司名字',
+            'client_cmy_name' => '客户公司全称',
             'client_dept' => '部门',
             'client_province' => '省份',
             'client_city' => '城市',
@@ -78,8 +78,8 @@ class Client extends \yii\db\ActiveRecord
             'client_tax_num' => '税号',
             'client_bank' => '开户银行',
             'client_bank_num' => '银行卡号',
-            'client_capital' => '注册资金',
-            'coupon_rate' => '客户公司Coupon Rate',
+            //  'client_capital' => '注册资金',
+            'coupon_rate' => '客户公司票面税率',
             'is_taxpayer' => '一般纳税人',
             'client_remark' => '备注信息',
             'invoice_id' => '发票号码',
