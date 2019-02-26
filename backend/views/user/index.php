@@ -32,7 +32,6 @@ $this->params['breadcrumbs'][] = $this->title;
             'label'=>'性别',
             'filter'=>User::allSex(),
         ],
-        'tel',
 //        'email:email',
 
         ['attribute'=>'status_id',
@@ -59,6 +58,7 @@ $this->params['breadcrumbs'][] = $this->title;
                 ->orderBy('title_id')
                 ->column(),
         ],
+        'tel',
         [
             'attribute' => 'crt_start',
             'format' => ['date', 'php:Y-m-d']
