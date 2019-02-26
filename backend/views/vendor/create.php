@@ -6,8 +6,8 @@ use yii\helpers\Html;
 /* @var $this yii\web\View */
 /* @var $model common\models\Vendor */
 
-$this->title = 'Create Vendor';
-$this->params['breadcrumbs'][] = ['label' => 'Vendors', 'url' => ['index']];
+$this->title = '新增供应商';
+$this->params['breadcrumbs'][] = ['label' => '供应商', 'url' => ['index']];
 $this->params['breadcrumbs'][] = $this->title;
 ?>
 <div class="vendor-create">

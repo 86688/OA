@@ -5,14 +5,13 @@ use yii\helpers\Html;
 /* @var $this yii\web\View */
 /* @var $model common\models\Vendor */
 
-$this->title = 'Update Vendor: {nameAttribute}';
-$this->params['breadcrumbs'][] = ['label' => 'Vendors', 'url' => ['index']];
-$this->params['breadcrumbs'][] = ['label' => $model->vendor_id, 'url' => ['view', 'id' => $model->vendor_id]];
-$this->params['breadcrumbs'][] = 'Update';
+$this->title = '修改供应商';
+$this->params['breadcrumbs'][] = ['label' => '供应商', 'url' => ['index']];
+$this->params['breadcrumbs'][] = ['label' => $model->vendor_name, 'url' => ['view', 'id' => $model->vendor_id]];
+$this->params['breadcrumbs'][] = '修改';
 ?>
 <div class="vendor-update">
 
-    <h1><?= Html::encode($this->title) ?></h1>
 
     <?= $this->render('_form', [
         'model' => $model,
