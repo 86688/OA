@@ -24,13 +24,13 @@ $this->params['breadcrumbs'][] = $this->title;
         'columns' => [
 //            ['class' => 'yii\grid\SerialColumn'],
 
-            'vendor_id',
-            'vendor_name',
+//            'vendor_id',
             'vendor_type',
-            'vendor_province',
+            'vendor_name',
+//            'vendor_province',
             'vendor_city',
             'vendor_linkman',
-//            'vendor_linktel',
+            'vendor_linktel',
 //            'vendor_email:email',
 //            'coupon_rate',
 //            'is_taxpayer',
