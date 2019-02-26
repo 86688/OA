@@ -77,6 +77,11 @@ class UserSearch extends User
             'query' => $query,
         ]);
 
+        $dataProvider->sort->attributes['title_id']=
+        [
+            'asc' => ['title.title_id' => SORT_DESC],
+        ];
+
         $this->load($params);
         if (!$this->validate()) {
             return $dataProvider;
