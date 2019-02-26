@@ -2,10 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="da73695b-73d3-4dd7-b409-cfa0504147bb" name="Default" comment="">
-      <change beforePath="$PROJECT_DIR$/backend/views/client/index.php" beforeDir="false" afterPath="$PROJECT_DIR$/backend/views/client/index.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/views/vendor/_form.php" beforeDir="false" afterPath="$PROJECT_DIR$/backend/views/vendor/_form.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/views/vendor/create.php" beforeDir="false" afterPath="$PROJECT_DIR$/backend/views/vendor/create.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/views/vendor/update.php" beforeDir="false" afterPath="$PROJECT_DIR$/backend/views/vendor/update.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/views/client/create.php" beforeDir="false" afterPath="$PROJECT_DIR$/backend/views/client/create.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/views/vendor/view.php" beforeDir="false" afterPath="$PROJECT_DIR$/backend/views/vendor/view.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/common/models/Client.php" beforeDir="false" afterPath="$PROJECT_DIR$/common/models/Client.php" afterDir="false" />
     </list>
     <ignored path="OA.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -75,20 +74,38 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/backend/views/vendor/_form.php">
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/common/models/Client.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="393">
-              <caret line="43" column="34" selection-start-line="43" selection-start-column="34" selection-end-line="43" selection-end-column="34" />
+            <state relative-caret-position="439">
+              <caret line="80" column="12" selection-start-line="80" selection-start-column="12" selection-end-line="80" selection-end-column="12" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/backend/views/client/index.php">
+        <entry file="file://$PROJECT_DIR$/backend/views/vendor/_form.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="132">
-              <caret line="27" column="21" selection-start-line="27" selection-start-column="21" selection-end-line="27" selection-end-column="21" />
+            <state relative-caret-position="924">
+              <caret line="43" column="34" selection-start-line="43" selection-start-column="34" selection-end-line="43" selection-end-column="34" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/backend/views/vendor/view.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="173">
+              <caret line="21" column="35" selection-start-line="21" selection-start-column="35" selection-end-line="21" selection-end-column="35" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/backend/views/client/create.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="308">
+              <caret line="14" lean-forward="true" selection-start-line="14" selection-end-line="14" />
             </state>
           </provider>
         </entry>
@@ -173,7 +190,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/backend/views/dept/view.php" />
         <option value="$PROJECT_DIR$/common/models/Title.php" />
         <option value="$PROJECT_DIR$/vendor/yiisoft/yii2/grid/GridView.php" />
         <option value="$PROJECT_DIR$/vendor/yiisoft/yii2/widgets/BaseListView.php" />
@@ -211,9 +227,7 @@
         <option value="$PROJECT_DIR$/backend/views/user/create.php" />
         <option value="$PROJECT_DIR$/common/models/User.php" />
         <option value="$PROJECT_DIR$/backend/views/site/index.php" />
-        <option value="$PROJECT_DIR$/backend/views/vendor/view.php" />
         <option value="$PROJECT_DIR$/backend/views/client/view.php" />
-        <option value="$PROJECT_DIR$/common/models/Client.php" />
         <option value="$PROJECT_DIR$/backend/views/user/view.php" />
         <option value="$PROJECT_DIR$/backend/views/user/index.php" />
         <option value="$PROJECT_DIR$/common/models/UserSearch.php" />
@@ -224,6 +238,9 @@
         <option value="$PROJECT_DIR$/backend/views/vendor/create.php" />
         <option value="$PROJECT_DIR$/backend/views/vendor/update.php" />
         <option value="$PROJECT_DIR$/backend/views/vendor/_form.php" />
+        <option value="$PROJECT_DIR$/backend/views/client/create.php" />
+        <option value="$PROJECT_DIR$/common/models/Client.php" />
+        <option value="$PROJECT_DIR$/backend/views/vendor/view.php" />
       </list>
     </option>
   </component>
@@ -460,12 +477,12 @@
       <workItem from="1550823317386" duration="881000" />
       <workItem from="1550826214038" duration="3391000" />
       <workItem from="1551057999598" duration="2820000" />
-      <workItem from="1551142816403" duration="12624000" />
+      <workItem from="1551142816403" duration="12843000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="282827000" />
+    <option name="totallyTimeSpent" value="283046000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-6" y="-6" width="1549" height="837" extended-state="6" />
@@ -546,9 +563,6 @@
     </option>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/backend/controllers/DeptController.php">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
     <entry file="file://$PROJECT_DIR$/vendor/yiisoft/yii2/composer.json">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-757">
@@ -784,20 +798,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/backend/views/vendor/view.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="484">
-          <caret line="31" column="21" selection-start-line="31" selection-start-column="21" selection-end-line="31" selection-end-column="21" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/common/models/Client.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="351">
-          <caret line="68" column="36" selection-start-line="68" selection-start-column="36" selection-end-line="68" selection-end-column="36" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/backend/views/user/view.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-154">
@@ -871,13 +871,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/common/models/Vendor.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-597">
-          <caret line="9" column="41" lean-forward="true" selection-start-line="9" selection-start-column="41" selection-end-line="9" selection-end-column="41" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/common/models/VendorSearch.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-1227" />
@@ -909,10 +902,38 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/common/models/Client.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="439">
+          <caret line="80" column="12" selection-start-line="80" selection-start-column="12" selection-end-line="80" selection-end-column="12" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/common/models/Vendor.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-597">
+          <caret line="9" column="41" lean-forward="true" selection-start-line="9" selection-start-column="41" selection-end-line="9" selection-end-column="41" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/backend/views/vendor/_form.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="393">
+        <state relative-caret-position="924">
           <caret line="43" column="34" selection-start-line="43" selection-start-column="34" selection-end-line="43" selection-end-column="34" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/backend/views/client/create.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="308">
+          <caret line="14" lean-forward="true" selection-start-line="14" selection-end-line="14" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/backend/views/vendor/view.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="173">
+          <caret line="21" column="35" selection-start-line="21" selection-start-column="35" selection-end-line="21" selection-end-column="35" />
         </state>
       </provider>
     </entry>
