@@ -17,7 +17,7 @@ use common\models\Place;
     }
 </style>
 
-<div class="user-search">
+<div class="user-search ">
 
     <?php $form = ActiveForm::begin([
         'action' => ['index'],
