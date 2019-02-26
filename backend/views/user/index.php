@@ -33,7 +33,7 @@ $this->params['breadcrumbs'][] = $this->title;
             'filter'=>User::allSex(),
         ],
         'tel',
-        'email:email',
+//        'email:email',
 
         ['attribute'=>'status_id',
             'label'=>'状态',

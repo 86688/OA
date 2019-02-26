@@ -63,7 +63,7 @@ class User extends ActiveRecord implements IdentityInterface
     {
         return [
             [['tel', 'id_card','crt_start', 'crt_end', 'ctr_num', 'status_id', 'dept_id', 'title_id','place_id','linkman','linktel'], 'required',"message"=>"{attribute}不能为空"],
-            [['crt_start', 'crt_end','show'], 'integer',"message"=>"{attribute}必须为数字"],
+            [['show'], 'integer',"message"=>"{attribute}必须为数字"],
             [['user_name', 'linkman'], 'string', 'max' => 5],
             [['password_hash'], 'string', 'max' => 100],
             [['auth_key'], 'string', 'max' => 32],
@@ -93,7 +93,7 @@ class User extends ActiveRecord implements IdentityInterface
             'major' => '专业',
             'crt_start' => '合同开始',
             'crt_end' => '合同截止',
-            'ctr_num' => '合同次数',
+            'ctr_num' => '次数',
             'linkman' => '紧急联系人',
             'linktel' => '紧急联系电话',
             'housing_fund' => '公积金',
