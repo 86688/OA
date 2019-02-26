@@ -42,6 +42,7 @@ AppAsset::register($this);
     $menuItems = [
         ['label' => '主页', 'url' => ['/site/index']],
         ['label' => '人事', 'url' => ['/user/index']],
+        ['label' => '项目', 'url' => ['/project/index']],
         ['label' => '财务', 'url' => ['/finance/index']],
         ['label' => '供应商', 'url' => ['/vendor/index']],
         ['label' => '客户', 'url' => ['/client/index']],

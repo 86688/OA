@@ -51,14 +51,13 @@ class UserSearch extends User
         }
 
         $query->andFilterWhere(['like', 'user_name', $this->user_name])
-            ->andFilterWhere(['like', 'sex', $this->sex])
-            ->andFilterWhere(['like', 'status_id', $this->status_id])
-            ->andFilterWhere(['like', 'dept_id', $this->dept_id])
-            ->andFilterWhere(['like', 'title_id', $this->title_id]);
+            ->andFilterWhere(['=', 'status_id', $this->status_id])
+            ->andFilterWhere(['=', 'dept_id', $this->dept_id])
+            ->andFilterWhere(['=', 'title_id', $this->title_id]);
 
         //连表查询-工作地址
         $query->join('INNER JOIN','place','user.place_id = place.place_id');
-        $query->andFilterWhere(['like','place.place',$this->place_id]);
+        $query->andFilterWhere(['=','place.place',$this->place_id]);
 
         //默认排序
         $dataProvider->sort->attributes['title_id'] =
