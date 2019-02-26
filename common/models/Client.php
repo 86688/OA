@@ -66,7 +66,7 @@ class Client extends \yii\db\ActiveRecord
     {
         return [
             'client_id' => '编号',
-            'client_cmy_name' => '客户公司全称',
+            'client_cmy_name' => '客户全称',
             'client_dept' => '部门',
             'client_province' => '省份',
             'client_city' => '城市',

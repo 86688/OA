@@ -7,7 +7,7 @@ use common\models\Dept;
 use common\models\Title;
 use common\models\User;
 
-$this->title = '人员';
+$this->title = '人事';
 $this->params['breadcrumbs'][] = $this->title;
 ?>
 
