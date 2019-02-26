@@ -6,6 +6,7 @@ use common\models\User;
 use common\models\Dept;
 use common\models\Title;
 use common\models\Place;
+//use dosamigos\datepicker\DatePicker;
 
 
 
@@ -58,6 +59,15 @@ $this->params['breadcrumbs'][] = $this->title;
 
     <?= $form->field($model, 'file[]')->fileInput(['multiple' => true])->label('上传');?>
 
+<!--    --><?//= $form->field($model, 'crt_end')->widget(
+//        DatePicker::className(), [
+//        'inline' => true,
+//        'template' => '<div class="well well-sm" style="background-color: #fff; width:250px">{input}</div>',
+//        'clientOptions' => [
+//            'autoclose' => true,
+//            'format' => 'dd-M-yyyy'
+//        ]
+//    ]);?>
 
 
 

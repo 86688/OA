@@ -92,7 +92,7 @@ class User extends ActiveRecord implements IdentityInterface
             'school' => '院校',
             'major' => '专业',
             'crt_start' => '合同开始',
-            'crt_end' => '合同结束',
+            'crt_end' => '合同截止',
             'ctr_num' => '合同次数',
             'linkman' => '紧急联系人',
             'linktel' => '紧急联系电话',
