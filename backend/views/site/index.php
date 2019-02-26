@@ -7,11 +7,11 @@ $this->title = '后台管理系统';
 <div class="container">
 
     <div class="row jumbotron">
-        <p class="btn btn-lg btn-success col-md-4"><a href="http://admin.oa.com/index.php?r=user">人事</a></p>
-        <p class="btn btn-lg btn-success col-md-4 col-md-offset-2"><a href="http://admin.oa.com/index.php?r=project">项目</a></p>
-        <p class="btn btn-lg btn-success col-md-4"><a href="http://admin.oa.com/index.php?r=finance">财务</a></p>
-        <p class="btn btn-lg btn-success col-md-4 col-md-offset-2"><a href="http://admin.oa.com/index.php?r=vendor">供应商</a></p>
-        <p class="btn btn-lg btn-success col-md-4"><a href="http://admin.oa.com/index.php?r=client">客户</a></p>
+        <a href="http://admin.oa.com/index.php?r=user"><p class="btn btn-lg btn-success col-md-4">人事</p></a>
+        <a href="http://admin.oa.com/index.php?r=project"><p class="btn btn-lg btn-success col-md-4 col-md-offset-2">项目</p></a>
+        <a href="http://admin.oa.com/index.php?r=finance"><p class="btn btn-lg btn-success col-md-4">财务</p></a>
+        <a href="http://admin.oa.com/index.php?r=vendor"><p class="btn btn-lg btn-success col-md-4 col-md-offset-2">供应商</p></a>
+        <a href="http://admin.oa.com/index.php?r=client"><p class="btn btn-lg btn-success col-md-4">客户</p></a>
     </div>
 
 
