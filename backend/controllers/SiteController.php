@@ -8,6 +8,7 @@ use yii\filters\AccessControl;
 use common\models\LoginForm;
 
 
+
 /**
  * Site controller
  */
@@ -81,8 +82,7 @@ class SiteController extends Controller
         $model = new LoginForm();
 
         // 收集数据
-        if ($model->load(Yii::$app->request->post() && $model->login()))
-        {
+        if ($model->load(Yii::$app->request->post()) && $model->login()) {
             return $this->goBack();
         } else {
             $model->password_hash = '';
