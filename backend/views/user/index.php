@@ -28,10 +28,7 @@ $this->params['breadcrumbs'][] = $this->title;
     'dataProvider' => $dataProvider,
     'columns' => [
         'user_name',
-        ['attribute'=>'sex',
-            'label'=>'性别',
-        ],
-
+        'sex',
         ['attribute'=>'status_id',
             'label'=>'状态',
             'value'=>'status.status_name',
