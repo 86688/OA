@@ -139,6 +139,7 @@ class UserController extends Controller
     //重置一个
     public function actionResetpwd($id)
     {
+
         if (!Yii::$app->user->can('modify_emp', [], true)) {
             throw new ForbiddenHttpException('对不起，你没有这个权限');
         }
