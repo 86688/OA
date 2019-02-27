@@ -37,7 +37,7 @@ class VendorController extends Controller
      */
     public function actionIndex()
     {
-        if (!Yii::$app->user->can('view_emp', [], true)) {
+        if (!Yii::$app->user->can('backend', [], true)) {
             throw new ForbiddenHttpException('请认证身份，谢谢！');
         }
 

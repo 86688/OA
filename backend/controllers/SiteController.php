@@ -45,7 +45,7 @@ class SiteController extends Controller
     //显示主页
     public function actionIndex()
     {
-        if (!Yii::$app->user->can('view_emp', [], true)) {
+        if (!Yii::$app->user->can('backend', [], true)) {
             throw new ForbiddenHttpException('请认证身份，谢谢！');
         }
 
