@@ -64,9 +64,13 @@ class SiteController extends Controller
         return $this->render('index');
     }
 
-    //   Login action.
-    //  登录方法是在site里面的
-    //  注册方法是在user里面的
+    /**
+     * Login action.
+     *
+     * @return string
+     */
+//  登录方法是在site里面的
+//  注册方法是在user里面的
     public function actionLogin()
     {
         // 是否游客
@@ -75,21 +79,10 @@ class SiteController extends Controller
         }
 
         $model = new LoginForm();
-        //收集数据
-        if ($model->load(Yii::$app->request->post())) {
-            //权限检查
-            if (!Yii::$app->user->can('view_emp', [], true)) {
-                die('权限');
-                throw new ForbiddenHttpException('对不起，你没有这个权限');
-            }
-            //注册登录
-            if($model->login())
-            {
-                return $this->goBack();
-            }
-
+        //收集数据  && 执行loginform的login方法（验证密码用户配对  并且注册用户）
+        if ($model->load(Yii::$app->request->post()) && $model->login()) {
+            return $this->goBack();
         } else {
-
             $model->password_hash = '';
             return $this->render('login', [
                 'model' => $model,

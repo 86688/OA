@@ -2,8 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="da73695b-73d3-4dd7-b409-cfa0504147bb" name="Default" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/backend/controllers/SiteController.php" beforeDir="false" afterPath="$PROJECT_DIR$/backend/controllers/SiteController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/views/user/change.php" beforeDir="false" afterPath="$PROJECT_DIR$/backend/views/user/change.php" afterDir="false" />
     </list>
     <ignored path="OA.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -58,8 +58,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/backend/controllers/SiteController.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="132">
-              <caret line="79" column="18" selection-start-line="79" selection-start-column="14" selection-end-line="79" selection-end-column="18" />
+            <state relative-caret-position="415">
+              <caret line="85" column="25" selection-start-line="85" selection-end-line="86" />
               <folding>
                 <element signature="e#38#46#0#PHP" expanded="true" />
               </folding>
@@ -68,10 +68,22 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/vendor/yiisoft/yii2/web/User.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="219">
+              <caret line="248" column="43" selection-start-line="248" selection-start-column="26" selection-end-line="248" selection-end-column="43" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/backend/controllers/UserController.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-805">
-              <caret line="14" column="26" selection-start-line="14" selection-start-column="26" selection-end-line="14" selection-end-column="26" />
+            <state relative-caret-position="339">
+              <caret line="58" selection-start-line="58" selection-end-line="58" />
+              <folding>
+                <element signature="e#39#47#0#PHP" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -79,8 +91,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/common/models/LoginForm.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="227">
-              <caret line="68" column="20" selection-start-line="68" selection-start-column="20" selection-end-line="68" selection-end-column="20" />
+            <state relative-caret-position="329">
+              <caret line="73" column="39" lean-forward="true" selection-start-line="73" selection-start-column="39" selection-end-line="73" selection-end-column="39" />
             </state>
           </provider>
         </entry>
@@ -175,7 +187,6 @@
         <option value="$PROJECT_DIR$/backend/views/user/index.php" />
         <option value="$PROJECT_DIR$/common/models/UserSearch.php" />
         <option value="$PROJECT_DIR$/backend/views/site/index.php" />
-        <option value="$PROJECT_DIR$/backend/controllers/UserController.php" />
         <option value="$PROJECT_DIR$/common/models/LoginForm.php" />
         <option value="$PROJECT_DIR$/backend/views/project/create.php" />
         <option value="$PROJECT_DIR$/backend/views/project/_form.php" />
@@ -183,6 +194,7 @@
         <option value="$PROJECT_DIR$/backend/controllers/ProjectController.php" />
         <option value="$PROJECT_DIR$/backend/views/project/index.php" />
         <option value="$PROJECT_DIR$/backend/views/user/change.php" />
+        <option value="$PROJECT_DIR$/backend/controllers/UserController.php" />
         <option value="$PROJECT_DIR$/backend/controllers/SiteController.php" />
       </list>
     </option>
@@ -419,12 +431,12 @@
       <workItem from="1550823317386" duration="881000" />
       <workItem from="1550826214038" duration="3391000" />
       <workItem from="1551057999598" duration="2820000" />
-      <workItem from="1551142816403" duration="30581000" />
+      <workItem from="1551142816403" duration="32188000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="300784000" />
+    <option name="totallyTimeSpent" value="302391000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-6" y="-6" width="1549" height="837" extended-state="6" />
@@ -432,7 +444,7 @@
     <layout>
       <window_info id="Structure" order="0" weight="0.24976258" />
       <window_info id="Favorites" order="1" side_tool="true" />
-      <window_info active="true" content_ui="combo" id="Project" order="2" visible="true" weight="0.16342933" />
+      <window_info content_ui="combo" id="Project" order="2" visible="true" weight="0.16342933" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.27864215" />
       <window_info anchor="bottom" id="Run" order="2" />
@@ -731,13 +743,6 @@
     <entry file="file://$PROJECT_DIR$/backend/views/site/login.php">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/vendor/yiisoft/yii2/web/User.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-565">
-          <caret line="720" column="6" selection-start-line="720" selection-start-column="6" selection-end-line="720" selection-end-column="6" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/backend/views/project/create.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="286">
@@ -834,24 +839,34 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/common/models/LoginForm.php">
+    <entry file="file://$PROJECT_DIR$/backend/controllers/UserController.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="227">
-          <caret line="68" column="20" selection-start-line="68" selection-start-column="20" selection-end-line="68" selection-end-column="20" />
+        <state relative-caret-position="339">
+          <caret line="58" selection-start-line="58" selection-end-line="58" />
+          <folding>
+            <element signature="e#39#47#0#PHP" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/backend/controllers/UserController.php">
+    <entry file="file://$PROJECT_DIR$/common/models/LoginForm.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-805">
-          <caret line="14" column="26" selection-start-line="14" selection-start-column="26" selection-end-line="14" selection-end-column="26" />
+        <state relative-caret-position="329">
+          <caret line="73" column="39" lean-forward="true" selection-start-line="73" selection-start-column="39" selection-end-line="73" selection-end-column="39" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/vendor/yiisoft/yii2/web/User.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="219">
+          <caret line="248" column="43" selection-start-line="248" selection-start-column="26" selection-end-line="248" selection-end-column="43" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/backend/controllers/SiteController.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="132">
-          <caret line="79" column="18" selection-start-line="79" selection-start-column="14" selection-end-line="79" selection-end-column="18" />
+        <state relative-caret-position="415">
+          <caret line="85" column="25" selection-start-line="85" selection-end-line="86" />
           <folding>
             <element signature="e#38#46#0#PHP" expanded="true" />
           </folding>
