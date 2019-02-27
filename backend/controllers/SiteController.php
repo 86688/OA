@@ -6,8 +6,7 @@ use yii\web\Controller;
 use yii\filters\VerbFilter;
 use yii\filters\AccessControl;
 use common\models\LoginForm;
-use common\models\User;
-use yii\web\ForbiddenHttpException;
+
 
 /**
  * Site controller
@@ -70,8 +69,8 @@ class SiteController extends Controller
      *
      * @return string
      */
-//  登录方法是在site里面的
-//  注册方法是在user里面的
+    //  登录方法是在site里面的
+    //  注册方法是在user里面的
     public function actionLogin()
     {
         // 是否游客
@@ -82,11 +81,9 @@ class SiteController extends Controller
         $model = new LoginForm();
 
         // 收集数据
-        if ($model->load(Yii::$app->request->post()))
+        if ($model->load(Yii::$app->request->post() && $model->login()))
         {
-            if($model->login()){
-                return $this->goBack();
-            }
+            return $this->goBack();
         } else {
             $model->password_hash = '';
             return $this->render('login', [
