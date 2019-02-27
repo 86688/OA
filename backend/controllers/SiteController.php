@@ -51,7 +51,7 @@ class SiteController extends Controller
 
         return $this->render('index');
     }
-    
+
     //  登录方法是在site里面的
     //  注册方法是在user里面的
     public function actionLogin()
