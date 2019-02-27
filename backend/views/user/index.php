@@ -27,7 +27,8 @@ $this->params['breadcrumbs'][] = $this->title;
     'dataProvider' => $dataProvider,
     'columns' => [
         'user_name',
-        ['attribute'=>'sex',
+        [
+            'attribute'=>'sex',
             'label'=>'性别',
             'value'=>'sex',
         ],
