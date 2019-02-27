@@ -1,7 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="da73695b-73d3-4dd7-b409-cfa0504147bb" name="Default" comment="" />
+    <list default="true" id="da73695b-73d3-4dd7-b409-cfa0504147bb" name="Default" comment="">
+      <change beforePath="$PROJECT_DIR$/backend/controllers/ProjectController.php" beforeDir="false" afterPath="$PROJECT_DIR$/backend/controllers/ProjectController.php" afterDir="false" />
+    </list>
     <ignored path="OA.iws" />
     <ignored path=".idea/workspace.xml" />
     <ignored path=".idea/dataSources.local.xml" />
@@ -51,7 +53,26 @@
     <favorites_list name="OA" />
   </component>
   <component name="FileEditorManager">
-    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300" />
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/backend/controllers/UserController.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="176">
+              <caret line="8" column="24" selection-start-line="8" selection-end-line="9" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/backend/controllers/ProjectController.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="110">
+              <caret line="11" lean-forward="true" selection-start-line="11" selection-end-line="11" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+    </leaf>
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
@@ -99,7 +120,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/common/models/Dept.php" />
         <option value="$PROJECT_DIR$/backend/views/dept/create.php" />
         <option value="$PROJECT_DIR$/backend/views/dept/index.php" />
         <option value="$PROJECT_DIR$/common/models/Place.php" />
@@ -150,6 +170,7 @@
         <option value="$PROJECT_DIR$/backend/views/project/_form.php" />
         <option value="$PROJECT_DIR$/backend/views/project/index.php" />
         <option value="$PROJECT_DIR$/backend/views/project/_search.php" />
+        <option value="$PROJECT_DIR$/backend/controllers/ProjectController.php" />
       </list>
     </option>
   </component>
@@ -385,15 +406,16 @@
       <workItem from="1550823317386" duration="881000" />
       <workItem from="1550826214038" duration="3391000" />
       <workItem from="1551057999598" duration="2820000" />
-      <workItem from="1551142816403" duration="26979000" />
+      <workItem from="1551142816403" duration="27215000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="297182000" />
+    <option name="totallyTimeSpent" value="297418000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-6" y="-6" width="1549" height="837" extended-state="6" />
+    <editor active="true" />
     <layout>
       <window_info id="Structure" order="0" weight="0.24976258" />
       <window_info id="Favorites" order="1" side_tool="true" />
@@ -669,9 +691,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/backend/controllers/ProjectController.php">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
     <entry file="file://$PROJECT_DIR$/vendor/yiisoft/yii2/grid/GridView.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="381">
@@ -811,11 +830,15 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/backend/controllers/UserController.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="208">
-          <caret line="58" column="24" selection-start-line="58" selection-start-column="24" selection-end-line="58" selection-end-column="24" />
-          <folding>
-            <element signature="e#39#47#0#PHP" expanded="true" />
-          </folding>
+        <state relative-caret-position="176">
+          <caret line="8" column="24" selection-start-line="8" selection-end-line="9" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/backend/controllers/ProjectController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="110">
+          <caret line="11" lean-forward="true" selection-start-line="11" selection-end-line="11" />
         </state>
       </provider>
     </entry>

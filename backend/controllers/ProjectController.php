@@ -8,6 +8,8 @@ use common\models\ProjectSearch;
 use yii\web\Controller;
 use yii\web\NotFoundHttpException;
 use yii\filters\VerbFilter;
+use yii\web\ForbiddenHttpException;
+
 
 /**
  * ProjectController implements the CRUD actions for Project model.
@@ -64,6 +66,10 @@ class ProjectController extends Controller
      */
     public function actionCreate()
     {
+        if (!Yii::$app->user->can('new_pro', [], true)) {
+            throw new ForbiddenHttpException('对不起，你没有这个权限');
+        }
+
         $model = new Project();
 
         if ($model->load(Yii::$app->request->post()) && $model->save()) {
