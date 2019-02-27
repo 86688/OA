@@ -8,7 +8,8 @@ use common\models\VendorSearch;
 use yii\web\Controller;
 use yii\web\NotFoundHttpException;
 use yii\filters\VerbFilter;
-use yii\filters\AccessControl;
+use yii\web\ForbiddenHttpException;
+
 
 /**
  * VendorController implements the CRUD actions for Vendor model.
@@ -27,16 +28,6 @@ class VendorController extends Controller
                     'delete' => ['POST'],
                 ],
             ],
-            'access'=>[
-                'class' => AccessControl::className(),
-                'rules' => [
-                    [
-                        'actions' => ['index'],
-                        'allow' => true,
-                        'roles' => ['@'],
-                    ]
-                ],
-            ],
         ];
     }
 
@@ -46,6 +37,10 @@ class VendorController extends Controller
      */
     public function actionIndex()
     {
+        if (!Yii::$app->user->can('view_emp', [], true)) {
+            throw new ForbiddenHttpException('对不起，你没有这个权限');
+        }
+
         $searchModel = new VendorSearch();
         $dataProvider = $searchModel->search(Yii::$app->request->queryParams);
 

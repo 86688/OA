@@ -14,7 +14,6 @@ use common\models\AuthItem;
 use app\models\Upload;
 use app\models\UploadForm;
 use yii\web\UploadedFile;
-use yii\filters\AccessControl;
 
 class UserController extends Controller
 {
@@ -27,22 +26,16 @@ class UserController extends Controller
                     'delete' => ['POST'],
                 ],
             ],
-            'access'=>[
-                'class' => AccessControl::className(),
-                'rules' => [
-                    [
-                        'actions' => ['index'],
-                        'allow' => true,
-                        'roles' => ['@'],
-                    ]
-                ],
-            ],
         ];
     }
 
     //展示所有
     public function actionIndex()
     {
+        if (!Yii::$app->user->can('view_emp', [], true)) {
+            throw new ForbiddenHttpException('对不起，你没有这个权限');
+        }
+
         $searchModel = new UserSearch();
         $dataProvider = $searchModel->search(Yii::$app->request->queryParams);
 

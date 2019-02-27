@@ -9,7 +9,6 @@ use yii\web\Controller;
 use yii\web\NotFoundHttpException;
 use yii\filters\VerbFilter;
 use yii\web\ForbiddenHttpException;
-use yii\filters\AccessControl;
 
 
 /**
@@ -29,16 +28,6 @@ class ProjectController extends Controller
                     'delete' => ['POST'],
                 ],
             ],
-            'access'=>[
-                'class' => AccessControl::className(),
-                'rules' => [
-                    [
-                        'actions' => ['index'],
-                        'allow' => true,
-                        'roles' => ['@'],
-                    ]
-                ],
-            ],
         ];
     }
 
@@ -48,6 +37,11 @@ class ProjectController extends Controller
      */
     public function actionIndex()
     {
+        if (!Yii::$app->user->can('view_emp', [], true)) {
+            throw new ForbiddenHttpException('对不起，你没有这个权限');
+        }
+
+
         $searchModel = new ProjectSearch();
         $dataProvider = $searchModel->search(Yii::$app->request->queryParams);
 

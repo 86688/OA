@@ -8,7 +8,8 @@ use common\models\DeptSearch;
 use yii\web\Controller;
 use yii\web\NotFoundHttpException;
 use yii\filters\VerbFilter;
-use yii\filters\AccessControl;
+use yii\web\ForbiddenHttpException;
+
 
 /**
  * DeptController implements the CRUD actions for Dept model.
@@ -27,16 +28,6 @@ class DeptController extends Controller
                     'delete' => ['POST'],
                 ],
             ],
-            'access'=>[
-                'class' => AccessControl::className(),
-                'rules' => [
-                    [
-                        'actions' => ['index'],
-                        'allow' => true,
-                        'roles' => ['@'],
-                    ]
-                ],
-            ],
         ];
     }
 
@@ -46,6 +37,10 @@ class DeptController extends Controller
      */
     public function actionIndex()
     {
+        if (!Yii::$app->user->can('view_emp', [], true)) {
+            throw new ForbiddenHttpException('对不起，你没有这个权限');
+        }
+
         $searchModel = new DeptSearch();
         $dataProvider = $searchModel->search(Yii::$app->request->queryParams);
 
