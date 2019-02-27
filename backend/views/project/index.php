@@ -48,7 +48,9 @@ $this->params['breadcrumbs'][] = $this->title;
             //'phase',
             //'project_type',
 
-            ['class' => 'yii\grid\ActionColumn'],
+            ['class' => 'yii\grid\ActionColumn',
+                'template'=>'{view} {update} {delete}',
+            ],
         ],
     ]); ?>
 </div>
