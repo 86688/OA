@@ -8,6 +8,16 @@ use yii\widgets\ActiveForm;
 /* @var $form yii\widgets\ActiveForm */
 ?>
 
+<style>
+    .input{
+        width:110px;
+        float:left;
+    }
+    .nbsp{
+        float:left;
+    }
+</style>
+
 <div class="project-search">
 
     <?php $form = ActiveForm::begin([
@@ -15,49 +25,13 @@ use yii\widgets\ActiveForm;
         'method' => 'get',
     ]); ?>
 
-    <?= $form->field($model, 'project_id') ?>
+    <?= $form->field($model, 'project_name')->textInput(['placeholder'=> '项目名字','class'=>'input form-control','value'=>""])->label(false);?><div class="nbsp">&nbsp;&nbsp;&nbsp;</div>
 
-    <?= $form->field($model, 'project_name') ?>
-
-    <?= $form->field($model, 'depe_id') ?>
-
-    <?= $form->field($model, 'new_time') ?>
-
-    <?= $form->field($model, 'update_time') ?>
-
-    <?php // echo $form->field($model, 'confirm_time') ?>
-
-    <?php // echo $form->field($model, 'exec_time') ?>
-
-    <?php // echo $form->field($model, 'end_time') ?>
-
-    <?php // echo $form->field($model, 'principal') ?>
-
-    <?php // echo $form->field($model, 'assist') ?>
-
-    <?php // echo $form->field($model, 'city') ?>
-
-    <?php // echo $form->field($model, 'address') ?>
-
-    <?php // echo $form->field($model, 'budget') ?>
-
-    <?php // echo $form->field($model, 'crt_id') ?>
-
-    <?php // echo $form->field($model, 'self_id') ?>
-
-    <?php // echo $form->field($model, 'client_id') ?>
-
-    <?php // echo $form->field($model, 'project_remark') ?>
-
-    <?php // echo $form->field($model, 'rating') ?>
-
-    <?php // echo $form->field($model, 'phase') ?>
-
-    <?php // echo $form->field($model, 'project_type') ?>
+    <?= $form->field($model, 'principal')->textInput(['placeholder'=> '负责人','class'=>'input form-control','value'=>""])->label(false);?><div class="nbsp">&nbsp;&nbsp;&nbsp;</div>
 
     <div class="form-group">
-        <?= Html::submitButton('Search', ['class' => 'btn btn-primary']) ?>
-        <?= Html::resetButton('Reset', ['class' => 'btn btn-default']) ?>
+        <?= Html::submitButton('搜索', ['class' => 'btn btn-primary']) ?>
+        <?= Html::resetButton('重置', ['class' => 'btn btn-default']) ?>
     </div>
 
     <?php ActiveForm::end(); ?>

@@ -63,21 +63,15 @@ class LoginForm extends Model
         }
     }
 
-    /**
-     * Logs in a user using the provided username and password.
-     * @return boolean whether the user is logged in successfully
-     */
+    // Logs in a user using the provided username and password.
     // 注册
     // 验证通过  进行注册用户   并且保持登录
     public function login()
     {
-//        if (!Yii::$app->user->can('backend', [], true)) {
-//            throw new ForbiddenHttpException('对不起，你没有这个权限');
-//        }
 
         // validate检测rules
         if ($this->validate()) {
-            return Yii::$app->user->login($this->getUser(), $this->rememberMe ? 3600 * 24: 0);
+            return Yii::$app->user->login($this->getUser(), $this->rememberMe ? 3600 * 24: 0);//注册登录成功  时间为一天
         } else {
             return false;
         }
