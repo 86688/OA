@@ -30,7 +30,6 @@ $this->params['breadcrumbs'][] = $this->title;
         'user_name',
         ['attribute'=>'sex',
             'label'=>'性别',
-//            'value'=>'user.sex',
         ],
 
         ['attribute'=>'status_id',
