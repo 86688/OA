@@ -63,6 +63,10 @@ class SiteController extends Controller
      */
     public function actionIndex()
     {
+        if (!Yii::$app->user->can('view_emp', [], true)) {
+            throw new ForbiddenHttpException('请认证身份，谢谢！');
+        }
+        
         return $this->render('index');
     }
 
