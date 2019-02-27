@@ -48,8 +48,8 @@ use yii\web\IdentityInterface;
 class User extends ActiveRecord implements IdentityInterface
 {
     //性别
-    const WOMEN=0;
     const MAN=1;
+    const WOMEN=0;
     //使用与转正
     const STATUS_TRY = 0;
     const STATUS_OFFICAL = 1;

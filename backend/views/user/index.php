@@ -20,20 +20,18 @@ $this->params['breadcrumbs'][] = $this->title;
         <?= Html::a('人事变动', ['user/change'], ['class' => 'btn btn-success']) ?>
     </p>
 
+    <!--    引入搜索页面-->
     <?php  echo $this->render('_search', ['model' => $searchModel]); ?>
 
     <!-- 以下为用户的列表   -->
     <?= GridView::widget([
     'dataProvider' => $dataProvider,
-    //'filterModel' => $searchModel,
     'columns' => [
-            'user_id',
         'user_name',
         ['attribute'=>'sex',
             'label'=>'性别',
-            'filter'=>User::allSex(),
+//            'value'=>'user.sex',
         ],
-//        'email:email',
 
         ['attribute'=>'status_id',
             'label'=>'状态',
@@ -75,9 +73,7 @@ $this->params['breadcrumbs'][] = $this->title;
         ['class' => 'yii\grid\ActionColumn',
             'template'=>'{view} {update} {delete} {resetpwd} {privilege}',
             'buttons'=>[
-                //$url 是列为按钮创建的URL，
-                //$model是当前要渲染的模型对象，
-                //$key 是在数据提供者数组中模型的键
+                //$url 是列为按钮创建的URL，//$model是当前要渲染的模型对象，//$key 是在数据提供者数组中模型的键
                 'resetpwd'=>function($url,$model,$key)
                 {
                     $options=[

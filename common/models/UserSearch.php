@@ -13,14 +13,7 @@ use common\models\User;
 //继承user
 class UserSearch extends User
 {
-//    public function attributes()
-//    {
-//        return array_merge(parent::attributes(),['authorName']);
-//    }
 
-    /**
-     * @重写了rules
-     */
     public function rules()
     {
         return [
@@ -46,11 +39,12 @@ class UserSearch extends User
         $this->load($params);
         //校验数据
         if (!$this->validate()) {
-            // $query->where('0=1');
             return $dataProvider;
         }
 
+
         $query->andFilterWhere(['like', 'user_name', $this->user_name])
+            ->andFilterWhere(['=', 'sex', $this->sex])
             ->andFilterWhere(['=', 'status_id', $this->status_id])
             ->andFilterWhere(['=', 'dept_id', $this->dept_id])
             ->andFilterWhere(['=', 'title_id', $this->title_id]);

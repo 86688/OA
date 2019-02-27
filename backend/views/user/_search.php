@@ -27,6 +27,8 @@ use common\models\Place;
     <!--    搜索框-->
     <?= $form->field($model, 'user_name')->textInput(['placeholder'=> '姓名','class'=>'input form-control','value'=>""])->label(false);?><div class="nbsp">&nbsp;&nbsp;&nbsp;</div>
 
+    <?= $form->field($model, 'sex')->dropDownList(User::allSex(),['prompt'=>'性别','class'=>'input form-control','value'=>""])->label(false);?><div class="nbsp">&nbsp;&nbsp;&nbsp;</div>
+
     <?= $form->field($model, 'dept_id')->dropDownList(Dept::allDept(),['prompt'=>'部门','class'=>'input form-control','value'=>""])->label(false);?><div class="nbsp">&nbsp;&nbsp;&nbsp;</div>
 
     <?= $form->field($model, 'place_id')->dropDownList(Place::allPlace(),['prompt'=>'地点','class'=>'input form-control','value'=>""])->label(false);?><div class="nbsp">&nbsp;&nbsp;&nbsp;</div>
