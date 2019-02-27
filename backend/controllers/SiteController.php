@@ -6,6 +6,7 @@ use yii\web\Controller;
 use yii\filters\VerbFilter;
 use yii\filters\AccessControl;
 use common\models\LoginForm;
+use common\models\User;
 use yii\web\ForbiddenHttpException;
 
 /**
@@ -79,7 +80,7 @@ class SiteController extends Controller
         }
 
         $model = new LoginForm();
-        //收集数据  && 执行loginform的login方法（验证密码用户配对  并且注册用户）
+        // 收集数据
         if ($model->load(Yii::$app->request->post()) && $model->login()) {
             return $this->goBack();
         } else {
@@ -90,11 +91,7 @@ class SiteController extends Controller
         }
     }
 
-    /**
-     * Logout action.
-     *
-     * @return string
-     */
+    //Logout
     public function actionLogout()
     {
         Yii::$app->user->logout();
