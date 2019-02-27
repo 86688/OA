@@ -4,8 +4,6 @@ use yii\helpers\Html;
 use yii\grid\GridView;
 use common\models\Status;
 use common\models\Dept;
-use common\models\Title;
-use common\models\User;
 
 $this->title = '人员';
 $this->params['breadcrumbs'][] = $this->title;
@@ -35,6 +33,7 @@ $this->params['breadcrumbs'][] = $this->title;
                     ->orderBy('status_id')
                     ->column(),
             ],
+            
             ['attribute'=>'dept_id',
                 'label'=>'部门',
                 'value'=>'dept.dept_name',
