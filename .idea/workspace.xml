@@ -55,11 +55,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/backend/views/user/index.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="395">
-              <caret line="31" selection-start-line="31" selection-end-line="31" />
+            <state relative-caret-position="263">
+              <caret line="25" selection-start-line="25" selection-end-line="25" />
               <folding>
                 <element signature="e#7#28#0#PHP" expanded="true" />
               </folding>
@@ -67,16 +67,13 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/backend/views/user/_search.php">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="374">
-              <caret line="29" column="62" selection-start-line="29" selection-start-column="56" selection-end-line="29" selection-end-column="62" />
+              <caret line="29" lean-forward="true" selection-start-line="29" selection-end-line="29" />
               <folding>
                 <element signature="e#6#27#0#PHP" expanded="true" />
-                <element signature="e#765#771#0#HTML" expanded="true" />
-                <element signature="e#771#777#0#HTML" expanded="true" />
-                <element signature="e#777#783#0#HTML" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -191,8 +188,8 @@
         <option value="$PROJECT_DIR$/backend/controllers/UserController.php" />
         <option value="$PROJECT_DIR$/common/models/UserSearch.php" />
         <option value="$PROJECT_DIR$/common/models/User.php" />
-        <option value="$PROJECT_DIR$/backend/views/user/_search.php" />
         <option value="$PROJECT_DIR$/backend/views/user/index.php" />
+        <option value="$PROJECT_DIR$/backend/views/user/_search.php" />
       </list>
     </option>
   </component>
@@ -409,12 +406,12 @@
       <workItem from="1550826214038" duration="3391000" />
       <workItem from="1551057999598" duration="2820000" />
       <workItem from="1551142816403" duration="35077000" />
-      <workItem from="1551273082730" duration="879000" />
+      <workItem from="1551273082730" duration="979000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="320270000" />
+    <option name="totallyTimeSpent" value="320370000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-6" y="-6" width="1549" height="837" extended-state="6" />
@@ -845,25 +842,22 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/backend/views/user/_search.php">
+    <entry file="file://$PROJECT_DIR$/backend/views/user/index.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="374">
-          <caret line="29" column="62" selection-start-line="29" selection-start-column="56" selection-end-line="29" selection-end-column="62" />
+        <state relative-caret-position="263">
+          <caret line="25" selection-start-line="25" selection-end-line="25" />
           <folding>
-            <element signature="e#6#27#0#PHP" expanded="true" />
-            <element signature="e#765#771#0#HTML" expanded="true" />
-            <element signature="e#771#777#0#HTML" expanded="true" />
-            <element signature="e#777#783#0#HTML" expanded="true" />
+            <element signature="e#7#28#0#PHP" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/backend/views/user/index.php">
+    <entry file="file://$PROJECT_DIR$/backend/views/user/_search.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="395">
-          <caret line="31" selection-start-line="31" selection-end-line="31" />
+        <state relative-caret-position="374">
+          <caret line="29" lean-forward="true" selection-start-line="29" selection-end-line="29" />
           <folding>
-            <element signature="e#7#28#0#PHP" expanded="true" />
+            <element signature="e#6#27#0#PHP" expanded="true" />
           </folding>
         </state>
       </provider>

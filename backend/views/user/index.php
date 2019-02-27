@@ -23,7 +23,6 @@ $this->params['breadcrumbs'][] = $this->title;
     <!--    引入搜索页面-->
     <?php  echo $this->render('_search', ['model' => $searchModel]); ?>
 
-    <!-- 以下为用户的列表   -->
     <?= GridView::widget([
     'dataProvider' => $dataProvider,
     'columns' => [
