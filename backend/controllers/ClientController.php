@@ -41,7 +41,7 @@ class ClientController extends Controller
     {
 
         if (!Yii::$app->user->can('view_emp', [], true)) {
-            throw new ForbiddenHttpException('请先登录');
+            throw new ForbiddenHttpException('请认证身份，谢谢！');
         }
 
         $searchModel = new ClientSearch();
