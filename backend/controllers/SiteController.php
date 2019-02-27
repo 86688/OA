@@ -21,20 +21,6 @@ class SiteController extends Controller
     public function behaviors()
     {
         return [
-            'access' => [
-                'class' => AccessControl::className(),
-                'rules' => [
-                    [
-                        'actions' => ['login', 'error'],
-                        'allow' => true,
-                    ],
-                    [
-                        'actions' => ['logout', 'index'],
-                        'allow' => true,
-                        'roles' => ['@'],
-                    ],
-                ],
-            ],
             'verbs' => [
                 'class' => VerbFilter::className(),
                 'actions' => [
@@ -56,25 +42,16 @@ class SiteController extends Controller
         ];
     }
 
-    /**
-     * Displays homepage.
-     *
-     * @return string
-     */
+    //显示主页
     public function actionIndex()
     {
         if (!Yii::$app->user->can('view_emp', [], true)) {
             throw new ForbiddenHttpException('请认证身份，谢谢！');
         }
-        
+
         return $this->render('index');
     }
-
-    /**
-     * Login action.
-     *
-     * @return string
-     */
+    
     //  登录方法是在site里面的
     //  注册方法是在user里面的
     public function actionLogin()
