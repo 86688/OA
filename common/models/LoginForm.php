@@ -3,6 +3,8 @@ namespace common\models;
 
 use Yii;
 use yii\base\Model;
+use yii\web\ForbiddenHttpException;
+
 
 /**
  * Login form
@@ -63,17 +65,19 @@ class LoginForm extends Model
 
     /**
      * Logs in a user using the provided username and password.
-     *
      * @return boolean whether the user is logged in successfully
      */
     // 注册
-//    验证通过  进行注册用户   并且保持登录
+    // 验证通过  进行注册用户   并且保持登录
     public function login()
     {
+//        if (!Yii::$app->user->can('backend', [], true)) {
+//            throw new ForbiddenHttpException('对不起，你没有这个权限');
+//        }
+
         // validate检测rules
         if ($this->validate()) {
-            // 保存一个月
-            return Yii::$app->user->login($this->getUser(), $this->rememberMe ? 3600 * 24 * 30 : 0);
+            return Yii::$app->user->login($this->getUser(), $this->rememberMe ? 3600 * 24: 0);
         } else {
             return false;
         }

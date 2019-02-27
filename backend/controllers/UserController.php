@@ -56,6 +56,10 @@ class UserController extends Controller
     //展示一个
     public function actionView($id)
     {
+        if (!Yii::$app->user->can('view_emp', [], true)) {
+            throw new ForbiddenHttpException('对不起，你没有这个权限');
+        }
+
         return $this->render('view', [
             'model' => $this->findModel($id),
         ]);
@@ -64,6 +68,11 @@ class UserController extends Controller
     //删除一个
     public function actionDelete($id)
     {
+
+        if (!Yii::$app->user->can('del_emp', [], true)) {
+            throw new ForbiddenHttpException('对不起，你没有这个权限');
+        }
+
         $this->findModel($id)->delete();
 
         return $this->redirect(['index']);
@@ -109,6 +118,10 @@ class UserController extends Controller
     //更新一个
     public function actionUpdate($id)
     {
+        if (!Yii::$app->user->can('modify_emp', [], true)) {
+            throw new ForbiddenHttpException('对不起，你没有这个权限');
+        }
+
         $model = $this->findModel($id);
 
         //上传文件
@@ -126,6 +139,10 @@ class UserController extends Controller
     //重置一个
     public function actionResetpwd($id)
     {
+        if (!Yii::$app->user->can('modify_emp', [], true)) {
+            throw new ForbiddenHttpException('对不起，你没有这个权限');
+        }
+
         $user = User::findOne($id);
         $user->password_hash = '$2y$13$HtJqGRmc76KIRIwokii8AOQ1XZljXiuWCKUGFnH9vkTnfBpHtqgFu';
         if ($user->save(true, ['password_hash'])) {
@@ -197,7 +214,8 @@ class UserController extends Controller
     }
 
     //上传
-    public function actionUploadMore(){
+    public function actionUploadMore()
+    {
 
         $model = new User();
 
