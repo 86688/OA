@@ -33,7 +33,7 @@ $this->params['breadcrumbs'][] = $this->title;
                     ->orderBy('status_id')
                     ->column(),
             ],
-            
+
             ['attribute'=>'dept_id',
                 'label'=>'部门',
                 'value'=>'dept.dept_name',
