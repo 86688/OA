@@ -8,7 +8,6 @@ use common\models\ClientSearch;
 use yii\web\Controller;
 use yii\web\NotFoundHttpException;
 use yii\filters\VerbFilter;
-use yii\filters\AccessControl;
 
 /**
  * ClientController implements the CRUD actions for Client model.
@@ -25,16 +24,6 @@ class ClientController extends Controller
                 'class' => VerbFilter::className(),
                 'actions' => [
                     'delete' => ['POST'],
-                ],
-            ],
-            'access'=>[
-                'class' => AccessControl::className(),
-                'rules' => [
-                    [
-                        'actions' => ['index'],
-                        'allow' => true,
-                        'roles' => ['@'],
-                    ]
                 ],
             ],
         ];

@@ -8,7 +8,6 @@ use common\models\DeptSearch;
 use yii\web\Controller;
 use yii\web\NotFoundHttpException;
 use yii\filters\VerbFilter;
-use yii\filters\AccessControl;
 
 /**
  * DeptController implements the CRUD actions for Dept model.
@@ -25,16 +24,6 @@ class DeptController extends Controller
                 'class' => VerbFilter::className(),
                 'actions' => [
                     'delete' => ['POST'],
-                ],
-            ],
-            'access'=>[
-                'class' => AccessControl::className(),
-                'rules' => [
-                    [
-                        'actions' => ['index'],
-                        'allow' => true,
-                        'roles' => ['@'],
-                    ]
                 ],
             ],
         ];

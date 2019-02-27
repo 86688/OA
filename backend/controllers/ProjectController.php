@@ -2,7 +2,6 @@
 
 namespace backend\controllers;
 
-
 use Yii;
 use common\models\Project;
 use common\models\ProjectSearch;
@@ -10,8 +9,6 @@ use yii\web\Controller;
 use yii\web\NotFoundHttpException;
 use yii\filters\VerbFilter;
 use yii\web\ForbiddenHttpException;
-use yii\filters\AccessControl;
-
 
 
 /**
@@ -29,17 +26,6 @@ class ProjectController extends Controller
                 'class' => VerbFilter::className(),
                 'actions' => [
                     'delete' => ['POST'],
-                ],
-            ],
-
-            'access'=>[
-                'class' => AccessControl::className(),
-                'rules' => [
-                    [
-                        'actions' => ['index'],
-                        'allow' => true,
-                        'roles' => ['@'],
-                    ]
                 ],
             ],
         ];
