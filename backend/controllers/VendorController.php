@@ -38,7 +38,7 @@ class VendorController extends Controller
     public function actionIndex()
     {
         if (!Yii::$app->user->can('backend', [], true)) {
-            throw new ForbiddenHttpException('请认证身份，谢谢！');
+            throw new ForbiddenHttpException('请认证，谢谢！');
         }
 
         $searchModel = new VendorSearch();
