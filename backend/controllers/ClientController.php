@@ -41,7 +41,7 @@ class ClientController extends Controller
     {
 
         if (!Yii::$app->user->can('view_emp', [], true)) {
-            throw new ForbiddenHttpException('对不起，你没有这个权限');
+            throw new ForbiddenHttpException('请先登录');
         }
 
         $searchModel = new ClientSearch();
