@@ -2,6 +2,7 @@
 
 use yii\helpers\Html;
 use yii\widgets\ActiveForm;
+use timepicker\DateTimePicker;
 
 /* @var $this yii\web\View */
 /* @var $model common\models\Project */
@@ -16,16 +17,72 @@ use yii\widgets\ActiveForm;
 
     <?= $form->field($model, 'depe_id')->textInput(['maxlength' => true]) ?>
 
-    <?= $form->field($model, 'new_time')->textInput(['maxlength' => true]) ?>
-
-    <?= $form->field($model, 'update_time')->textInput(['maxlength' => true]) ?>
-
-    <?= $form->field($model, 'confirm_time')->textInput(['maxlength' => true]) ?>
-
-    <?= $form->field($model, 'exec_time')->textInput(['maxlength' => true]) ?>
-
-    <?= $form->field($model, 'end_time')->textInput(['maxlength' => true]) ?>
-
+    <?= $form->field($model, 'new_time')->widget(DateTimePicker::className(), [
+        'template' => '{input}',
+        'pickButtonIcon' => 'glyphicon glyphicon-time',
+        'inline' => false,
+        'clientOptions' => [
+            'todayHighlight'=>true,
+            'startView' => 2,
+            'minView' => 2,
+            'autoclose' => true,
+            'linkFormat' => 'yyyy-mm-dd', // if inline = true
+            'format' => 'yyyy-mm-dd', // if inline = false
+        ]
+    ]);?>
+    <?= $form->field($model, 'update_time')->widget(DateTimePicker::className(), [
+        'template' => '{input}',
+        'pickButtonIcon' => 'glyphicon glyphicon-time',
+        'inline' => false,
+        'clientOptions' => [
+            'todayHighlight'=>true,
+            'startView' => 2,
+            'minView' => 2,
+            'autoclose' => true,
+            'linkFormat' => 'yyyy-mm-dd', // if inline = true
+            'format' => 'yyyy-mm-dd', // if inline = false
+        ]
+    ]);?>
+    <?= $form->field($model, 'confirm_time')->widget(DateTimePicker::className(), [
+        'template' => '{input}',
+        'pickButtonIcon' => 'glyphicon glyphicon-time',
+        'inline' => false,
+        'clientOptions' => [
+            'todayHighlight'=>true,
+            'startView' => 2,
+            'minView' => 2,
+            'autoclose' => true,
+            'linkFormat' => 'yyyy-mm-dd', // if inline = true
+            'format' => 'yyyy-mm-dd', // if inline = false
+        ]
+    ]);?>
+    <?= $form->field($model, 'exec_time')->widget(DateTimePicker::className(), [
+        'template' => '{input}',
+        'pickButtonIcon' => 'glyphicon glyphicon-time',
+        'inline' => false,
+        'clientOptions' => [
+            'todayHighlight'=>true,
+            'startView' => 2,
+            'minView' => 2,
+            'autoclose' => true,
+            'linkFormat' => 'yyyy-mm-dd', // if inline = true
+            'format' => 'yyyy-mm-dd', // if inline = false
+        ]
+    ]);?>
+    <?= $form->field($model, 'end_time')->widget(DateTimePicker::className(), [
+        'template' => '{input}',
+        'pickButtonIcon' => 'glyphicon glyphicon-time',
+        'inline' => false,
+        'clientOptions' => [
+            'todayHighlight'=>true,
+            'startView' => 2,
+            'minView' => 2,
+            'autoclose' => true,
+            'linkFormat' => 'yyyy-mm-dd', // if inline = true
+            'format' => 'yyyy-mm-dd', // if inline = false
+        ]
+    ]);?>
+    
     <?= $form->field($model, 'principal')->textInput(['maxlength' => true]) ?>
 
     <?= $form->field($model, 'assist')->textInput(['maxlength' => true]) ?>
