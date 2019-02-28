@@ -35,7 +35,7 @@ $this->params['breadcrumbs'][] = $this->title;
             //'confirm_time',
             //'exec_time',
             //'end_time',
-            //'principal',
+            'principal',
             //'assist',
             'city',
             //'address',

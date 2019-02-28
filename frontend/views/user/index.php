@@ -14,7 +14,6 @@ $this->params['breadcrumbs'][] = $this->title;
 
 <div class="user-index">
     <p>
-        <?= Html::a('新入人员', ['create'], ['class' => 'btn btn-success']) ?>
         <?= Html::a('请假调休', ['vacation/index'], ['class' => 'btn btn-success']) ?>
     </p>
 
@@ -26,12 +25,12 @@ $this->params['breadcrumbs'][] = $this->title;
     //'filterModel' => $searchModel,
     'columns' => [
         'user_name',
-        ['attribute'=>'sex',
-            'label'=>'性别',
-            'filter'=>User::allSex(),
-        ],
+//        ['attribute'=>'sex',
+//            'label'=>'性别',
+//            'filter'=>User::allSex(),
+//        ],
         'tel',
-        'email:email',
+//        'email:email',
 
 //        ['attribute'=>'status_id',
 //            'label'=>'状态',
@@ -49,14 +48,14 @@ $this->params['breadcrumbs'][] = $this->title;
                 ->orderBy('dept_id')
                 ->column(),
         ],
-        ['attribute'=>'title_id',
-            'label'=>'职位',
-            'value'=>'title.title_name',
-            'filter'=>Title::find()
-                ->select(['title_name'])
-                ->orderBy('title_id')
-                ->column(),
-        ],
+//        ['attribute'=>'title_id',
+//            'label'=>'职位',
+//            'value'=>'title.title_name',
+//            'filter'=>Title::find()
+//                ->select(['title_name'])
+//                ->orderBy('title_id')
+//                ->column(),
+//        ],
 //        [
 //            'attribute' => 'crt_start',
 //            'format' => ['date', 'php:Y-m-d']
@@ -69,36 +68,36 @@ $this->params['breadcrumbs'][] = $this->title;
 
 
         //动作按钮
-        ['class' => 'yii\grid\ActionColumn',
-            'template'=>'{view}',
-            'buttons'=>[
-                //$url 是列为按钮创建的URL，
-                //$model是当前要渲染的模型对象，
-                //$key 是在数据提供者数组中模型的键
-                'resetpwd'=>function($url,$model,$key)
-                {
-                    $options=[
-                        'title'=>Yii::t('yii','重置密码'),
-                        'aria-label'=>Yii::t('yii','重置密码'),
-                        'data-pjax'=>'0',
-                        'data-confirm' => Yii::t('yii', '确认重置吗?'),
-
-                    ];
-                    return Html::a('<span class="glyphicon glyphicon-lock"></span>',['user/resetpwd', 'id' => $key],$options);
-                },
-
-                'privilege'=>function($url,$model,$key)
-                {
-                    $options=[
-                        'title'=>Yii::t('yii','权限'),
-                        'aria-label'=>Yii::t('yii','权限'),
-                        'data-pjax'=>'0',
-                    ];
-                    return Html::a('<span class="glyphicon glyphicon-user"></span>',$url,$options);
-                },
-
-            ],
-    ],
+//        ['class' => 'yii\grid\ActionColumn',
+//            'template'=>'{view}',
+//            'buttons'=>[
+//                //$url 是列为按钮创建的URL，
+//                //$model是当前要渲染的模型对象，
+//                //$key 是在数据提供者数组中模型的键
+//                'resetpwd'=>function($url,$model,$key)
+//                {
+//                    $options=[
+//                        'title'=>Yii::t('yii','重置密码'),
+//                        'aria-label'=>Yii::t('yii','重置密码'),
+//                        'data-pjax'=>'0',
+//                        'data-confirm' => Yii::t('yii', '确认重置吗?'),
+//
+//                    ];
+//                    return Html::a('<span class="glyphicon glyphicon-lock"></span>',['user/resetpwd', 'id' => $key],$options);
+//                },
+//
+//                'privilege'=>function($url,$model,$key)
+//                {
+//                    $options=[
+//                        'title'=>Yii::t('yii','权限'),
+//                        'aria-label'=>Yii::t('yii','权限'),
+//                        'data-pjax'=>'0',
+//                    ];
+//                    return Html::a('<span class="glyphicon glyphicon-user"></span>',$url,$options);
+//                },
+//
+//            ],
+//    ],
         ],
 ]); ?>
 </div>
