@@ -82,7 +82,7 @@ use timepicker\DateTimePicker;
             'format' => 'yyyy-mm-dd', // if inline = false
         ]
     ]);?>
-    
+
     <?= $form->field($model, 'principal')->textInput(['maxlength' => true]) ?>
 
     <?= $form->field($model, 'assist')->textInput(['maxlength' => true]) ?>

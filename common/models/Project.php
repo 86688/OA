@@ -48,7 +48,6 @@ class Project extends \yii\db\ActiveRecord
     {
         return [
             [['project_name', 'phase'], 'required'],
-            [['new_time', 'update_time', 'confirm_time', 'exec_time', 'end_time', 'crt_id', 'client_id'], 'integer'],
             [['project_name'], 'string', 'max' => 50],
             [['depe_id', 'budget'], 'string', 'max' => 30],
             [['principal', 'rating'], 'string', 'max' => 10],
