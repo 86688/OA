@@ -2,6 +2,7 @@
 
 use yii\helpers\Html;
 use yii\widgets\DetailView;
+use common\models\Place;
 
 
 /* @var $this yii\web\View */
@@ -64,7 +65,16 @@ $this->params['breadcrumbs'][] = $this->title;
             //工作地点
             [
                 'attribute'=>'place_id',
-                'value'=>$model->place->place,
+//                'value'=>$model->place,
+                'value' => function ($model) {
+                    $place = [
+                        '0' => '浦东',
+                        '1' => '浦西',
+                        '2' => '深圳',
+                        '3' => '海南',
+                    ];
+                    return $place[$model->place_id];
+                },
             ],
             'school',
             'major',

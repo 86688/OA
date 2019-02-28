@@ -68,7 +68,7 @@ class User extends ActiveRecord implements IdentityInterface
             [['password_hash'], 'string', 'max' => 100],
             [['auth_key'], 'string', 'max' => 32],
             [['password_hash', 'password_reset_token'], 'string', 'max' => 255],
-            [['sex', 'ctr_num', 'vacation', 'status_id', 'dept_id', 'title_id'], 'string', 'max' => 1],
+            [['sex', 'ctr_num', 'vacation', 'status_id'], 'string', 'max' => 1],
             [['tel', 'linktel'], 'string', 'max' => 11,"message"=>"{attribute}只能为数字"],
             [['email'], 'string', 'max' => 30],
             [['id_card'], 'string', 'max' => 18],
