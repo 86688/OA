@@ -169,7 +169,7 @@ class ActionColumn extends Column
                         $title = Yii::t('yii', '修改');
                         break;
                     case 'delete':
-                        $title = Yii::t('yii', '删除');
+                        $title = Yii::t('yii', '离职');
                         break;
                     default:
                         $title = ucfirst($name);
