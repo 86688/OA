@@ -21,7 +21,7 @@ composer require 2amigos/yii2-date-time-picker-widget:~1.0
 or add
 
 ```json
-"2amigos/yii2-date-time-picker-widget" : "~1.0"
+timepicker : "~1.0"
 ```
 
 to the require section of your application's `composer.json` file.
