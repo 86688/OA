@@ -48,4 +48,12 @@ return array (
       '@yii/faker' => $vendorDir . '/yiisoft/yii2-faker',
     ),
   ),
+  array (
+        'name' => 'timepicker',
+        'alias' =>
+            array (
+                '@timepicker' => $vendorDir . '/timepicker/',
+            ),
+  ),
+
 );

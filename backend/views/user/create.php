@@ -6,7 +6,8 @@ use common\models\User;
 use common\models\Dept;
 use common\models\Title;
 use common\models\Place;
-use dosamigos\datetimepicker;
+use timepicker\DateTimePicker;
+
 
 
 /* @var $this yii\web\View */
@@ -36,7 +37,7 @@ $this->params['breadcrumbs'][] = $this->title;
 
     <?= $form->field($model, 'crt_start')->textInput(['maxlength' => true]) ?>
 
-    <?= $form->field($model, 'crt_end')->textInput(['maxlength' => true]) ?>
+<!--    --><?//= $form->field($model, 'crt_end')->textInput(['maxlength' => true]) ?>
 
     <?= $form->field($model, 'ctr_num')->textInput() ?>
 
@@ -58,15 +59,21 @@ $this->params['breadcrumbs'][] = $this->title;
 
     <?= $form->field($model, 'file[]')->fileInput(['multiple' => true])->label('上传');?>
 
-    <?php $a=new DatePicker()?>
 
-    <?= $form->field($a, 'date')->widget(
-        DatePicker::className(), [
-        'inline' => true,
-        'template' => '<div class="well well-sm" style="background-color: #fff; width:250px">{input}</div>',
+    <?= $form->field($model, 'crt_end')->widget(DateTimePicker::className(), [
+        'language' => 'EN',
+//        'size' => 'ms',
+        'template' => '{input}',
+        'pickButtonIcon' => 'glyphicon glyphicon-time',
+        'inline' => false,
         'clientOptions' => [
+            'startView' => 1,
+            'minView' => 0,
+            'maxView' => 1,
             'autoclose' => true,
-            'format' => 'dd-M-yyyy'
+            'linkFormat' => 'yyyy-mm-dd', // if inline = true
+            'format' => 'yyyy-mm-dd', // if inline = false
+//            'todayBtn' => true
         ]
     ]);?>
 
