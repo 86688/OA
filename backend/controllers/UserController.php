@@ -87,10 +87,11 @@ class UserController extends Controller
     public function upload()
     {
         $model = new User();
-
+        //获取上传文件名字的数组
         $files = UploadedFile::getInstances($model, 'file');
 
         foreach ($files as $file){
+            //saveAs保存上传的文件 逐个保存
             //构成：位置+(时间+文件名+扩展名)---(路径，删除模板)
             $file->saveAs(Yii::getAlias("@backend").'\assets\file\\'.$model->user_name.$file->baseName.'.'.$file->extension,true);
         }
