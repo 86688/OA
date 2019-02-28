@@ -171,6 +171,10 @@ class UserController extends Controller
     //权限
     public function actionPrivilege($id)
     {
+        if (!Yii::$app->user->can('gm', [], true)) {
+            throw new ForbiddenHttpException('对不起，你没有这个权限');
+        }
+
         //step1. 找出所有权限,提供给checkboxlist
         $allPrivileges = AuthItem::find()
             ->select(['name', 'description'])
