@@ -78,8 +78,9 @@ class UserController extends Controller
             throw new ForbiddenHttpException('对不起，你没有这个权限');
         }
 
-        $this->findModel($id)->delete();
-
+        $user=$this->findModel($id);
+        $user->status_id='2';
+        $user->save(true,['status_id']);
         return $this->redirect(['index']);
     }
 
