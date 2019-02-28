@@ -65,7 +65,6 @@ $this->params['breadcrumbs'][] = $this->title;
             //工作地点
             [
                 'attribute'=>'place_id',
-//                'value'=>$model->place,
                 'value' => function ($model) {
                     $place = [
                         '0' => '浦东',
