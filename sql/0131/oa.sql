@@ -348,7 +348,7 @@ CREATE TABLE `train_tag` (
 -- ----------------------------
 
 -- ----------------------------
--- Table structure for user
+-- Table structure for emp
 -- ----------------------------
 DROP TABLE IF EXISTS `user`;
 CREATE TABLE `user` (
@@ -379,7 +379,7 @@ CREATE TABLE `user` (
 ) ENGINE=InnoDB AUTO_INCREMENT=3 DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci ROW_FORMAT=COMPACT;
 
 -- ----------------------------
--- Records of user
+-- Records of emp
 -- ----------------------------
 INSERT INTO `user` VALUES ('1', '张强', '8d969eef6ecad3c29a3a629280e686cf0c3f5d5a86aff3ca12020c923adc6c92', '男', '18701558556', 'qq@qq.com', '125323232323222222', '黄埔军校', '计算机', '1548914453', '1548914453', '1', '上海', '张江', '11111111111', '18701558590', '2', '0', '1', '0');
 INSERT INTO `user` VALUES ('2', '李明', '8d969eef6ecad3c29a3a629280e686cf0c3f5d5a86aff3ca12020c923adc6c92', '男', '18701558556', 'qq@qq.com', '13358616', '黄埔军校', '计算机', '1548914453', '1548914453', '1', '上海', '张江', '11111111111', '11111111111', '2', '1', '2', '1');

@@ -9,7 +9,7 @@ use yii\web\ForbiddenHttpException;
 /**
  * Login form
  */
-class LoginForm extends Model
+class LoginFront extends Model
 {
     public $username;
     public $password_hash;
@@ -68,7 +68,6 @@ class LoginForm extends Model
     // 验证通过  进行注册用户   并且保持登录
     public function login()
     {
-
         // validate检测rules
         if ($this->validate()) {
             return Yii::$app->user->login($this->getUser(), $this->rememberMe ? 3600 * 24: 0);//注册登录成功  时间为一天

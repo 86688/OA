@@ -1,7 +1,7 @@
 <?php
 use yii\helpers\Html;
 use yii\widgets\ActiveForm;
-use common\models\User;
+use common\models\Emp;
 use common\models\Dept;
 use common\models\Title;
 use common\models\Place;
@@ -25,7 +25,7 @@ use common\models\Place;
     ]); ?>
 
     <!--    搜索框-->
-    <?= $form->field($model, 'user_name')->textInput(['placeholder'=> '姓名','class'=>'input form-control','value'=>""])->label(false);?><div class="nbsp">&nbsp;&nbsp;&nbsp;</div>
+    <?= $form->field($model, 'username')->textInput(['placeholder'=> '姓名','class'=>'input form-control','value'=>""])->label(false);?><div class="nbsp">&nbsp;&nbsp;&nbsp;</div>
 
     <?= $form->field($model, 'dept_id')->dropDownList(Dept::allDept(),['prompt'=>'部门','class'=>'input form-control','value'=>""])->label(false);?><div class="nbsp">&nbsp;&nbsp;&nbsp;</div>
 

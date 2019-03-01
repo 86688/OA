@@ -1,13 +1,14 @@
 <?php
 namespace frontend\controllers;
 
+use common\models\LoginFront;
 use Yii;
 use yii\web\Controller;
 use yii\filters\VerbFilter;
 use yii\filters\AccessControl;
 use common\models\LoginForm;
 use yii\web\ForbiddenHttpException;
-use common\models\User;
+use common\models\Emp;
 
 
 
@@ -57,20 +58,16 @@ class SiteController extends Controller
     //  注册方法是在user里面的
     public function actionLogin()
     {
+
         // 是否游客
         if (!Yii::$app->user->isGuest) {
             return $this->goHome();
         }
 
-        $model = new LoginForm();
-
+        $model = new LoginFront();
         // 收集数据
         if ($model->load(Yii::$app->request->post()) && $model->login()) {
-//            if (!Yii::$app->user->can('backend', [], true)) {
-//                throw new ForbiddenHttpException('对不起，你没有这个权限');
-//                die('对不起，你没有这个权限');
-//            }
-            return $this->goBack();
+            return $this->redirect(['index']);
         } else {
             $model->password_hash = '';
             return $this->render('login', [

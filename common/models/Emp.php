@@ -45,7 +45,7 @@ use yii\web\IdentityInterface;
  * @property Status[] $statuses
  * @property Title $title
  */
-class User extends ActiveRecord implements IdentityInterface
+class Emp extends ActiveRecord implements IdentityInterface
 {
     //性别
     const MAN=1;

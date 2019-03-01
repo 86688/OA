@@ -2,7 +2,7 @@
 
 use yii\helpers\Html;
 use yii\widgets\ActiveForm;
-use common\models\User;
+use common\models\Emp;
 use common\models\Dept;
 use common\models\Title;
 use common\models\Place;
@@ -10,9 +10,9 @@ use common\models\Place;
 
 /* @var $this yii\web\View */
 /* @var $model common\models\User */
-$this->title = "修改:$model->user_name";
+$this->title = "修改:$model->username";
 $this->params['breadcrumbs'][] = ['label' => '人员', 'url' => ['index']];
-$this->params['breadcrumbs'][] = ['label' => $model->user_name, 'url' => ['view', 'id' => $model->user_id]];
+$this->params['breadcrumbs'][] = ['label' => $model->username, 'url' => ['view', 'id' => $model->user_id]];
 $this->params['breadcrumbs'][] = '修改';
 ?>
 <div class="user-update">
@@ -22,9 +22,9 @@ $this->params['breadcrumbs'][] = '修改';
 
         <?php $form = ActiveForm::begin(); ?>
 
-        <?= $form->field($model, 'user_name')->textInput(['maxlength' => true]) ?>
+        <?= $form->field($model, 'username')->textInput(['maxlength' => true]) ?>
 
-        <?= $form->field($model, 'sex')->dropDownList(User::allSex(),['prompt'=>'请选择性别']); ?>
+        <?= $form->field($model, 'sex')->dropDownList(Emp::allSex(),['prompt'=>'请选择性别']); ?>
 
         <?= $form->field($model, 'tel')->textInput(['maxlength' => true]) ?>
 

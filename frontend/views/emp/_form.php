@@ -2,7 +2,7 @@
 
 use yii\helpers\Html;
 use yii\widgets\ActiveForm;
-use common\models\User;
+use common\models\Emp;
 
 /* @var $this yii\web\View */
 /* @var $model common\models\User */
@@ -13,7 +13,7 @@ use common\models\User;
 
     <?php $form = ActiveForm::begin(); ?>
 
-    <?= $form->field($model, 'user_name')->textInput(['maxlength' => true]) ?>
+    <?= $form->field($model, 'username')->textInput(['maxlength' => true]) ?>
 
     <?= $form->field($model, 'password_hash')->textInput(['maxlength' => true]) ?>
 
@@ -21,7 +21,7 @@ use common\models\User;
 
     <?= $form->field($model, 'password_reset_token')->textInput(['maxlength' => true]) ?>
 
-    <?= $form->field($model, 'sex')->dropDownList(User::allSex(),['prompt'=>'请选择性别']); ?>
+    <?= $form->field($model, 'sex')->dropDownList(Emp::allSex(),['prompt'=>'请选择性别']); ?>
 
     <?= $form->field($model, 'tel')->textInput(['maxlength' => true]) ?>
 
@@ -47,7 +47,7 @@ use common\models\User;
 
     <?= $form->field($model, 'vacation')->textInput() ?>
 
-    <?= $form->field($model, 'status_id')->dropDownList(User::allStatus(),['prompt'=>'请输入状态']); ?>
+    <?= $form->field($model, 'status_id')->dropDownList(Emp::allStatus(),['prompt'=>'请输入状态']); ?>
 
     <?= $form->field($model, 'dept_id')->dropDownList(Dept::allDept(),['prompt'=>'请输入部门']) ?>
 

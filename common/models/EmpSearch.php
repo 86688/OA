@@ -11,7 +11,7 @@ use common\models\User;
  * UserSearch represents the model behind the search form of `common\models\User`.
  */
 //继承user
-class UserSearch extends User
+class EmpSearch extends User
 {
 
     public function rules()
@@ -29,7 +29,7 @@ class UserSearch extends User
 
     public function search($params)
     {
-        $query = User::find()
+        $query = Emp::find()
             ->where(['!=','status_id',2]);
 
         $dataProvider = new ActiveDataProvider([

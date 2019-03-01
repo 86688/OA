@@ -5,7 +5,7 @@ use yii\grid\GridView;
 use common\models\Status;
 use common\models\Dept;
 use common\models\Title;
-use common\models\User;
+use common\models\Emp;
 
 $this->title = '人员';
 $this->params['breadcrumbs'][] = $this->title;
@@ -24,7 +24,7 @@ $this->params['breadcrumbs'][] = $this->title;
     'dataProvider' => $dataProvider,
     //'filterModel' => $searchModel,
     'columns' => [
-        'user_name',
+        'username',
 //        ['attribute'=>'sex',
 //            'label'=>'性别',
 //            'filter'=>User::allSex(),
@@ -83,7 +83,7 @@ $this->params['breadcrumbs'][] = $this->title;
 //                        'data-confirm' => Yii::t('yii', '确认重置吗?'),
 //
 //                    ];
-//                    return Html::a('<span class="glyphicon glyphicon-lock"></span>',['user/resetpwd', 'id' => $key],$options);
+//                    return Html::a('<span class="glyphicon glyphicon-lock"></span>',['emp/resetpwd', 'id' => $key],$options);
 //                },
 //
 //                'privilege'=>function($url,$model,$key)
@@ -93,7 +93,7 @@ $this->params['breadcrumbs'][] = $this->title;
 //                        'aria-label'=>Yii::t('yii','权限'),
 //                        'data-pjax'=>'0',
 //                    ];
-//                    return Html::a('<span class="glyphicon glyphicon-user"></span>',$url,$options);
+//                    return Html::a('<span class="glyphicon glyphicon-emp"></span>',$url,$options);
 //                },
 //
 //            ],

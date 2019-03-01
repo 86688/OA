@@ -7,7 +7,7 @@ use yii\widgets\DetailView;
 /* @var $this yii\web\View */
 /* @var $model common\models\User */
 
-$this->title = $model->user_name;
+$this->title = $model->username;
 $this->params['breadcrumbs'][] = ['label' => '人员', 'url' => ['index']];
 $this->params['breadcrumbs'][] = $this->title;
 ?>
@@ -18,7 +18,7 @@ $this->params['breadcrumbs'][] = $this->title;
         <?= Html::a('删除', ['delete', 'id' => $model->user_id], [
             'class' => 'btn btn-danger',
             'data' => [
-                'confirm' => "确定要删除{$model->user_name}吗？",
+                'confirm' => "确定要删除{$model->username}吗？",
                 'method' => 'post',
             ],
         ]) ?>
@@ -29,7 +29,7 @@ $this->params['breadcrumbs'][] = $this->title;
         'model' => $model,
         'attributes' => [
             'user_id',
-            'user_name',
+            'username',
             'sex',
             'tel',
             'email:email',
