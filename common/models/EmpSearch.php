@@ -5,13 +5,13 @@ namespace common\models;
 use Yii;
 use yii\base\Model;
 use yii\data\ActiveDataProvider;
-use common\models\User;
+use common\models\Emp;
 
 /**
  * UserSearch represents the model behind the search form of `common\models\User`.
  */
 //继承user
-class UserSearch extends User
+class EmpSearch extends Emp
 {
 
     public function rules()
@@ -50,7 +50,7 @@ class UserSearch extends User
             ->andFilterWhere(['=', 'title_id', $this->title_id]);
 
         //连表查询-工作地址
-        $query->join('INNER JOIN','place','user.place_id = place.place_id');
+        $query->join('INNER JOIN','place','emp.place_id = place.place_id');
         $query->andFilterWhere(['=','place.place',$this->place_id]);
 
         //默认排序
