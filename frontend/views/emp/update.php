@@ -2,7 +2,7 @@
 
 use yii\helpers\Html;
 use yii\widgets\ActiveForm;
-use common\models\User;
+use common\models\Emp;
 use common\models\Dept;
 use common\models\Title;
 use common\models\Place;

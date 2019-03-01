@@ -5,7 +5,7 @@ use yii\grid\GridView;
 use common\models\Status;
 use common\models\Dept;
 use common\models\Title;
-use common\models\User;
+use common\models\Emp;
 
 $this->title = '人员';
 $this->params['breadcrumbs'][] = $this->title;

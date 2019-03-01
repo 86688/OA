@@ -3,8 +3,8 @@
 namespace frontend\controllers;
 
 use Yii;
-use common\models\User;
-use common\models\UserSearch;
+use common\models\Emp;
+use common\models\EmpSearch;
 use yii\web\Controller;
 use yii\web\ForbiddenHttpException;
 use yii\web\NotFoundHttpException;
@@ -15,7 +15,7 @@ use app\models\Upload;
 use app\models\UploadForm;
 use yii\web\UploadedFile;
 
-class UserController extends Controller
+class EmpController extends Controller
 {
     public function behaviors()
     {
@@ -32,7 +32,7 @@ class UserController extends Controller
     //展示所有
     public function actionIndex()
     {
-        $searchModel = new UserSearch();
+        $searchModel = new EmpSearch();
         $dataProvider = $searchModel->search(Yii::$app->request->queryParams);
 
         return $this->render('index', [
@@ -60,7 +60,7 @@ class UserController extends Controller
     //上传文件
     public function upload()
     {
-        $model = new User();
+        $model = new Emp();
 
         $files = UploadedFile::getInstances($model, 'file');
 
@@ -114,7 +114,7 @@ class UserController extends Controller
     //重置一个
     public function actionResetpwd($id)
     {
-        $user = User::findOne($id);
+        $user = Emp::findOne($id);
         $user->password_hash = '$2y$13$HtJqGRmc76KIRIwokii8AOQ1XZljXiuWCKUGFnH9vkTnfBpHtqgFu';
         if ($user->save(true, ['password_hash'])) {
             return $this->redirect(['index']);
@@ -124,7 +124,7 @@ class UserController extends Controller
     //找到一个
     protected function findModel($id)
     {
-        if (($model = User::findOne($id)) !== null) {
+        if (($model = Emp::findOne($id)) !== null) {
             return $model;
         }
 
@@ -187,7 +187,7 @@ class UserController extends Controller
     //上传
     public function actionUploadMore(){
 
-        $model = new User();
+        $model = new Emp();
 
         if(Yii::$app->request->isPost){
             //获取文件
