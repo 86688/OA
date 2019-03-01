@@ -45,9 +45,6 @@ class SiteController extends Controller
     //显示主页
     public function actionIndex()
     {
-        if (!Yii::$app->user->can('backend', [], true)) {
-            throw new ForbiddenHttpException('请先登录，谢谢！');
-        }
 
         return $this->render('index');
     }
@@ -61,15 +58,16 @@ class SiteController extends Controller
             return $this->goHome();
         }
 
+
         $model = new LoginForm();
 
         // 收集数据
         if ($model->load(Yii::$app->request->post()) && $model->login()) {
-//            if (!Yii::$app->user->can('backend', [], true)) {
-//                throw new ForbiddenHttpException('对不起，你没有这个权限');
-//                die('对不起，你没有这个权限');
-//            }
-            return $this->goBack();
+            if (!Yii::$app->user->can('backend', [], true)) {
+                Yii::$app->user->logout();
+                throw new ForbiddenHttpException('对不起，你没有这个权限');
+            }
+        return $this->goBack();
         } else {
             $model->password_hash = '';
             return $this->render('login', [
