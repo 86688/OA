@@ -18,7 +18,7 @@ class UserSearch extends User
     {
         return [
             [['user_id', 'crt_start', 'crt_end'], 'integer'],
-            [['username', 'auth_key', 'password_hash', 'password_reset_token', 'sex', 'tel', 'email', 'id_card', 'school', 'major', 'ctr_num', 'linkman', 'linktel', 'housing_fund', 'vacation', 'status_id', 'dept_id', 'title_id', 'place_id'], 'safe'],
+            [['user_name', 'auth_key', 'password_hash', 'password_reset_token', 'sex', 'tel', 'email', 'id_card', 'school', 'major', 'ctr_num', 'linkman', 'linktel', 'housing_fund', 'vacation', 'status_id', 'dept_id', 'title_id', 'place_id'], 'safe'],
         ];
     }
 
@@ -43,14 +43,14 @@ class UserSearch extends User
         }
 
 
-        $query->andFilterWhere(['like', 'username', $this->username])
+        $query->andFilterWhere(['like', 'user_name', $this->user_name])
             ->andFilterWhere(['=', 'sex', $this->sex])
             ->andFilterWhere(['=', 'status_id', $this->status_id])
             ->andFilterWhere(['=', 'dept_id', $this->dept_id])
             ->andFilterWhere(['=', 'title_id', $this->title_id]);
 
         //连表查询-工作地址
-        $query->join('INNER JOIN','place','emp.place_id = place.place_id');
+        $query->join('INNER JOIN','place','user.place_id = place.place_id');
         $query->andFilterWhere(['=','place.place',$this->place_id]);
 
         //默认排序
@@ -81,7 +81,7 @@ class UserSearch extends User
             return $dataProvider;
         }
 
-        $query->andFilterWhere(['like', 'username', $this->username])
+        $query->andFilterWhere(['like', 'user_name', $this->user_name])
             ->andFilterWhere(['like', 'sex', $this->sex])
             ->andFilterWhere(['like', 'tel', $this->tel])
             ->andFilterWhere(['like', 'ctr_num', $this->ctr_num])

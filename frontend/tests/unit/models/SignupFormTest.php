@@ -15,9 +15,9 @@ class SignupFormTest extends \Codeception\Test\Unit
     public function _before()
     {
         $this->tester->haveFixtures([
-            'emp' => [
+            'user' => [
                 'class' => UserFixture::className(),
-                'dataFile' => codecept_data_dir() . 'emp.php'
+                'dataFile' => codecept_data_dir() . 'user.php'
             ]
         ]);
     }

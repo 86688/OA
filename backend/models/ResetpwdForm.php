@@ -35,7 +35,7 @@ class ResetpwdForm extends Model
 
 
     /**
-     * Signs emp up.
+     * Signs user up.
      *
      * @return User|null the saved model or null if saving fails
      */

@@ -406,7 +406,7 @@ CREATE TABLE `train_tag` (
 -- ----------------------------
 
 -- ----------------------------
--- Table structure for emp
+-- Table structure for user
 -- ----------------------------
 DROP TABLE IF EXISTS `user`;
 CREATE TABLE `user` (
@@ -446,7 +446,7 @@ CREATE TABLE `user` (
 ) ENGINE=InnoDB AUTO_INCREMENT=17 DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci ROW_FORMAT=COMPACT;
 
 -- ----------------------------
--- Records of emp
+-- Records of user
 -- ----------------------------
 INSERT INTO `user` VALUES ('001', 'ss', 'pG7TRyTIXlEbcenpi34TzmMYS2zDsMTF', '$2y$13$HtJqGRmc76KIRIwokii8AOQ1XZljXiuWCKUGFnH9vkTnfBpHtqgFu', '', '1', '18701558556', 'qqqqaa@qq.com', '125323232323222222', '黄埔军校', '计算机', '1548914453', '1548914453', '1', '张江', '11111111111', '18701558590', '2', '0', '1', '2', '0', '', '1', null, null, '0', null, null);
 INSERT INTO `user` VALUES ('002', '李明', 'pG7TRyTIXlEbcenpi34TzmMYS2zDsMTF', '$2y$13$HtJqGRmc76KIRIwokii8AOQ1XZljXiuWCKUGFnH9vkTnfBpHtqgFu', null, '女', '2222222222', 'qq@qq.com', '13358616', '北京大学', '计算机', '1548914453', '1548914453', '1', '张江', '11111111111', '11111111111', '2', '1', '2', '1', '0', '', '1', null, null, '0', null, null);

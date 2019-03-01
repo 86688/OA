@@ -8,10 +8,10 @@ use yii\db\ActiveRecord;
 use yii\web\IdentityInterface;
 
 /**
- * This is the model class for table "emp".
+ * This is the model class for table "user".
  *
  * @property int $user_id 职员编号
- * @property string $username 职员姓名
+ * @property string $user_name 职员姓名
 * @property string $password_hash 职员密码
  * @property string $auth_key 安全认证
  * @property string $password_reset_token 重置密码
@@ -56,7 +56,7 @@ class User extends ActiveRecord implements IdentityInterface
 
     public static function tableName()
     {
-        return 'emp';
+        return 'user';
     }
 
     public function rules()
@@ -64,7 +64,7 @@ class User extends ActiveRecord implements IdentityInterface
         return [
             [['tel', 'id_card', 'status_id', 'dept_id', 'title_id','place_id','linkman','linktel'], 'required',"message"=>"{attribute}不能为空"],
             [['show'], 'integer',"message"=>"{attribute}必须为数字"],
-            [['username', 'linkman'], 'string', 'max' => 5],
+            [['user_name', 'linkman'], 'string', 'max' => 5],
             [['password_hash'], 'string', 'max' => 100],
             [['auth_key'], 'string', 'max' => 32],
             [['password_hash', 'password_reset_token'], 'string', 'max' => 255],
@@ -81,7 +81,7 @@ class User extends ActiveRecord implements IdentityInterface
     {
         return [
             'user_id' => '编号',
-            'username' => '姓名',
+            'user_name' => '姓名',
             'password_hash' => '密码',
             'auth_key' => '安全认证',
             'password_reset_token' => '重置密码',
@@ -126,9 +126,9 @@ class User extends ActiveRecord implements IdentityInterface
     }
 
     //根据name查找
-    public static function findByUsername($username)
+    public static function findByUsername($user_name)
     {
-        return static::findOne(['username' => $username]);
+        return static::findOne(['user_name' => $user_name]);
     }
 
     //根据token查找
@@ -152,7 +152,7 @@ class User extends ActiveRecord implements IdentityInterface
         }
 
         $timestamp = (int) substr($token, strrpos($token, '_') + 1);
-        $expire = Yii::$app->params['emp.passwordResetTokenExpire'];
+        $expire = Yii::$app->params['user.passwordResetTokenExpire'];
         return $timestamp + $expire >= time();
     }
 

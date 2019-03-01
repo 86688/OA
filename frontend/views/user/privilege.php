@@ -9,16 +9,16 @@
 use yii\helpers\Html;
 use yii\widgets\ActiveForm;
 use yii\helpers\ArrayHelper;
-use common\models\Emp;
+use common\models\User;
 
 /* @var $this yii\web\View */
 /* @var $model common\models\Adminuser */
 
-$model = Emp::findOne($id);
+$model = User::findOne($id);
 
-$this->title = '权限设置: ' . $model->username;
+$this->title = '权限设置: ' . $model->user_name;
 $this->params['breadcrumbs'][] = ['label' => '管理员', 'url' => ['index']];
-$this->params['breadcrumbs'][] = ['label' => $model->username, 'url' => ['view', 'id' => $id]];
+$this->params['breadcrumbs'][] = ['label' => $model->user_name, 'url' => ['view', 'id' => $id]];
 $this->params['breadcrumbs'][] = '权限设置';
 ?>
 

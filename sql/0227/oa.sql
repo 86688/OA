@@ -662,7 +662,7 @@ CREATE TABLE `train_tag` (
 -- ----------------------------
 
 -- ----------------------------
--- Table structure for emp
+-- Table structure for user
 -- ----------------------------
 DROP TABLE IF EXISTS `user`;
 CREATE TABLE `user` (
@@ -702,7 +702,7 @@ CREATE TABLE `user` (
 ) ENGINE=InnoDB AUTO_INCREMENT=107 DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci ROW_FORMAT=COMPACT;
 
 -- ----------------------------
--- Records of emp
+-- Records of user
 -- ----------------------------
 INSERT INTO `user` VALUES ('001', '许飞', 'pG7TRyTIXlEbcenpi34TzmMYS2zDsMTF', '$2y$13$HtJqGRmc76KIRIwokii8AOQ1XZljXiuWCKUGFnH9vkTnfBpHtqgFu', null, '男', '18616997314', '', '340221197703140000', '', '', '2012/3/1', '2023/9/30', '2', '余洁红', '13917094445', '118668031', '5', '1', '3', '12', '1', '0', '0', null, null, null, null, null);
 INSERT INTO `user` VALUES ('002', '邹召龙', 'pG7TRyTIXlEbcenpi34TzmMYS2zDsMTF', '$2y$13$HtJqGRmc76KIRIwokii8AOQ1XZljXiuWCKUGFnH9vkTnfBpHtqgFu', null, '女', '13816022190', '', '430602198505080000', '', '', '2018/3/15', '2019/3/14', '1', '宋晓成', '13816022190', '111842402205 ', '5', '1', '3', '12', '2', '0', '0', null, null, null, null, null);

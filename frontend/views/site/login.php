@@ -19,7 +19,7 @@ $this->params['breadcrumbs'][] = $this->title;
         <div class="col-lg-3">
             <?php $form = ActiveForm::begin(['id' => 'login-form'],['action'=>'site/login']); ?>
             <!--  public yii\widgets\ActiveField field($model, $attribute, $options = [])-->
-            <?= $form->field($model, 'username')->textInput(['autofocus' => true]) ?>
+            <?= $form->field($model, 'user_name')->textInput(['autofocus' => true]) ?>
 
                 <?= $a=$form->field($model, 'password_hash')->passwordInput()?>
 

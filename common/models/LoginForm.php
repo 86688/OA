@@ -11,7 +11,7 @@ use yii\web\ForbiddenHttpException;
  */
 class LoginForm extends Model
 {
-    public $username;
+    public $user_name;
     public $password_hash;
     public $rememberMe = true;
 
@@ -26,7 +26,7 @@ class LoginForm extends Model
     {
         return [
             // username and password are both required
-            [['username', 'password_hash'], 'required',"message"=>"{attribute}不能为空"],
+            [['user_name', 'password_hash'], 'required',"message"=>"{attribute}不能为空"],
             // rememberMe must be a boolean value
             ['rememberMe', 'boolean'],
             // password is validated by validatePassword()
@@ -37,7 +37,7 @@ class LoginForm extends Model
     public function attributeLabels()
     {
         return [
-            'username'=> '用户名',
+            'user_name'=> '用户名',
             'password_hash'=>'密码',
             'rememberMe'=>'记住我',
             
@@ -63,7 +63,7 @@ class LoginForm extends Model
         }
     }
 
-    // Logs in a emp using the provided username and password.
+    // Logs in a user using the provided username and password.
     // 注册
     // 验证通过  进行注册用户   并且保持登录
     public function login()
@@ -78,7 +78,7 @@ class LoginForm extends Model
     }
 
     /**
-     * Finds emp by [[username]]
+     * Finds user by [[username]]
      *
      * @return User|null
      */
@@ -86,7 +86,7 @@ class LoginForm extends Model
     protected function getUser()
     {
         if ($this->_user === null) {
-            $this->_user = User::findByUsername($this->username);
+            $this->_user = User::findByUsername($this->user_name);
         }
         return $this->_user;
     }

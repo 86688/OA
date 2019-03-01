@@ -2,7 +2,7 @@
 
 use yii\helpers\Html;
 use yii\widgets\ActiveForm;
-use common\models\Emp;
+use common\models\User;
 use common\models\Dept;
 use common\models\Title;
 use common\models\Place;
@@ -21,9 +21,9 @@ $this->params['breadcrumbs'][] = $this->title;
 
     <?php $form = ActiveForm::begin(); ?>
 
-    <?= $form->field($model, 'username')->textInput(['maxlength' => true]) ?>
+    <?= $form->field($model, 'user_name')->textInput(['maxlength' => true]) ?>
     
-    <?= $form->field($model, 'sex')->dropDownList(Emp::allSex(),['prompt'=>'请选择性别']); ?>
+    <?= $form->field($model, 'sex')->dropDownList(User::allSex(),['prompt'=>'请选择性别']); ?>
 
     <?= $form->field($model, 'tel')->textInput(['maxlength' => true]) ?>
 
@@ -51,7 +51,7 @@ $this->params['breadcrumbs'][] = $this->title;
 
     <?= $form->field($model, 'place_id')->dropDownList(Place::allPlace(),['prompt'=>'请输入地点'])?>
 
-    <?= $form->field($model, 'status_id')->dropDownList(Emp::allStatus(),['prompt'=>'请输入状态']); ?>
+    <?= $form->field($model, 'status_id')->dropDownList(User::allStatus(),['prompt'=>'请输入状态']); ?>
 
     <?= $form->field($model, 'dept_id')->dropDownList(Dept::allDept(),['prompt'=>'请输入部门']) ?>
 

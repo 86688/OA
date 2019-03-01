@@ -15,7 +15,6 @@ return [
     'modules' => [],
     'components' => [
         'request' => [
-            'cookieValidationKey'=>'sdfjjksloeedf78789judf',
             'csrfParam' => '_csrf-backend',
         ],
         // 指定用户认证模型
@@ -26,10 +25,8 @@ return [
         ],
         'session' => [
             // this is the name of the session cookie used for login on the backend
-            'name' => 'backend',
-            'savePath'=>sys_get_temp_dir(),
+            'name' => 'advanced-backend',
         ],
-
         'log' => [
             'traceLevel' => YII_DEBUG ? 3 : 0,
             'targets' => [

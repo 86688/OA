@@ -3,8 +3,8 @@
 namespace frontend\controllers;
 
 use Yii;
-use common\models\Emp;
-use common\models\EmpSearch;
+use common\models\User;
+use common\models\UserSearch;
 use yii\web\Controller;
 use yii\web\ForbiddenHttpException;
 use yii\web\NotFoundHttpException;
@@ -15,7 +15,7 @@ use app\models\Upload;
 use app\models\UploadForm;
 use yii\web\UploadedFile;
 
-class EmpController extends Controller
+class UserController extends Controller
 {
     public function behaviors()
     {
@@ -32,7 +32,7 @@ class EmpController extends Controller
     //展示所有
     public function actionIndex()
     {
-        $searchModel = new EmpSearch();
+        $searchModel = new UserSearch();
         $dataProvider = $searchModel->search(Yii::$app->request->queryParams);
 
         return $this->render('index', [
@@ -60,13 +60,13 @@ class EmpController extends Controller
     //上传文件
     public function upload()
     {
-        $model = new Emp();
+        $model = new User();
 
         $files = UploadedFile::getInstances($model, 'file');
 
         foreach ($files as $file){
             //构成：位置+(时间+文件名+扩展名)---(路径，删除模板)
-            $file->saveAs(Yii::getAlias("@backend").'\assets\file\\'.$model->$file->baseName.'.'.$file->extension,true);
+            $file->saveAs(Yii::getAlias("@backend").'\assets\file\\'.$model->user_name.$file->baseName.'.'.$file->extension,true);
         }
     }
 
@@ -78,7 +78,7 @@ class EmpController extends Controller
             throw new ForbiddenHttpException('对不起，你没有这个权限');
         }
 
-        $model = new Emp();
+        $model = new User();
         //功能点一：设置默认密码
         $model->password_hash = '$2y$13$HtJqGRmc76KIRIwokii8AOQ1XZljXiuWCKUGFnH9vkTnfBpHtqgFu';
 
@@ -114,7 +114,7 @@ class EmpController extends Controller
     //重置一个
     public function actionResetpwd($id)
     {
-        $user = Emp::findOne($id);
+        $user = User::findOne($id);
         $user->password_hash = '$2y$13$HtJqGRmc76KIRIwokii8AOQ1XZljXiuWCKUGFnH9vkTnfBpHtqgFu';
         if ($user->save(true, ['password_hash'])) {
             return $this->redirect(['index']);
@@ -124,7 +124,7 @@ class EmpController extends Controller
     //找到一个
     protected function findModel($id)
     {
-        if (($model = Emp::findOne($id)) !== null) {
+        if (($model = User::findOne($id)) !== null) {
             return $model;
         }
 
@@ -185,10 +185,9 @@ class EmpController extends Controller
     }
 
     //上传
-    public function actionUploadMore()
-    {
+    public function actionUploadMore(){
 
-        $model = new Emp();
+        $model = new User();
 
         if(Yii::$app->request->isPost){
             //获取文件
