@@ -48,14 +48,14 @@ $this->params['breadcrumbs'][] = $this->title;
                 ->orderBy('dept_id')
                 ->column(),
         ],
-//        ['attribute'=>'title_id',
-//            'label'=>'职位',
-//            'value'=>'title.title_name',
-//            'filter'=>Title::find()
-//                ->select(['title_name'])
-//                ->orderBy('title_id')
-//                ->column(),
-//        ],
+        ['attribute'=>'title_id',
+            'label'=>'职位',
+            'value'=>'title.title_name',
+            'filter'=>Title::find()
+                ->select(['title_name'])
+                ->orderBy('title_id')
+                ->column(),
+        ],
 //        [
 //            'attribute' => 'crt_start',
 //            'format' => ['date', 'php:Y-m-d']

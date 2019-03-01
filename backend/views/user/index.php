@@ -20,7 +20,7 @@ $this->params['breadcrumbs'][] = $this->title;
         <?= Html::a('人事变动', ['user/change'], ['class' => 'btn btn-success']) ?>
     </p>
 
-    <!--    引入搜索页面-->
+    <!--    引入搜索页面  -->
     <?php  echo $this->render('_search', ['model' => $searchModel]); ?>
 
     <?= GridView::widget([
