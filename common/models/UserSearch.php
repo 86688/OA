@@ -34,7 +34,15 @@ class UserSearch extends User
 
         $dataProvider = new ActiveDataProvider([
             'query' => $query,
+            'sort' => [
+                'defaultOrder' => [
+                    'user_name' => SORT_DESC,
+                ],
+            ],
         ]);
+
+
+
         //块赋值
         $this->load($params);
         //校验数据
