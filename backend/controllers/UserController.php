@@ -32,12 +32,13 @@ class UserController extends Controller
     //展示所有
     public function actionIndex()
     {
-        if (!Yii::$app->user->can('backend', [], true)) {
-            throw new ForbiddenHttpException('请认证身份，谢谢！');
-        }
-
         $searchModel = new UserSearch();
         $dataProvider = $searchModel->search(Yii::$app->request->queryParams);
+
+        if(Yii::$app->user->can('gm')||(Yii::$app->user->can('dept_head')))
+        {
+
+        }
 
         return $this->render('index', [
             //两个模型

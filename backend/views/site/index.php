@@ -13,8 +13,6 @@ $this->title = '后台管理系统';
         <a href="http://admin.oa.com/index.php?r=vendor"><p class="btn btn-lg btn-success col-md-4 col-md-offset-1">供应商</p></a>
         <a href="http://admin.oa.com/index.php?r=client"><p class="btn btn-lg btn-success col-md-4">客户</p></a>
         <a href="http://admin.oa.com/index.php?r=vendor"><p class="btn btn-lg btn-success col-md-4 col-md-offset-1">空白</p></a>
-
     </div>
-
 
 </div>
