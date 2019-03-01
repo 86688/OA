@@ -46,9 +46,11 @@ class SiteController extends Controller
     //显示主页
     public function actionIndex()
     {
-        if (!Yii::$app->user->can('backend', [], true)) {
-            throw new ForbiddenHttpException('请先登录，谢谢！');
-        }
+
+//        var_dump($_SESSION);
+//        echo '<br>';
+//        var_dump($_COOKIE);
+//        die();
 
         return $this->render('index');
     }

@@ -45,6 +45,10 @@ class SiteController extends Controller
     //显示主页
     public function actionIndex()
     {
+//        var_dump($_SESSION);
+//        echo '<br>';
+//        var_dump($_COOKIE);
+//        die();
 
         return $this->render('index');
     }

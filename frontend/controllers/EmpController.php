@@ -35,6 +35,7 @@ class EmpController extends Controller
         $searchModel = new EmpSearch();
         $dataProvider = $searchModel->search(Yii::$app->request->queryParams);
 
+
         return $this->render('index', [
             'searchModel' => $searchModel,
             'dataProvider' => $dataProvider,
