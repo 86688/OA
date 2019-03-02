@@ -2,13 +2,14 @@
 
 use yii\helpers\Html;
 use yii\widgets\DetailView;
+use common\models\Place;
 
 
 /* @var $this yii\web\View */
 /* @var $model common\models\User */
 
 $this->title = $model->user_name;
-$this->params['breadcrumbs'][] = ['label' => '人员', 'url' => ['index']];
+$this->params['breadcrumbs'][] = ['label' => '人事', 'url' => ['index']];
 $this->params['breadcrumbs'][] = $this->title;
 ?>
 <div class="user-view">
@@ -28,20 +29,19 @@ $this->params['breadcrumbs'][] = $this->title;
         //此处的model属于的是user的模型！
         'model' => $model,
         'attributes' => [
-            'user_id',
+//            'user_id',
             'user_name',
             'sex',
             'tel',
             'email:email',
             'id_card',
-            'school',
-            'major',
+
             [
                'attribute'=>'crt_start',
                 'format'=>['date','php:Y-m-d'],
             ],
             [
-                'attribute'=>'crt_start',
+                'attribute'=>'crt_end',
                 'format'=>['date','php:Y-m-d'],
             ],
             'ctr_num',
@@ -65,8 +65,18 @@ $this->params['breadcrumbs'][] = $this->title;
             //工作地点
             [
                 'attribute'=>'place_id',
-                'value'=>$model->place->place,
+                'value' => function ($model) {
+                    $place = [
+                        '0' => '浦东',
+                        '1' => '浦西',
+                        '2' => '深圳',
+                        '3' => '海南',
+                    ];
+                    return $place[$model->place_id];
+                },
             ],
+            'school',
+            'major',
 
             // 'file',
             // 'show',
