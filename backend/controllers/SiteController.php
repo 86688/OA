@@ -45,10 +45,6 @@ class SiteController extends Controller
     //显示主页
     public function actionIndex()
     {
-//        var_dump($_SESSION);
-//        echo '<br>';
-//        var_dump($_COOKIE);
-//        die();
 
         return $this->render('index');
     }
@@ -67,9 +63,8 @@ class SiteController extends Controller
 
         // 收集数据
         if ($model->load(Yii::$app->request->post()) && $model->login()) {
-            if (!Yii::$app->user->can('backend', [], true)) {
-                Yii::$app->user->logout();
-                throw new ForbiddenHttpException('对不起，你没有这个权限');
+            if (Yii::$app->user->can('common', [], true)) {
+                    return $this->render('common');
             }
         return $this->goBack();
         } else {
