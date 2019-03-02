@@ -45,6 +45,9 @@ class SiteController extends Controller
     //显示主页
     public function actionIndex()
     {
+        if ((Yii::$app->user->can("common"))){
+            return $this->render('common');
+        }
 
         return $this->render('index');
     }
