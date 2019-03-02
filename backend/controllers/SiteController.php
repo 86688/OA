@@ -55,7 +55,11 @@ class SiteController extends Controller
     {
         // 是否游客
         if (!Yii::$app->user->isGuest) {
-            return $this->goHome();
+            if ((Yii::$app->user->can("common"))){
+                return $this->render('common');
+            }
+            //不是永科
+//            return $this->goHome();
         }
 
 
@@ -63,7 +67,7 @@ class SiteController extends Controller
 
         // 收集数据
         if ($model->load(Yii::$app->request->post()) && $model->login()) {
-            if ((Yii::$app->user->can("common"))||(Yii::$app->user->can("hr_aid"))){
+            if ((Yii::$app->user->can("common"))){
                     return $this->render('common');
             }
         return $this->goBack();
