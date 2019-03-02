@@ -5,7 +5,6 @@
 $this->title = '100T';
 ?>
 <div class="container">
-
     <div class="row jumbotron">
         <a href="http://public.oa.com/index.php?r=emp"><p class="btn btn-lg btn-success col-md-4">人事</p></a>
         <a href="http://public.oa.com/index.php?r=project"><p class="btn btn-lg btn-success col-md-4 col-md-offset-1">项目</p></a>
