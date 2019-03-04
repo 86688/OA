@@ -85,10 +85,6 @@ class UserSearch extends User
         }
 
         $query->andFilterWhere(['like', 'user_name', $this->user_name])
-            ->andFilterWhere(['like', 'sex', $this->sex])
-            ->andFilterWhere(['like', 'tel', $this->tel])
-            ->andFilterWhere(['like', 'ctr_num', $this->ctr_num])
-            ->andFilterWhere(['like', 'vacation', $this->vacation])
             ->andFilterWhere(['like', 'status_id', $this->status_id])
             ->andFilterWhere(['like', 'dept_id', $this->dept_id])
             ->andFilterWhere(['like', 'title_id', $this->title_id])

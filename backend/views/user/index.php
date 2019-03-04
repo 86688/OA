@@ -111,7 +111,7 @@ $this->params['breadcrumbs'][] = $this->title;
             ]);
             }else{
             echo GridView::widget([
-                'dataProvider' => $dataProvider,
+                'dataProvider' => $dataProviderone,
                 'columns' => [
                     'user_name',
 

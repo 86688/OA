@@ -20,7 +20,7 @@ use common\models\Place;
 <div class="user-search">
 
     <?php $form = ActiveForm::begin([
-        'action' => ['index'],
+        'action' => ['change'],
         'method' => 'get',
     ]); ?>
 

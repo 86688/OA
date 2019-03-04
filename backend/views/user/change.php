@@ -42,10 +42,7 @@ $this->params['breadcrumbs'][] = $this->title;
                     ->orderBy('dept_id')
                     ->column(),
             ],
-
             'mark',
-
-
             //动作按钮
             ['class' => 'yii\grid\ActionColumn',
                 'template'=>'{view} {update} {delete}',

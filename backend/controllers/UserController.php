@@ -42,6 +42,17 @@ class UserController extends Controller
         ]);
     }
 
+    public function change()
+    {
+        $searchModel = new UserSearch();
+        $dataProvider = $searchModel->change(Yii::$app->request->queryParams);
+
+        return $this->render('change', [
+            'searchModel' => $searchModel,
+            'dataProvider' => $dataProvider,
+        ]);
+    }
+
     public function actionChange()
     {
         $searchModel=new UserSearch();
