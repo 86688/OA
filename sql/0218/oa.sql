@@ -275,7 +275,7 @@ DROP TABLE IF EXISTS `project`;
 CREATE TABLE `project` (
   `project_id` int(1) unsigned NOT NULL AUTO_INCREMENT COMMENT '��Ŀ���',
   `project_name` varchar(50) NOT NULL COMMENT '��Ŀ����',
-  `depe_id` varchar(30) DEFAULT NULL,
+  `dept_id` varchar(30) DEFAULT NULL,
   `new_time` int(11) unsigned DEFAULT NULL COMMENT '��Ŀ�½�ʱ��',
   `update_time` int(11) unsigned DEFAULT NULL COMMENT '��Ŀ����ʱ��',
   `confirm_time` int(11) unsigned DEFAULT NULL COMMENT '��Ŀȷ��ʱ��',
