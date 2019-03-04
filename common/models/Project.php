@@ -47,7 +47,7 @@ class Project extends \yii\db\ActiveRecord
     public function rules()
     {
         return [
-            [['project_name', 'phase'], 'required',"message"=>"{attribute}不能为空"],
+            [['project_name', 'phase'], 'required'],
             [['project_name'], 'string', 'max' => 50],
             [['dept_id', 'budget'], 'string', 'max' => 30],
             [['principal', 'rating'], 'string', 'max' => 10],
@@ -69,7 +69,11 @@ class Project extends \yii\db\ActiveRecord
             'project_id' => '项目编号',
             'project_name' => '项目名字',
             'dept_id' => '部门',
-
+            'new_time' => '新建时间',
+            'update_time' => '修改时间',
+            'confirm_time' => '确认时间',
+            'exec_time' => '执行时间',
+            'end_time' => '截止时间',
             'principal' => '负责人',
             'assist' => '协助人',
             'city' => '城市',
@@ -78,15 +82,10 @@ class Project extends \yii\db\ActiveRecord
             'crt_id' => '合同',
             'self_id' => '公司',
             'client_id' => '客户',
-            'project_remark' => '备注',
+            'project_remark' => '项目备注',
             'rating' => '排名',
             'phase' => '阶段',
-            'project_type' => '类型',
-            'new_time' => '新建时间',
-            'update_time' => '修改时间',
-            'confirm_time' => '确认时间',
-            'exec_time' => '执行时间',
-            'end_time' => '截止时间',
+            'project_type' => '项目类型',
         ];
     }
 
