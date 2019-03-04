@@ -24,7 +24,7 @@ use common\models\Place;
         'method' => 'get',
     ]); ?>
 
-    <!--    搜索框-->
+    <!--搜索框-->
     <?= $form->field($model, 'user_name')->textInput(['placeholder'=> '姓名','class'=>'input form-control','value'=>""])->label(false);?><div class="nbsp">&nbsp;&nbsp;&nbsp;</div>
 
     <?= $form->field($model, 'dept_id')->dropDownList(Dept::allDept(),['prompt'=>'部门','class'=>'input form-control'])->label(false);?><div class="nbsp">&nbsp;&nbsp;&nbsp;</div>

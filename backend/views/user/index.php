@@ -28,6 +28,7 @@ $this->params['breadcrumbs'][] = $this->title;
     <!--    引入搜索页面  -->
     <?php  echo $this->render('_search', ['model' => $searchModel]); ?>
 
+
     <?php if(Yii::$app->user->can('backend', [], true)){
             echo GridView::widget([
                     'dataProvider' => $dataProvider,
@@ -48,8 +49,7 @@ $this->params['breadcrumbs'][] = $this->title;
                             ->orderBy('status_id')
                             ->column(),
                     ],
-            //        echo '1';
-            //    die();
+
                     ['attribute'=>'dept_id',
                         'label'=>'部门',
                         'value'=>'dept.dept_name',

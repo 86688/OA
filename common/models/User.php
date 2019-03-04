@@ -62,7 +62,7 @@ class User extends ActiveRecord implements IdentityInterface
     public function rules()
     {
         return [
-            [['tel', 'id_card', 'status_id', 'dept_id', 'title_id','place_id','linkman','linktel'], 'required',"message"=>"{attribute}不能为空"],
+//            [['tel', 'id_card', 'status_id', 'dept_id', 'title_id','place_id','linkman','linktel'], 'required',"message"=>"{attribute}不能为空"],
             [['show'], 'integer',"message"=>"{attribute}必须为数字"],
             [['user_name', 'linkman'], 'string', 'max' => 5],
             [['password_hash'], 'string', 'max' => 100],

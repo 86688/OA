@@ -29,26 +29,22 @@ class UserSearch extends User
 
     public function search($params)
     {
-        $query = User::find()->where(['!=','status_id',2]);
+        $query = User::find()
+            ->where(['!=', 'status_id', 2]);
+
+//        var_dump($query);
+//        die();
 
         $dataProvider = new ActiveDataProvider([
             'query' => $query,
-            'sort' => [
-                'defaultOrder' => [
-                    'user_name' => SORT_DESC,
-                ],
-            ],
         ]);
 
-
-
-        //块赋值
         $this->load($params);
-        //校验数据
+
         if (!$this->validate()) {
+
             return $dataProvider;
         }
-
 
         $query->andFilterWhere(['like', 'user_name', $this->user_name])
             ->andFilterWhere(['=', 'sex', $this->sex])
@@ -72,7 +68,7 @@ class UserSearch extends User
 
     public function change($params)
     {
-        $query = User::find()->where([]);
+        $query = User::find();
 
         $dataProvider = new ActiveDataProvider([
             'query' => $query,
@@ -100,4 +96,5 @@ class UserSearch extends User
 
         return $dataProvider;
     }
+
 }

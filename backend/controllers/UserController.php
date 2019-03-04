@@ -109,6 +109,9 @@ class UserController extends Controller
         //功能点二：上传文件
         $this->upload();
 
+
+
+
         if ($model->load(Yii::$app->request->post()) && $model->save()) {
             return $this->redirect(['view', 'id' => $model->user_id]);
         }else{
