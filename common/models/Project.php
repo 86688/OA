@@ -49,7 +49,7 @@ class Project extends \yii\db\ActiveRecord
         return [
             [['project_name', 'phase'], 'required'],
             [['project_name'], 'string', 'max' => 50],
-            [['depe_id', 'budget'], 'string', 'max' => 30],
+            [['dept_id', 'budget'], 'string', 'max' => 30],
             [['principal', 'rating'], 'string', 'max' => 10],
             [['assist', 'address'], 'string', 'max' => 100],
             [['city'], 'string', 'max' => 20],
@@ -68,7 +68,7 @@ class Project extends \yii\db\ActiveRecord
         return [
             'project_id' => '项目编号',
             'project_name' => '项目名字',
-            'depe_id' => '部门',
+            'dept_id' => '部门',
             'new_time' => '新建时间',
             'update_time' => '修改时间',
             'confirm_time' => '确认时间',

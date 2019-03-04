@@ -15,7 +15,7 @@ use timepicker\DateTimePicker;
 
     <?= $form->field($model, 'project_name')->textInput(['maxlength' => true]) ?>
 
-    <?= $form->field($model, 'depe_id')->textInput(['maxlength' => true]) ?>
+    <?= $form->field($model, 'dept_id')->textInput(['maxlength' => true]) ?>
 
     <?= $form->field($model, 'new_time')->widget(DateTimePicker::className(), [
         'template' => '{input}',
@@ -104,6 +104,7 @@ use timepicker\DateTimePicker;
     <?= $form->field($model, 'rating')->textInput(['maxlength' => true]) ?>
 
     <?= $form->field($model, 'phase')->textInput() ?>
+   
 
     <?= $form->field($model, 'project_type')->textInput(['maxlength' => true]) ?>
 
