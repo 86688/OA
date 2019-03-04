@@ -5,10 +5,10 @@ use yii\helpers\Html;
 /* @var $this yii\web\View */
 /* @var $model common\models\Vacation */
 
-$this->title = 'Update Vacation: {nameAttribute}';
-$this->params['breadcrumbs'][] = ['label' => 'Vacations', 'url' => ['index']];
-$this->params['breadcrumbs'][] = ['label' => $model->id, 'url' => ['view', 'id' => $model->id]];
-$this->params['breadcrumbs'][] = 'Update';
+$this->title = '修改请假: {nameAttribute}';
+$this->params['breadcrumbs'][] = ['label' => '请假', 'url' => ['index']];
+$this->params['breadcrumbs'][] = ['label' => $model->user, 'url' => ['view', 'id' => $model->id]];
+$this->params['breadcrumbs'][] = '修改';
 ?>
 <div class="vacation-update">
 

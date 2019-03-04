@@ -7,7 +7,7 @@ use yii\grid\GridView;
 /* @var $searchModel common\models\VacationSearch */
 /* @var $dataProvider yii\data\ActiveDataProvider */
 
-$this->title = 'Vacations';
+$this->title = '请假';
 $this->params['breadcrumbs'][] = $this->title;
 ?>
 <div class="vacation-index">
@@ -16,7 +16,7 @@ $this->params['breadcrumbs'][] = $this->title;
     <?php // echo $this->render('_search', ['model' => $searchModel]); ?>
 
     <p>
-        <?= Html::a('Create Vacation', ['create'], ['class' => 'btn btn-success']) ?>
+        <?= Html::a('新建请假', ['create'], ['class' => 'btn btn-success']) ?>
     </p>
 
     <?= GridView::widget([
