@@ -104,7 +104,7 @@ use timepicker\DateTimePicker;
     <?= $form->field($model, 'rating')->textInput(['maxlength' => true]) ?>
 
     <?= $form->field($model, 'phase')->textInput() ?>
-   
+
 
     <?= $form->field($model, 'project_type')->textInput(['maxlength' => true]) ?>
 

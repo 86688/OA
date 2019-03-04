@@ -104,4 +104,21 @@ class Project extends \yii\db\ActiveRecord
     {
         return $this->hasOne(SelfCmy::className(), ['self_id' => 'self_id']);
     }
+
+    public function allPhase()
+    {
+        return [
+            1=>'意向',
+            2=>'确定',
+            3=>'结算',
+            4=>'结束',
+        ];
+    }
+    public function allType()
+    {
+        return [
+            1=>'内部',
+            2=>'外部',
+        ];
+    }
 }
