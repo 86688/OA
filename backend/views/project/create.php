@@ -22,7 +22,8 @@ $this->params['breadcrumbs'][] = $this->title;
 
     <?= $form->field($model, 'project_name')->textInput(['maxlength' => true]) ?>
 
-    <?= $form->field($model, 'dept_id')->textInput(['maxlength' => true]) ?>
+    <?= $form->field($model, 'dept_id')->dropDownList(Dept::allDept(),['prompt'=>'请输入部门']) ?>
+
 
     <?= $form->field($model, 'new_time')->widget(DateTimePicker::className(), [
         'template' => '{input}',
