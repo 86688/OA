@@ -246,5 +246,11 @@ class UserController extends Controller
             }
         }
     }
+
+//    public function actionVacation()
+//    {
+//        $model=new User();
+//        return $this->render('vacation',['model'=>$model]);
+//    }
 }
 
