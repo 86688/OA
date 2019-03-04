@@ -35,11 +35,6 @@ class UserController extends Controller
         $searchModel = new UserSearch();
         $dataProvider = $searchModel->search(Yii::$app->request->queryParams);
 
-        if(Yii::$app->user->can('gm')||(Yii::$app->user->can('dept_head')))
-        {
-
-        }
-
         return $this->render('index', [
             //两个模型
             'searchModel' => $searchModel,
