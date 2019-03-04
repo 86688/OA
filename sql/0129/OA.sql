@@ -157,7 +157,7 @@ ROW_FORMAT = Compact;
 CREATE TABLE `project` (
 `project_id` int(1) UNSIGNED NOT NULL AUTO_INCREMENT COMMENT '��Ŀ���',
 `project_name` varchar(50) CHARACTER SET utf8 COLLATE utf8_general_ci NOT NULL COMMENT '��Ŀ����',
-`depe_id` varchar(30) CHARACTER SET utf8 COLLATE utf8_general_ci NULL DEFAULT NULL,
+`dept_id` varchar(30) CHARACTER SET utf8 COLLATE utf8_general_ci NULL DEFAULT NULL,
 `new_time` int(11) UNSIGNED NULL DEFAULT NULL COMMENT '��Ŀ�½�ʱ��',
 `update_time` int(11) UNSIGNED NULL DEFAULT NULL COMMENT '��Ŀ����ʱ��',
 `confirm_time` int(11) UNSIGNED NULL DEFAULT NULL COMMENT '��Ŀȷ��ʱ��',

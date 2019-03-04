@@ -19,7 +19,7 @@ class ProjectSearch extends Project
     {
         return [
             [['project_id', 'new_time', 'update_time', 'confirm_time', 'exec_time', 'end_time', 'crt_id', 'client_id'], 'integer'],
-            [['project_name', 'depe_id', 'principal', 'assist', 'city', 'address', 'budget', 'self_id', 'project_remark', 'rating', 'phase', 'project_type'], 'safe'],
+            [['project_name', 'dept_id', 'principal', 'assist', 'city', 'address', 'budget', 'self_id', 'project_remark', 'rating', 'phase', 'project_type'], 'safe'],
         ];
     }
 
@@ -70,7 +70,7 @@ class ProjectSearch extends Project
         ]);
 
         $query->andFilterWhere(['like', 'project_name', $this->project_name])
-            ->andFilterWhere(['like', 'depe_id', $this->depe_id])
+            ->andFilterWhere(['like', 'dept_id', $this->dept_id])
             ->andFilterWhere(['like', 'principal', $this->principal])
             ->andFilterWhere(['like', 'assist', $this->assist])
             ->andFilterWhere(['like', 'city', $this->city])

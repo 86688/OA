@@ -9,7 +9,7 @@ use Yii;
  *
  * @property string $project_id ��Ŀ���
  * @property string $project_name ��Ŀ����
- * @property string $depe_id
+ * @property string $dept_id
  * @property string $new_time ��Ŀ�½�ʱ��
  * @property string $update_time ��Ŀ����ʱ��
  * @property string $confirm_time ��Ŀȷ��ʱ��
