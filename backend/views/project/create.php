@@ -112,7 +112,8 @@ $this->params['breadcrumbs'][] = $this->title;
 
     <?= $form->field($model, 'phase')->dropDownList(Project::allPhase(),['prompt'=>'请选择阶段']); ?>
 
-    <?= $form->field($model, 'project_type')->textInput(['maxlength' => true]) ?>
+    <?= $form->field($model, 'project_type')->checkboxList(Project::allType(),['prompt'=>'请选择类型']); ?>
+
 
     <div class="form-group">
         <?= Html::submitButton('保存', ['class' => 'btn btn-success']) ?>
