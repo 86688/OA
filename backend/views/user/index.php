@@ -132,7 +132,7 @@ $this->params['breadcrumbs'][] = $this->title;
                             ->column(),
                     ],
                     'tel',
-                    
+
                 ],
             ]);
     }
