@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="da73695b-73d3-4dd7-b409-cfa0504147bb" name="Default" comment="">
-      <change beforePath="$PROJECT_DIR$/backend/views/finance/index.php" beforeDir="false" afterPath="$PROJECT_DIR$/backend/views/finance/index.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/views/site/index.php" beforeDir="false" afterPath="$PROJECT_DIR$/backend/views/site/index.php" afterDir="false" />
     </list>
     <ignored path="OA.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -54,11 +54,29 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/backend/views/user/index.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="44">
+              <caret line="2" column="11" lean-forward="true" selection-start-line="2" selection-end-line="3" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/backend/views/finance/index.php">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="373">
               <caret line="25" column="12" selection-start-line="25" selection-start-column="12" selection-end-line="25" selection-end-column="12" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/backend/views/site/index.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="396">
+              <caret line="18" selection-start-line="17" selection-end-line="18" />
             </state>
           </provider>
         </entry>
@@ -151,7 +169,6 @@
         <option value="$PROJECT_DIR$/backend/config/main.php" />
         <option value="$PROJECT_DIR$/frontend/config/main.php" />
         <option value="$PROJECT_DIR$/backend/views/site/common.php" />
-        <option value="$PROJECT_DIR$/backend/views/site/index.php" />
         <option value="$PROJECT_DIR$/frontend/views/user/_search.php" />
         <option value="$USER_HOME$/Desktop/项目/之前的代码数据库/mice/#I/Runtime/Cache/7806febb9dfb73f9d4bf0e07314a6cc2.php" />
         <option value="$PROJECT_DIR$/backend/views/user/_search.php" />
@@ -174,6 +191,7 @@
         <option value="$PROJECT_DIR$/backend/views/finance/update.php" />
         <option value="$PROJECT_DIR$/backend/views/finance/view.php" />
         <option value="$PROJECT_DIR$/backend/views/finance/index.php" />
+        <option value="$PROJECT_DIR$/backend/views/site/index.php" />
       </list>
     </option>
   </component>
@@ -296,6 +314,13 @@
               <item name="OA" type="462c0819:PsiDirectoryNode" />
               <item name="backend" type="462c0819:PsiDirectoryNode" />
               <item name="views" type="462c0819:PsiDirectoryNode" />
+              <item name="site" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="OA" type="b2602c69:ProjectViewProjectNode" />
+              <item name="OA" type="462c0819:PsiDirectoryNode" />
+              <item name="backend" type="462c0819:PsiDirectoryNode" />
+              <item name="views" type="462c0819:PsiDirectoryNode" />
               <item name="user" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
@@ -407,12 +432,12 @@
       <workItem from="1551142816403" duration="35077000" />
       <workItem from="1551273082730" duration="1965000" />
       <workItem from="1551316422776" duration="15301000" />
-      <workItem from="1551668640006" duration="4961000" />
+      <workItem from="1551668640006" duration="5309000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="375455000" />
+    <option name="totallyTimeSpent" value="375803000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -689,13 +714,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/backend/views/site/index.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="198">
-          <caret line="9" column="31" selection-start-line="9" selection-start-column="31" selection-end-line="9" selection-end-column="31" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/backend/views/user/vacation.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="286">
@@ -709,16 +727,6 @@
           <caret line="242" column="91" selection-start-line="242" selection-start-column="91" selection-end-line="242" selection-end-column="91" />
           <folding>
             <element signature="e#39#47#0#PHP" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/backend/views/user/index.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="352">
-          <caret line="16" column="39" selection-start-line="16" selection-start-column="39" selection-end-line="16" selection-end-column="39" />
-          <folding>
-            <element signature="e#7#28#0#PHP" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -840,6 +848,20 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="373">
           <caret line="25" column="12" selection-start-line="25" selection-start-column="12" selection-end-line="25" selection-end-column="12" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/backend/views/user/index.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="44">
+          <caret line="2" column="11" lean-forward="true" selection-start-line="2" selection-end-line="3" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/backend/views/site/index.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="396">
+          <caret line="18" selection-start-line="17" selection-end-line="18" />
         </state>
       </provider>
     </entry>

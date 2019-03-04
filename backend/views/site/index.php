@@ -1,6 +1,8 @@
 <?php
 
 /* @var $this yii\web\View */
+use yii\helpers\Html;
+
 
 $this->title = '后台管理系统';
 ?>
@@ -8,12 +10,14 @@ $this->title = '后台管理系统';
 <div class="container">
 
     <div class="row jumbotron">
-        <a href="http://admin.oa.com/index.php?r=user"><p class="btn btn-lg btn-success col-md-4">人事</p></a>
-        <a href="http://admin.oa.com/index.php?r=project"><p class="btn btn-lg btn-success col-md-4 col-md-offset-1">项目</p></a>
-        <a href="http://admin.oa.com/index.php?r=finance"><p class="btn btn-lg btn-success col-md-4">财务</p></a>
-        <a href="http://admin.oa.com/index.php?r=vendor"><p class="btn btn-lg btn-success col-md-4 col-md-offset-1">供应商</p></a>
-        <a href="http://admin.oa.com/index.php?r=client"><p class="btn btn-lg btn-success col-md-4">客户</p></a>
-        <a href="http://admin.oa.com/index.php?r=vendor"><p class="btn btn-lg btn-success col-md-4 col-md-offset-1">空白</p></a>
+        <?= Html::a('人事', ['user/index'], ['class' => 'btn btn-lg btn-success col-md-4']) ?>
+        <?= Html::a('项目', ['project/index'], ['class' => 'btn btn-lg btn-success col-md-4 col-md-offset-1']) ?>
+        <br><br><br><br>
+        <?= Html::a('财务', ['finance/index'], ['class' => 'btn btn-lg btn-success col-md-4']) ?>
+        <?= Html::a('供应商', ['vendor/index'], ['class' => 'btn btn-lg btn-success col-md-4 col-md-offset-1']) ?>
+        <br><br><br><br>
+        <?= Html::a('客户', ['client/index'], ['class' => 'btn btn-lg btn-success col-md-4 ']) ?>
+
     </div>
 
 </div>
