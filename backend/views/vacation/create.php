@@ -1,6 +1,8 @@
 <?php
 
 use yii\helpers\Html;
+use yii\widgets\ActiveForm;
+
 
 
 /* @var $this yii\web\View */
@@ -29,8 +31,8 @@ $this->params['breadcrumbs'][] = $this->title;
         <?= Html::submitButton('保存', ['class' => 'btn btn-success']) ?>
     </div>
 
-    <?php ActiveForm::end(); ?><?= $this->render('_form', [
-        'model' => $model,
-    ]) ?>
+    <?php ActiveForm::end(); ?>
+
+
 
 </div>
