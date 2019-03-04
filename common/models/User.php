@@ -51,8 +51,8 @@ class User extends ActiveRecord implements IdentityInterface
     const MAN=1;
     const WOMEN=0;
     //使用与转正
-    const STATUS_TRY = 0;
-    const STATUS_OFFICAL = 1;
+//    const STATUS_TRY = 0;
+//    const STATUS_OFFICAL = 1;
 
     public static function tableName()
     {
@@ -207,7 +207,7 @@ class User extends ActiveRecord implements IdentityInterface
     //展示页面获取所有的状态
     public static function allStatus()
     {
-        return [self::STATUS_OFFICAL=>'正式',self::STATUS_TRY=>'试用'];
+        return [0=>'正式',1=>'试用',2=>'离职'];
     }
 
     //展示页面获取所有性别
