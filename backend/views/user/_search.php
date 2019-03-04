@@ -24,7 +24,7 @@ use common\models\Place;
         'method' => 'get',
     ]); ?>
 
-    <?php if(Yii::$app->user->can('gm', [], true))
+    <?php if(Yii::$app->user->can('backend', [], true))
         {
             echo  $form->field($model, 'user_name')->textInput(['placeholder'=> '姓名','class'=>'input form-control','value'=>""])->label(false);
             echo '<div class="nbsp">&nbsp;&nbsp;&nbsp;</div>';
@@ -42,8 +42,6 @@ use common\models\Place;
             echo  $form->field($model, 'dept_id')->dropDownList(Dept::allDept(),['prompt'=>'部门','class'=>'input form-control','value'=>""])->label(false);
             echo '<div class="nbsp">&nbsp;&nbsp;&nbsp;</div>';
     }
-
-
     ?>
 
     <div class="form-group">

@@ -28,7 +28,7 @@ $this->params['breadcrumbs'][] = $this->title;
     <!--    引入搜索页面  -->
     <?php  echo $this->render('_search', ['model' => $searchModel]); ?>
 
-    <?php if(Yii::$app->user->can('gm', [], true)){
+    <?php if(Yii::$app->user->can('backend', [], true)){
             echo GridView::widget([
                     'dataProvider' => $dataProvider,
                     'columns' => [
