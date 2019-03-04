@@ -1,14 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="da73695b-73d3-4dd7-b409-cfa0504147bb" name="Default" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/controllers/UserController.php" beforeDir="false" afterPath="$PROJECT_DIR$/backend/controllers/UserController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/views/user/_change.php" beforeDir="false" afterPath="$PROJECT_DIR$/backend/views/user/_change.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/views/user/index.php" beforeDir="false" afterPath="$PROJECT_DIR$/backend/views/user/index.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/common/models/User.php" beforeDir="false" afterPath="$PROJECT_DIR$/common/models/User.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/common/models/UserSearch.php" beforeDir="false" afterPath="$PROJECT_DIR$/common/models/UserSearch.php" afterDir="false" />
-    </list>
+    <list default="true" id="da73695b-73d3-4dd7-b409-cfa0504147bb" name="Default" comment="" />
     <ignored path="OA.iws" />
     <ignored path=".idea/workspace.xml" />
     <ignored path=".idea/dataSources.local.xml" />
@@ -86,8 +79,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/backend/views/user/_change.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="117">
-              <caret line="26" column="8" selection-start-line="26" selection-start-column="8" selection-end-line="26" selection-end-column="8" />
+            <state relative-caret-position="227">
+              <caret line="31" column="29" lean-forward="true" selection-start-line="31" selection-end-line="32" />
             </state>
           </provider>
         </entry>
@@ -461,12 +454,12 @@
       <workItem from="1551273082730" duration="1965000" />
       <workItem from="1551316422776" duration="15301000" />
       <workItem from="1551668640006" duration="7456000" />
-      <workItem from="1551702565633" duration="3751000" />
+      <workItem from="1551702565633" duration="3991000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="390593000" />
+    <option name="totallyTimeSpent" value="390833000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -977,8 +970,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/backend/views/user/_change.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="117">
-          <caret line="26" column="8" selection-start-line="26" selection-start-column="8" selection-end-line="26" selection-end-column="8" />
+        <state relative-caret-position="227">
+          <caret line="31" column="29" lean-forward="true" selection-start-line="31" selection-end-line="32" />
         </state>
       </provider>
     </entry>
