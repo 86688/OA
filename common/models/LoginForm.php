@@ -71,7 +71,9 @@ class LoginForm extends Model
 
         // validate检测rules
         if ($this->validate()) {
-            return Yii::$app->user->login($this->getUser(), $this->rememberMe ? 3600 * 24: 0);//注册登录成功  时间为一天
+            $result=Yii::$app->user->login($this->getUser(), $this->rememberMe ? 3600 * 24: 0);
+            $_SESSION['user_id']=$this->getUser()->user_id;
+            return $result;//注册登录成功  时间为一天
         } else {
             return false;
         }
