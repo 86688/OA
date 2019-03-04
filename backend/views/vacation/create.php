@@ -12,9 +12,24 @@ $this->params['breadcrumbs'][] = $this->title;
 ?>
 <div class="vacation-create">
 
-    <h1><?= Html::encode($this->title) ?></h1>
 
-    <?= $this->render('_form', [
+    <?php $form = ActiveForm::begin(); ?>
+
+    <?= $form->field($model, 'id')->textInput() ?>
+
+    <?= $form->field($model, 'user')->textInput(['maxlength' => true]) ?>
+
+    <?= $form->field($model, 'start')->textInput() ?>
+
+    <?= $form->field($model, 'end')->textInput() ?>
+
+    <?= $form->field($model, 'count')->textInput(['maxlength' => true]) ?>
+
+    <div class="form-group">
+        <?= Html::submitButton('保存', ['class' => 'btn btn-success']) ?>
+    </div>
+
+    <?php ActiveForm::end(); ?><?= $this->render('_form', [
         'model' => $model,
     ]) ?>
 

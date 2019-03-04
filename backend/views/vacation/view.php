@@ -33,9 +33,7 @@ $this->params['breadcrumbs'][] = $this->title;
             'start',
             'end',
             'count',
-            'statusone',
-            'statustwo',
-            'statusthr',
+
         ],
     ]) ?>
 
