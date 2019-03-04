@@ -46,14 +46,14 @@ class Vacation extends \yii\db\ActiveRecord
     public function attributeLabels()
     {
         return [
-            'id' => 'ID',
-            'user' => 'User',
-            'start' => 'Start',
-            'end' => 'End',
-            'count' => 'Count',
-            'statusone' => 'Statusone',
-            'statustwo' => 'Statustwo',
-            'statusthr' => 'Statusthr',
+            'id' => '编号',
+            'user' => '用户',
+            'start' => '开始',
+            'end' => '结束',
+            'count' => '时长',
+            'statusone' => '批准一',
+            'statustwo' => '批准二',
+            'statusthr' => '批准三',
         ];
     }
 }
