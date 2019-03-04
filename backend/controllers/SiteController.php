@@ -45,9 +45,6 @@ class SiteController extends Controller
     //显示主页
     public function actionIndex()
     {
-        if ((Yii::$app->user->can("common"))){
-            return $this->render('common');
-        }
 
         return $this->render('index');
     }
@@ -58,11 +55,7 @@ class SiteController extends Controller
     {
         // 是否游客
         if (!Yii::$app->user->isGuest) {
-            if ((Yii::$app->user->can("common"))){
-                return $this->render('common');
-            }
-            //不是永科
-//            return $this->goHome();
+            return $this->goHome();
         }
 
 
@@ -70,9 +63,9 @@ class SiteController extends Controller
 
         // 收集数据
         if ($model->load(Yii::$app->request->post()) && $model->login()) {
-            if ((Yii::$app->user->can("common"))){
-                    return $this->render('common');
-            }
+//            if ((Yii::$app->user->can("common"))||(Yii::$app->user->can("common"))){
+//                    return $this->render('common');
+//            }
         return $this->goBack();
         } else {
             $model->password_hash = '';
