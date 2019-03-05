@@ -1,31 +1,38 @@
+<?php echo "<script type='text/javascript' src='./jquery-3.1.1.min.js'>alert('js代码');</script>";?>
+
+<?php
+//$a="<script type='text/javascript'>alert('js代码');</script>";
+//echo $a;
+?>
+
+
 <?php
 
 use yii\helpers\Html;
 use yii\widgets\ActiveForm;
-use common\models\User;
 use common\models\Dept;
-use common\models\Title;
-use common\models\Place;
 use timepicker\DateTimePicker;
 use common\models\Project;
-use common\models\Area;
-
-/* @var $this yii\web\View */
-/* @var $model common\models\Project */
 
 $this->title = '新建项目';
 $this->params['breadcrumbs'][] = ['label' => '项目', 'url' => ['index']];
 $this->params['breadcrumbs'][] = $this->title;
 ?>
+
+
+
+
 <div class="project-form">
 
     <?php $form = ActiveForm::begin(); ?>
 
     <div>
         <p class="control-label">地点</p>
-        <select class="form-control" id="province" onchange="showcity()"><option  value="0">-省份-</option></select>
-        <select class="form-control" id="city" onchange="showdistrict()"><option value="0">-城市-</option></select>
-        <select class="form-control" id="district"><option  value="0">-地点-</option></select>
+        <select class="form-control" id="province"><option  value="0">-请选择-</option></select>
+        <br>
+        <select class="form-control" id="city" ><option value="0">-请选择-</option></select>
+        <br>
+        <select class="form-control" id="area"><option  value="0">-请选择-</option></select>
     </div>
 
     <?= $form->field($model, 'project_name')->textInput(['maxlength' => true]) ?>
@@ -121,32 +128,7 @@ $this->params['breadcrumbs'][] = $this->title;
 
     <?= $form->field($model, 'phase')->dropDownList(Project::allPhase(),['prompt'=>'请选择阶段']); ?>
 
-    <?= $form->field($model, 'project_type')->checkboxList(Project::allType(),['prompt'=>'请选择类型']); ?>
-
-<!--    --><?//=
-//    $url=\yii\helpers\Url::toRoute(['get-region']);
-//
-//    echo $form->field($model, 'province')->widget(\region\Region::className(),[
-//        'model'=>$model,
-//        'url'=>$url,
-//        'province'=>[
-//            'attribute'=>'province',
-//            'items'=>Area::getRegion(),
-//            'options'=>['class'=>'form-control form-control-inline','prompt'=>'选择省份']
-//        ],
-//        'city'=>[
-//            'attribute'=>'city',
-//            'items'=>Area::getRegion($model['province']),
-//            'options'=>['class'=>'form-control form-control-inline','prompt'=>'选择城市']
-//        ],
-//        'district'=>[
-//            'attribute'=>'district',
-//            'items'=>Area::getRegion($model['city']),
-//            'options'=>['class'=>'form-control form-control-inline','prompt'=>'选择县/区']
-//        ]
-//    ]);
-//    ?>
-
+    <?= $form->field($model, 'project_type')->dropDownList(Project::allType(),['prompt'=>'请选择类型']); ?>
 
     <div class="form-group">
         <?= Html::submitButton('保存', ['class' => 'btn btn-success']) ?>
@@ -155,3 +137,6 @@ $this->params['breadcrumbs'][] = $this->title;
     <?php ActiveForm::end(); ?>
 
 </div>
+
+
+
