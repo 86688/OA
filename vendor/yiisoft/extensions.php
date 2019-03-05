@@ -55,5 +55,12 @@ return array (
                 '@timepicker' => $vendorDir . '/timepicker/',
             ),
   ),
+  array (
+        'name' => 'region',
+        'alias' =>
+            array (
+                '@region' => $vendorDir . '/region/',
+            ),
+    ),
 
 );

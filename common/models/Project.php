@@ -4,33 +4,6 @@ namespace common\models;
 
 use Yii;
 
-/**
- * This is the model class for table "project".
- *
- * @property string $project_id ��Ŀ���
- * @property string $project_name ��Ŀ����
- * @property string $dept_id
- * @property string $new_time ��Ŀ�½�ʱ��
- * @property string $update_time ��Ŀ����ʱ��
- * @property string $confirm_time ��Ŀȷ��ʱ��
- * @property string $exec_time ��Ŀִ��ʱ��
- * @property string $end_time ��Ŀ���ʱ��
- * @property string $principal ��Ŀ������
- * @property string $assist ��ĿЭ����
- * @property string $city ��Ŀ����
- * @property string $address ��Ŀ�ص�
- * @property string $budget ��ĿԤ��
- * @property string $crt_id ��ͬ���
- * @property int $self_id �Լ���˾���
- * @property string $client_id �ͻ����
- * @property string $project_remark ��Ŀ��ע
- * @property string $rating ��Ŀ����
- * @property int $phase �׶� 1-����2-δ��3-ȷ��4-ִ��5-����
- * @property string $project_type ��Ŀ����
- *
- * @property Contract $contract
- * @property SelfCmy $selfCmy
- */
 class Project extends \yii\db\ActiveRecord
 {
     /**
@@ -47,6 +20,7 @@ class Project extends \yii\db\ActiveRecord
     public function rules()
     {
         return [
+            [['project_name', 'phase'], 'required'],
             [['project_name'], 'string', 'max' => 50],
             [['dept_id', 'budget'], 'string', 'max' => 30],
             [['principal', 'rating'], 'string', 'max' => 10],
@@ -55,7 +29,7 @@ class Project extends \yii\db\ActiveRecord
             [['self_id'], 'string', 'max' => 3],
             [['project_remark'], 'string', 'max' => 75],
             [['phase'], 'string', 'max' => 1],
-            [['project_type'], 'max' => 5],
+            [['project_type'], 'string', 'max' => 5],
         ];
     }
 
