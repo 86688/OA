@@ -47,7 +47,6 @@ class Project extends \yii\db\ActiveRecord
     public function rules()
     {
         return [
-            [['project_name', 'phase'], 'required'],
             [['project_name'], 'string', 'max' => 50],
             [['dept_id', 'budget'], 'string', 'max' => 30],
             [['principal', 'rating'], 'string', 'max' => 10],
@@ -56,7 +55,7 @@ class Project extends \yii\db\ActiveRecord
             [['self_id'], 'string', 'max' => 3],
             [['project_remark'], 'string', 'max' => 75],
             [['phase'], 'string', 'max' => 1],
-            [['project_type'], 'string', 'max' => 5],
+            [['project_type'], 'max' => 5],
         ];
     }
 

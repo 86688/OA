@@ -63,10 +63,7 @@ class SiteController extends Controller
 
         // 收集数据
         if ($model->load(Yii::$app->request->post()) && $model->login()) {
-//            if ((Yii::$app->user->can("common"))||(Yii::$app->user->can("common"))){
-//                    return $this->render('common');
-//            }
-        return $this->goBack();
+            return $this->goBack();
         } else {
             $model->password_hash = '';
             return $this->render('login', [

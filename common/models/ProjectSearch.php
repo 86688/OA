@@ -41,9 +41,18 @@ class ProjectSearch extends Project
      */
     public function search($params)
     {
-        $query = Project::find();
-
+//        $query = Project::find();
+        //根据登录用户的ID 进行得到部门ID  再根据部门ID得出此部门的所有项目
+        $id=$_SESSION["__id"];
+        $dept_id=User::findOne($id)->dept_id;
+//        var_dump($dept_id);
+//        die();
+        $query = Project::find()
+            ->where(['dept_id'=>$dept_id]);
+//            ->all();
         // add conditions that should always apply here
+//        var_dump($query);
+//        die();
 
         $dataProvider = new ActiveDataProvider([
             'query' => $query,

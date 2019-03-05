@@ -12,6 +12,18 @@ $this->params['breadcrumbs'][] = $this->title;
 
 <div class="user-index">
 
+    <p>
+        <?= Html::a('请假调休', ['vacation/create'], ['class' => 'btn btn-success']) ?>
+        <?php if(Yii::$app->user->can('backend', [], true)){
+            echo Html::a('新入人员', ['user/create'], ['class' => 'btn btn-success']);
+            echo '&nbsp';
+            echo Html::a('部门管理', ['dept/index'], ['class' => 'btn btn-success']);
+            echo '&nbsp';
+            echo Html::a('人事变动', ['user/change'], ['class' => 'btn btn-success']);
+        }
+        ?>
+    </p>
+
     <?php  echo $this->render('_change', ['model' => $searchModel]); ?>
 
     <!-- 以下为用户的列表   -->
