@@ -64,7 +64,7 @@ class Area extends \yii\db\ActiveRecord
     public static function getRegion($area_parent_id=0)
     {
         $result = static::find()->where(['area_parent_id'=>$area_parent_id])->asArray()->all();
-        return ArrayHelper::map($result, 'id', 'name');
+        return ArrayHelper::map($result, 'id', 'area_name');
     }
 //    public static function find()
 //    {
